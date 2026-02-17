@@ -1,8 +1,12 @@
 export interface Subject {
-    id: number;
     name: string;
     day: string;
-    start: string;
-    end: string;
+    startTime: string;
+    endTime: string;
     location: string;
+		teacher: string;
+    topPercent: Number;
+    leftPercent: Number;
+    widthPercent: Number;
+    heightPercent: Number;
 }

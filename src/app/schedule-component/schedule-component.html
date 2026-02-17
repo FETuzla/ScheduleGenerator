@@ -1,0 +1,29 @@
+<div class="schedule-container">
+  <img
+    src="Godina1Linija1.png"
+    alt="Schedule"
+    class="schedule-image"
+  />
+
+  @for (subject of subjects(); track subject.name) {
+    <div
+      class="subject-rect"
+      [style.top.%]="subject.topPercent"
+      [style.left.%]="subject.leftPercent"
+      [style.width.%]="subject.widthPercent"
+      [style.height.%]="subject.heightPercent"
+      (click)="selectSubject(subject)"
+    >
+    </div>
+  }
+</div>
+
+@if (selectedSubject()) {
+  <div class="subject-info">
+    <h3>{{ selectedSubject()!.name }}</h3>
+    <p><strong>Teacher:</strong> {{ selectedSubject()!.teacher }}</p>
+    <p><strong>Day:</strong> {{ selectedSubject()!.day }}</p>
+    <p><strong>Time:</strong> {{ selectedSubject()!.startTime }} - {{ selectedSubject()!.endTime }}</p>
+    <p><strong>Location:</strong> {{ selectedSubject()!.location }}</p>
+  </div>
+}

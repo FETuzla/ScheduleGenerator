@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common'
 import { FormsModule } from '@angular/forms'
+import { ScheduleComponent } from "../schedule-component/schedule-component";
 
 @Component({
   selector: 'app-homepage',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, ScheduleComponent],
   templateUrl: './homepage.html',
   styleUrl: './homepage.scss',
 })
