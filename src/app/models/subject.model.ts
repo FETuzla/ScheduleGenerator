@@ -5,4 +5,8 @@ export interface Subject {
     endTime: string;
     location: string;
 		teacher: string;
+    topPercent: Number;
+    leftPercent: Number;
+    widthPercent: Number;
+    heightPercent: Number;
 }

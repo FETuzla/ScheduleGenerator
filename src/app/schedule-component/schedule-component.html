@@ -1,41 +1,29 @@
-<div class="timetable">
+<div class="schedule-container">
+  <img
+    src="Godina1Linija1.png"
+    alt="Schedule"
+    class="schedule-image"
+  />
 
-  <!-- Top-left empty corner -->
-  <div class="time-header"></div>
-
-  <!-- Day headers -->
-  @for (day of days; track day) {
-    <div class="day-header">
-      {{ day }}
-    </div>
-  }
-
-  <!-- Time labels (half-hour slots) -->
-  @for (slot of timeSlots; track $index) {
-    <div class="time-cell">
-      {{ slot }}
-    </div>
-  }
-
-  <!-- Class blocks -->
-  @for (item of subjects; track $index) {
+  @for (subject of subjects(); track subject.name) {
     <div
-      class="class-block"
-      [style.grid-column]="getGridColumn(item.day)"
-      [style.grid-row]="getGridRow(item.startTime) + ' / span ' + getRowSpan(item.startTime, item.endTime)"
+      class="subject-rect"
+      [style.top.%]="subject.topPercent"
+      [style.left.%]="subject.leftPercent"
+      [style.width.%]="subject.widthPercent"
+      [style.height.%]="subject.heightPercent"
+      (click)="selectSubject(subject)"
     >
-      <strong>{{ item.name }}</strong><br>
-
-      {{ item.startTime }} - {{ item.endTime }}<br>
-
-      @if (item.location) {
-        <div>{{ item.location }}</div>
-      }
-
-      @if (item.teacher) {
-        <small>{{ item.teacher }}</small>
-      }
     </div>
   }
-
 </div>
+
+@if (selectedSubject()) {
+  <div class="subject-info">
+    <h3>{{ selectedSubject()!.name }}</h3>
+    <p><strong>Teacher:</strong> {{ selectedSubject()!.teacher }}</p>
+    <p><strong>Day:</strong> {{ selectedSubject()!.day }}</p>
+    <p><strong>Time:</strong> {{ selectedSubject()!.startTime }} - {{ selectedSubject()!.endTime }}</p>
+    <p><strong>Location:</strong> {{ selectedSubject()!.location }}</p>
+  </div>
+}

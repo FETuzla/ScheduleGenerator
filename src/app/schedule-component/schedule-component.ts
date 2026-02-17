@@ -1,55 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { SUBJECTS } from '../data/subjects.data';
+import { Subject } from '../models/subject.model';
 
 @Component({
   selector: 'app-schedule',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './schedule-component.html',
-  styleUrls: ['./schedule-component.scss'],
+  styleUrl: './schedule-component.scss',
 })
 export class ScheduleComponent {
 
-	subjects = SUBJECTS;
+  // Using signal (modern Angular 17)
+  subjects = signal<Subject[]>(SUBJECTS);
 
-  days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  selectedSubject = signal<Subject | null>(null);
 
-  startHour = 8;
-  endHour = 20;
-
-  // Convert HH:mm → total minutes
-  private timeToMinutes(time: string): number {
-    const [h, m] = time.split(':').map(Number);
-    return h * 60 + m;
-  }
-
-  // Grid row start (30-min steps)
-  getGridRow(start: string): number {
-    const totalMinutes = this.timeToMinutes(start);
-    const startMinutes = this.startHour * 60;
-
-    return Math.floor((totalMinutes - startMinutes) / 30) + 2;
-    // +2 because:
-    // row 1 = header
-    // row 2 = first time slot
-  }
-
-  // How many 30-min blocks it spans
-  getRowSpan(start: string, end: string): number {
-    const duration = this.timeToMinutes(end) - this.timeToMinutes(start);
-    return duration / 30;
-  }
-
-  getGridColumn(day: string): number {
-    return this.days.indexOf(day) + 2;
-  }
-
-  get timeSlots(): string[] {
-    const slots: string[] = [];
-
-    for (let h = this.startHour; h < this.endHour; h++) {
-      slots.push(`${h}:00`);
-      slots.push(`${h}:30`);
-    }
-
-    return slots;
+  selectSubject(subject: Subject) {
+    this.selectedSubject.set(subject);
   }
 }

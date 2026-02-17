@@ -1,36 +1,32 @@
-.timetable {
-  display: grid;
-  grid-template-columns: 90px repeat(6, 1fr);
-  grid-template-rows: 40px repeat(24, 40px); /* 24 half-hour rows */
+.schedule-container {
   position: relative;
-  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 1000px;
 }
 
-.day-header {
-  background: #f5f5f5;
-  border: 1px solid #ddd;
-  text-align: center;
-  font-weight: bold;
-  line-height: 40px;
+.schedule-image {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-.time-header {
-  border: 1px solid #ddd;
-  background: #f5f5f5;
-}
-
-.time-cell {
-  border: 1px solid #eee;
-  font-size: 12px;
+.subject-rect {
+  position: absolute;
+  background: rgba(128, 128, 128, 0.1);
+  cursor: pointer;
+  font-size: 0.75rem;
   padding: 2px;
-  text-align: center;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
 }
 
-.class-block {
-  background: #cce5ff;
-  border: 1px solid #3399ff;
-  border-radius: 6px;
-  padding: 4px;
-  font-size: 12px;
-  overflow: hidden;
+.subject-rect:hover {
+  background: rgba(0, 123, 255, 0.6);
+}
+
+.subject-info {
+  margin-top: 20px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
 }
