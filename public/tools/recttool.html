@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Image Rectangle Creator</title>
+<style>
+  body {
+    font-family: sans-serif;
+    padding: 20px;
+  }
+
+  .image-container {
+    position: relative;
+    display: inline-block;
+    max-width: 800px;
+    border: 1px solid #ccc;
+  }
+
+  .image-container img {
+    width: 100%;
+    display: block;
+  }
+
+  .rect {
+    position: absolute;
+    border: 2px dashed red;
+    background-color: rgba(255, 0, 0, 0.2);
+    cursor: move;
+    box-sizing: border-box;
+    color: white;
+    font-weight: bold;
+    padding: 2px;
+    overflow: hidden;
+  }
+
+  .resize-handle {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: red;
+    bottom: 0;
+    right: 0;
+    cursor: se-resize;
+  }
+</style>
+</head>
+<body>
+
+<h2>Interactive Image Rectangle Creator with Names</h2>
+
+<div class="image-container" id="container">
+  <img id="myImage" src="../Godina1Linija1.png" alt="Your Image">
+</div>
+
+<br>
+<button onclick="addRectangle()">Add Rectangle</button>
+<button onclick="printRectangles()">Print Rectangles</button>
+
+<script>
+const container = document.getElementById('container');
+let rectangles = [];
+let selectedRect = null;
+let offsetX = 0;
+let offsetY = 0;
+let resizing = null;
+let startWidth = 0;
+let startHeight = 0;
+let startX = 0;
+let startY = 0;
+
+function addRectangle() {
+  const name = prompt('Enter rectangle name:', 'MyRectangle') || 'Unnamed';
+  const rect = document.createElement('div');
+  rect.classList.add('rect');
+  rect.style.top = '10%';
+  rect.style.left = '10%';
+  rect.style.width = '20%';
+  rect.style.height = '15%';
+  rect.dataset.name = name;
+  rect.textContent = name;
+
+  container.appendChild(rect);
+
+  // Add resize handle
+  const handle = document.createElement('div');
+  handle.classList.add('resize-handle');
+  rect.appendChild(handle);
+
+  // Drag and resize events
+  rect.addEventListener('mousedown', startDrag);
+  handle.addEventListener('mousedown', startResize);
+
+  rectangles.push(rect);
+}
+
+// Drag rectangle
+function startDrag(e) {
+  if (e.target.classList.contains('resize-handle')) return; // don't drag if resizing
+  selectedRect = e.target;
+  const rect = selectedRect.getBoundingClientRect();
+  const containerRect = container.getBoundingClientRect();
+
+  offsetX = e.clientX - rect.left;
+  offsetY = e.clientY - rect.top;
+
+  document.addEventListener('mousemove', drag);
+  document.addEventListener('mouseup', stopAction);
+}
+
+function drag(e) {
+  if (!selectedRect) return;
+
+  const containerRect = container.getBoundingClientRect();
+  let x = e.clientX - containerRect.left - offsetX;
+  let y = e.clientY - containerRect.top - offsetY;
+
+  const xPercent = (x / containerRect.width) * 100;
+  const yPercent = (y / containerRect.height) * 100;
+
+  selectedRect.style.left = xPercent + '%';
+  selectedRect.style.top = yPercent + '%';
+}
+
+// Resize rectangle
+function startResize(e) {
+  e.stopPropagation();
+  resizing = e.target.parentElement;
+  selectedRect = resizing;
+
+  const rect = selectedRect.getBoundingClientRect();
+  startWidth = rect.width;
+  startHeight = rect.height;
+  startX = e.clientX;
+  startY = e.clientY;
+
+  document.addEventListener('mousemove', resize);
+  document.addEventListener('mouseup', stopAction);
+}
+
+function resize(e) {
+  if (!resizing) return;
+  const containerRect = container.getBoundingClientRect();
+
+  const newWidth = startWidth + (e.clientX - startX);
+  const newHeight = startHeight + (e.clientY - startY);
+
+  resizing.style.width = (newWidth / containerRect.width) * 100 + '%';
+  resizing.style.height = (newHeight / containerRect.height) * 100 + '%';
+}
+
+function stopAction() {
+  selectedRect = null;
+  resizing = null;
+  document.removeEventListener('mousemove', drag);
+  document.removeEventListener('mousemove', resize);
+  document.removeEventListener('mouseup', stopAction);
+}
+
+// Print rectangles
+function printRectangles() {
+  const data = rectangles.map(rect => ({
+    name: rect.dataset.name,
+    topPercent: parseFloat(rect.style.top),
+    leftPercent: parseFloat(rect.style.left),
+    widthPercent: parseFloat(rect.style.width),
+    heightPercent: parseFloat(rect.style.height)
+  }));
+  console.log('Rectangles:', data);
+  alert('Check console for rectangle names and positions!');
+}
+</script>
+
+</body>
+</html>
+
