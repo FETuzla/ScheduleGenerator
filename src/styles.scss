@@ -1,4 +1,23 @@
-html, body {
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-}/* You can add global styles to this file, and also import other style files */
+}
+
+body, html {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+app-root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.router-wrap {
+    flex: 1;
+}
+
