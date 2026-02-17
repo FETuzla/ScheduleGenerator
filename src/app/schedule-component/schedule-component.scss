@@ -1,0 +1,36 @@
+.timetable {
+  display: grid;
+  grid-template-columns: 90px repeat(6, 1fr);
+  grid-template-rows: 40px repeat(24, 40px); /* 24 half-hour rows */
+  position: relative;
+  border: 1px solid #ccc;
+}
+
+.day-header {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+.time-header {
+  border: 1px solid #ddd;
+  background: #f5f5f5;
+}
+
+.time-cell {
+  border: 1px solid #eee;
+  font-size: 12px;
+  padding: 2px;
+  text-align: center;
+}
+
+.class-block {
+  background: #cce5ff;
+  border: 1px solid #3399ff;
+  border-radius: 6px;
+  padding: 4px;
+  font-size: 12px;
+  overflow: hidden;
+}

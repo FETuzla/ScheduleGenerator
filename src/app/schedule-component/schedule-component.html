@@ -1,0 +1,41 @@
+<div class="timetable">
+
+  <!-- Top-left empty corner -->
+  <div class="time-header"></div>
+
+  <!-- Day headers -->
+  @for (day of days; track day) {
+    <div class="day-header">
+      {{ day }}
+    </div>
+  }
+
+  <!-- Time labels (half-hour slots) -->
+  @for (slot of timeSlots; track $index) {
+    <div class="time-cell">
+      {{ slot }}
+    </div>
+  }
+
+  <!-- Class blocks -->
+  @for (item of subjects; track $index) {
+    <div
+      class="class-block"
+      [style.grid-column]="getGridColumn(item.day)"
+      [style.grid-row]="getGridRow(item.startTime) + ' / span ' + getRowSpan(item.startTime, item.endTime)"
+    >
+      <strong>{{ item.name }}</strong><br>
+
+      {{ item.startTime }} - {{ item.endTime }}<br>
+
+      @if (item.location) {
+        <div>{{ item.location }}</div>
+      }
+
+      @if (item.teacher) {
+        <small>{{ item.teacher }}</small>
+      }
+    </div>
+  }
+
+</div>
