@@ -1,0 +1,22 @@
+main {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.choice {
+    select {
+        height: 30px;
+        width: 200px;
+    }
+}
+
+.table {
+    width: 100%;
+    height: 40vh;
+    border: 1px solid gray;
+    align-items: center;
+}
