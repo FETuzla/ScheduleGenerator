@@ -1,33 +1,27 @@
 <main class="content">
-
   <div class="choice">
-			<select [(ngModel)]="selectedFirst">
-				@for (selector of firstSelectors; track selector) {
-					<option [value]="selector">
-						{{ selector }}
-					</option>
-				}
-			</select>
-      <option value="" disabled selected>Odaberi godinu</option>
+    <select [(ngModel)]="selectedFirst">
+      @for (selector of firstSelectors; track selector) {
+        <option [value]="selector">
+          {{ selector }}
+        </option>
+      }
+    </select>
+    <option value="" disabled selected>Odaberi godinu</option>
 
-			<select [(ngModel)]="selectedSecond">
-				<option value="" disabled selected>
-					{{ secondPlaceholder }}
-				</option>
+    <select [(ngModel)]="selectedSecond">
+      <option value="" disabled selected>
+        {{ secondPlaceholder }}
+      </option>
 
-        @for (option of secondSelectors; track option) {
-          <option [value]="option">
-            {{ option }}
-          </option>
-        }
-
-      </select>
-
+      @for (option of secondSelectors; track option) {
+        <option [value]="option">
+          {{ option }}
+        </option>
+      }
+    </select>
   </div>
-	<app-schedule [schedule]="schedule"></app-schedule>
+  <app-schedule [schedule]="schedule"></app-schedule>
 
-  <div class="table">
-    TABELA2
-  </div>
-
+  <div class="table">TABELA2</div>
 </main>

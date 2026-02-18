@@ -10,7 +10,6 @@ import { Schedule, Lecture } from '../models/schedule.model';
   styleUrl: './schedule-component.scss',
 })
 export class ScheduleComponent {
-
   @Input({ required: true })
   schedule!: Schedule;
 

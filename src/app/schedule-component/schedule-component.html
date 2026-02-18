@@ -1,9 +1,5 @@
 <div class="schedule-container">
-  <img
-    [src]="schedule.image"
-    alt="Schedule"
-    class="schedule-image"
-  />
+  <img [src]="schedule.image" alt="Schedule" class="schedule-image" />
 
   @for (lecture of schedule.lectures; track $index) {
     <div
@@ -22,8 +18,8 @@
     <h3>{{ selectedLecture()!.name }}</h3>
     <p><strong>Teacher:</strong> {{ selectedLecture()!.teacher }}</p>
     <p><strong>Day:</strong> {{ selectedLecture()!.day }}</p>
-    <p><strong>Time:</strong>
-      {{ selectedLecture()!.startTime }} - {{ selectedLecture()!.endTime }}
+    <p>
+      <strong>Time:</strong> {{ selectedLecture()!.startTime }} - {{ selectedLecture()!.endTime }}
     </p>
     <p><strong>Location:</strong> {{ selectedLecture()!.location }}</p>
   </div>
