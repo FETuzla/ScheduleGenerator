@@ -11,7 +11,7 @@
   display: block;
 }
 
-.subject-rect {
+.lecture-rect {
   position: absolute;
   background: rgba(128, 128, 128, 0.1);
   cursor: pointer;
@@ -21,11 +21,11 @@
   transition: all 0.2s ease;
 }
 
-.subject-rect:hover {
+.lecture-rect:hover {
   background: rgba(0, 123, 255, 0.6);
 }
 
-.subject-info {
+.lecture-info {
   margin-top: 20px;
   padding: 12px;
   border: 1px solid #ddd;

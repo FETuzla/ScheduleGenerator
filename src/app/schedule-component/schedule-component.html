@@ -1,29 +1,30 @@
 <div class="schedule-container">
   <img
-    src="Godina1Linija1.png"
+    [src]="schedule.image"
     alt="Schedule"
     class="schedule-image"
   />
 
-  @for (subject of subjects(); track subject.name) {
+  @for (lecture of schedule.lectures; track $index) {
     <div
-      class="subject-rect"
-      [style.top.%]="subject.topPercent"
-      [style.left.%]="subject.leftPercent"
-      [style.width.%]="subject.widthPercent"
-      [style.height.%]="subject.heightPercent"
-      (click)="selectSubject(subject)"
-    >
-    </div>
+      class="lecture-rect"
+      [style.top.%]="lecture.topPercent"
+      [style.left.%]="lecture.leftPercent"
+      [style.width.%]="lecture.widthPercent"
+      [style.height.%]="lecture.heightPercent"
+      (click)="selectLecture(lecture)"
+    ></div>
   }
 </div>
 
-@if (selectedSubject()) {
-  <div class="subject-info">
-    <h3>{{ selectedSubject()!.name }}</h3>
-    <p><strong>Teacher:</strong> {{ selectedSubject()!.teacher }}</p>
-    <p><strong>Day:</strong> {{ selectedSubject()!.day }}</p>
-    <p><strong>Time:</strong> {{ selectedSubject()!.startTime }} - {{ selectedSubject()!.endTime }}</p>
-    <p><strong>Location:</strong> {{ selectedSubject()!.location }}</p>
+@if (selectedLecture()) {
+  <div class="lecture-info">
+    <h3>{{ selectedLecture()!.name }}</h3>
+    <p><strong>Teacher:</strong> {{ selectedLecture()!.teacher }}</p>
+    <p><strong>Day:</strong> {{ selectedLecture()!.day }}</p>
+    <p><strong>Time:</strong>
+      {{ selectedLecture()!.startTime }} - {{ selectedLecture()!.endTime }}
+    </p>
+    <p><strong>Location:</strong> {{ selectedLecture()!.location }}</p>
   </div>
 }

@@ -1,22 +1,33 @@
 <main class="content">
-    <div class="choice">
-        <select [(ngModel)]="selectedFirst">
-            <option [ngValue]="null" disabled selected>Odaberi godinu</option>
-            <option *ngFor="let year of years" [ngValue]="year">
-                {{ year }}
-            </option>
-        </select>
-        <select *ngIf="selectedFirst !== 'BMI' && selectedFirst" [(ngModel)]="selectedSecond">
-            <option [ngValue]="null" disabled selected>
-                {{ secondPlaceholder }}
-            </option>
-            <option *ngFor="let option of smjerOptions" [value]="option">
-                {{ option }}
-            </option>
-        </select>
-    </div>
-		<app-schedule></app-schedule>
-    <div class="table">
-        TABELA2
-    </div>
+
+  <div class="choice">
+			<select [(ngModel)]="selectedFirst">
+				@for (selector of firstSelectors; track selector) {
+					<option [value]="selector">
+						{{ selector }}
+					</option>
+				}
+			</select>
+      <option value="" disabled selected>Odaberi godinu</option>
+
+			<select [(ngModel)]="selectedSecond">
+				<option value="" disabled selected>
+					{{ secondPlaceholder }}
+				</option>
+
+        @for (option of secondSelectors; track option) {
+          <option [value]="option">
+            {{ option }}
+          </option>
+        }
+
+      </select>
+
+  </div>
+	<app-schedule [schedule]="schedule"></app-schedule>
+
+  <div class="table">
+    TABELA2
+  </div>
+
 </main>
