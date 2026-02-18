@@ -1,7 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { Component, Input, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SUBJECTS } from '../data/subjects.data';
-import { Subject } from '../models/subject.model';
+import { Schedule, Lecture } from '../models/schedule.model';
 
 @Component({
   selector: 'app-schedule',
@@ -11,13 +10,12 @@ import { Subject } from '../models/subject.model';
   styleUrl: './schedule-component.scss',
 })
 export class ScheduleComponent {
+  @Input({ required: true })
+  schedule!: Schedule;
 
-  // Using signal (modern Angular 17)
-  subjects = signal<Subject[]>(SUBJECTS);
+  selectedLecture = signal<Lecture | null>(null);
 
-  selectedSubject = signal<Subject | null>(null);
-
-  selectSubject(subject: Subject) {
-    this.selectedSubject.set(subject);
+  selectLecture(lecture: Lecture) {
+    this.selectedLecture.set(lecture);
   }
 }

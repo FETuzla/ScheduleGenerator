@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common'
-import { FormsModule } from '@angular/forms'
-import { ScheduleComponent } from "../schedule-component/schedule-component";
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { ScheduleComponent } from '../schedule-component/schedule-component';
+import { FIRST_SELECTORS, FirstSelector, Schedule, SecondSelector } from '../models/schedule.model';
+import { SCHEDULES } from '../data/schedules.data';
 
 @Component({
   selector: 'app-homepage',
@@ -11,28 +13,36 @@ import { ScheduleComponent } from "../schedule-component/schedule-component";
   styleUrl: './homepage.scss',
 })
 export class Homepage {
-  selectedFirst: string | null = null;
-  selectedSecond: string | null = null;
+  selectedFirst: FirstSelector = 'Prva godina';
+  selectedSecond: SecondSelector = 'Linija 1';
 
-  years = ["Prva godina", "Druga godina", "Treca godina", "Cetvrta godina", "BMI"];
+  firstSelectors = FIRST_SELECTORS;
 
-  get smjerOptions(): string[]{
-    if(this.selectedFirst == "Prva godina"){
+  get secondSelectors(): SecondSelector[] {
+    if (this.selectedFirst == 'Prva godina') {
       return ['Linija 1', 'Linija 2'];
     }
-    if(this.selectedFirst == "BMI"){
+    if (this.selectedFirst == 'BMI') {
       return [];
     }
-    if(this.selectedFirst){
-      return ['AR','RI','ESKE','EEMS','TK']
+    if (this.selectedFirst) {
+      return ['AR', 'RI', 'ESKE', 'EEMS', 'TK'];
     }
     return [];
   }
 
-  get secondPlaceholder(): string{
-    if(this.selectedFirst === "Prva godina"){
+  get secondPlaceholder(): string {
+    if (this.selectedFirst === 'Prva godina') {
       return 'Odaberi liniju';
     }
     return 'Odaberi smjer';
+  }
+
+  get schedule(): Schedule {
+    return SCHEDULES.find(
+      (s) =>
+        s.firstSelector === this.selectedFirst &&
+        (s.secondSelector ?? null) === (this.selectedSecond ?? null),
+    )!!;
   }
 }
