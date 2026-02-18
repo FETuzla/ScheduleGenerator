@@ -11,7 +11,7 @@ import { Schedule, Lecture } from '../models/schedule.model';
 })
 export class ScheduleComponent {
   @Input({ required: true })
-  schedule!: Schedule;
+  schedule!: Schedule | null;
 
   selectedLecture = signal<Lecture | null>(null);
 
