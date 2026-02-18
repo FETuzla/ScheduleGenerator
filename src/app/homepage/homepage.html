@@ -1,6 +1,6 @@
 <main class="content">
   <div class="choice">
-    <select [(ngModel)]="selectedFirst">
+		<select [(ngModel)]="selectedFirst" (ngModelChange)="onFirstChange()">
       @for (selector of firstSelectors; track selector) {
         <option [value]="selector">
           {{ selector }}

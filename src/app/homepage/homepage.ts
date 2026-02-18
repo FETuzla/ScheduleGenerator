@@ -14,21 +14,26 @@ import { SCHEDULES } from '../data/schedules.data';
 })
 export class Homepage {
   selectedFirst: FirstSelector = 'Prva godina';
-  selectedSecond: SecondSelector = 'Linija 1';
+  selectedSecond: SecondSelector | null = 'Linija 1';
 
   firstSelectors = FIRST_SELECTORS;
 
+  onFirstChange() {
+    const options = this.secondSelectors;
+
+    this.selectedSecond = options.length ? options[0] : null;
+  }
+
   get secondSelectors(): SecondSelector[] {
-    if (this.selectedFirst == 'Prva godina') {
+    if (this.selectedFirst === 'Prva godina') {
       return ['Linija 1', 'Linija 2'];
     }
-    if (this.selectedFirst == 'BMI') {
+
+    if (this.selectedFirst === 'BMI') {
       return [];
     }
-    if (this.selectedFirst) {
-      return ['AR', 'RI', 'ESKE', 'EEMS', 'TK'];
-    }
-    return [];
+
+    return ['AR', 'EEMS', 'ESKE', 'RI', 'TK'];
   }
 
   get secondPlaceholder(): string {

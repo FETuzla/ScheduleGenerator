@@ -363,6 +363,101 @@ export const SCHEDULES: Schedule[] = [
       },
     ],
   },
+  {
+    firstSelector: 'Druga godina',
+    secondSelector: 'AR',
+    image: 'Godina2AR.png',
+    lectures: []
+  },
+  {
+    firstSelector: 'Druga godina',
+    secondSelector: 'EEMS',
+    image: 'Godina2EEMS.png',
+    lectures: []
+  },
+  {
+    firstSelector: 'Druga godina',
+    secondSelector: 'ESKE',
+    image: 'Godina2ESKE.png',
+    lectures: []
+  },
+  {
+    firstSelector: 'Druga godina',
+    secondSelector: 'RI',
+    image: 'Godina2RI.png',
+    lectures: []
+  },
+  {
+    firstSelector: 'Druga godina',
+    secondSelector: 'TK',
+    image: 'Godina2TK.png',
+    lectures: []
+  },
+  {
+    firstSelector: 'Treca godina',
+    secondSelector: 'AR',
+    image: 'Godina3AR.png',
+    lectures: []
+  },
+  {
+    firstSelector: 'Treca godina',
+    secondSelector: 'EEMS',
+    image: 'Godina3EEMS.png',
+    lectures: []
+  },
+  {
+    firstSelector: 'Treca godina',
+    secondSelector: 'ESKE',
+    image: 'Godina3ESKE.png',
+    lectures: []
+  },
+  {
+    firstSelector: 'Treca godina',
+    secondSelector: 'RI',
+    image: 'Godina3RI.png',
+    lectures: []
+  },
+  {
+    firstSelector: 'Treca godina',
+    secondSelector: 'TK',
+    image: 'Godina3TK.png',
+    lectures: []
+  },
+  {
+    firstSelector: 'Cetvrta godina',
+    secondSelector: 'AR',
+    image: 'Godina4AR.png',
+    lectures: []
+  },
+  {
+    firstSelector: 'Cetvrta godina',
+    secondSelector: 'EEMS',
+    image: 'Godina4EEMS.png',
+    lectures: []
+  },
+  {
+    firstSelector: 'Cetvrta godina',
+    secondSelector: 'ESKE',
+    image: 'Godina4ESKE.png',
+    lectures: []
+  },
+  {
+    firstSelector: 'Cetvrta godina',
+    secondSelector: 'RI',
+    image: 'Godina4RI.png',
+    lectures: []
+  },
+  {
+    firstSelector: 'Cetvrta godina',
+    secondSelector: 'TK',
+    image: 'Godina4TK.png',
+    lectures: []
+  },
+  {
+    firstSelector: 'BMI',
+    image: 'BMI.png',
+    lectures: []
+  },
 ];
 
 // Godina 1 Linija 2
