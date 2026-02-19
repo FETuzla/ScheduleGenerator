@@ -8,9 +8,7 @@
       }
     </select>
 
-    <select [(ngModel)]="selectedSecond">
-      
-
+    <select *ngIf="selectedFirst !== 'BMI'" [(ngModel)]="selectedSecond">
       @for (option of secondSelectors; track option) {
         <option [value]="option">
           {{ option }}
