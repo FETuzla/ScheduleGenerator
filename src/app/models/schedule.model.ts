@@ -8,8 +8,11 @@ export const FIRST_SELECTORS = [
 
 export const SECOND_SELECTORS = ['Linija 1', 'Linija 2', 'AR', 'RI', 'ESKE', 'EEMS', 'TK'] as const;
 
+export const LECTURE_TYPES = ['Predavanje', 'AV', 'LV'] as const;
+
 export type FirstSelector = (typeof FIRST_SELECTORS)[number];
 export type SecondSelector = (typeof SECOND_SELECTORS)[number];
+export type LectureType = (typeof LECTURE_TYPES)[number];
 
 export interface Lecture {
   name: string;
@@ -18,6 +21,7 @@ export interface Lecture {
   endTime: string;
   location: string;
   teacher: string;
+	type: LectureType;
   topPercent: number;
   leftPercent: number;
   widthPercent: number;
