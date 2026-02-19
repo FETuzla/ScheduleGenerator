@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lecture Builder</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 20px; }
+  input, select { margin: 4px; padding: 4px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+  th, td { border: 1px solid #ccc; padding: 6px; text-align: left; }
+  th { background: #f4f4f4; }
+  button { margin-top: 10px; padding: 6px 12px; }
+</style>
+</head>
+<body>
+
+<h1>Lecture Builder</h1>
+
+<div id="lecture-form">
+  <input type="text" id="name" placeholder="Name" />
+  <input type="text" id="day" placeholder="Day" />
+  <input type="text" id="startTime" placeholder="Start Time" />
+  <input type="text" id="endTime" placeholder="End Time" />
+  <input type="text" id="location" placeholder="Location" />
+  <input type="text" id="teacher" placeholder="Teacher" />
+  <button onclick="addLecture()">Add Lecture</button>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Day</th>
+      <th>Start</th>
+      <th>End</th>
+      <th>Location</th>
+      <th>Teacher</th>
+      <th>Remove</th>
+    </tr>
+  </thead>
+  <tbody id="lecture-table-body">
+  </tbody>
+</table>
+
+<button onclick="exportJSON()">Export JSON</button>
+<pre id="output" style="margin-top:20px; background:#f4f4f4; padding:10px;"></pre>
+
+<script>
+let lectures = [];
+
+function addLecture() {
+  const lecture = {
+    name: document.getElementById('name').value,
+    day: document.getElementById('day').value,
+    startTime: document.getElementById('startTime').value,
+    endTime: document.getElementById('endTime').value,
+    location: document.getElementById('location').value,
+    teacher: document.getElementById('teacher').value,
+		topPercent: 0,
+		leftPercent: 0,
+		widthPercent: 0,
+		heightPercent: 0
+  };
+
+  // Simple validation
+  if(!lecture.name || !lecture.day) {
+    alert("Please enter at least Name and Day.");
+    return;
+  }
+
+  lectures.push(lecture);
+  renderTable();
+  clearForm();
+}
+
+function renderTable() {
+  const tbody = document.getElementById('lecture-table-body');
+  tbody.innerHTML = '';
+  lectures.forEach((lec, index) => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${lec.name}</td>
+      <td>${lec.day}</td>
+      <td>${lec.startTime}</td>
+      <td>${lec.endTime}</td>
+      <td>${lec.location}</td>
+      <td>${lec.teacher}</td>
+      <td><button onclick="removeLecture(${index})">X</button></td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+function removeLecture(index) {
+  lectures.splice(index, 1);
+  renderTable();
+}
+
+function clearForm() {
+  document.getElementById('name').value = '';
+  document.getElementById('day').value = '';
+  document.getElementById('startTime').value = '';
+  document.getElementById('endTime').value = '';
+  document.getElementById('location').value = '';
+  document.getElementById('teacher').value = '';
+}
+
+function exportJSON() {
+  const json = JSON.stringify(lectures, null, 2);
+  document.getElementById('output').textContent = json;
+  navigator.clipboard.writeText(json);
+}
+</script>
+
+</body>
+</html>
