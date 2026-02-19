@@ -16,7 +16,9 @@
       }
     </select>
   </div>
-  <app-schedule [schedule]="schedule"></app-schedule>
+  <app-schedule [schedule]="schedule" (lectureSelected)="addLectureToCustom($event)"></app-schedule>
 
-  <div class="table">TABELA2</div>
+  <div class="custom_schedule">
+    <app-custom-schedule [lectures]="myLectures()"></app-custom-schedule>
+  </div>
 </main>

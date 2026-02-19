@@ -1,0 +1,39 @@
+<div class="schedule-blueprint">
+  <div class="days-header">
+    <div class="time-filler"></div> <div class="day-label">PONEDJELJAK</div>
+    <div class="day-label">UTORAK</div>
+    <div class="day-label">SRIJEDA</div>
+    <div class="day-label">CETRVRTAK</div>
+    <div class="day-label">PETAK</div>
+  </div>
+
+  <div class="main-container">
+    <div class="time-sidebar">
+        @for (hour of hours; track hour) {
+            <div class="hour-label">
+            <span>{{ hour }}-{{ hour+1 }}</span>
+            </div>
+        }
+    </div>
+
+    <div class="canvas-area">
+      <div class="grid-lines">
+        @for (day of [1,2,3,4,5]; track $index) {
+          <div class="day-column-rect"></div>
+        }
+      </div>
+
+      @for (lec of lectures; track $index) {
+        <div class="lecture-block"
+             [style.top.%]="lec.topPercent"
+             [style.left.%]="lec.leftPercent"
+             [style.width.%]="lec.widthPercent"
+             [style.height.%]="lec.heightPercent"
+             [title]="lec.name">
+          <span class="lec-name">{{ lec.name }}</span>
+          <span class="lec-loc">{{ lec.location }}</span>
+        </div>
+      }
+    </div>
+  </div>
+</div>

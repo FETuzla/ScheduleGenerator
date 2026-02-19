@@ -1,0 +1,111 @@
+.schedule-blueprint {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background: white;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+
+  .days-header {
+    display: grid;
+    grid-template-columns: 30px repeat(5, 1fr); 
+    background: #f8f9fa;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+
+    .time-filler, .day-label {
+      border-right: 1px solid black;
+      border-bottom: 1px solid black;
+      padding: 5px 0;
+    }
+  }
+
+  .main-container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .time-sidebar {
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    background: #f8f9fa;
+  }
+
+  .hour-label {
+    flex: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    color: #444;
+    font-weight: 900;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    
+    span {
+        transform: rotate(90deg);
+        white-space: nowrap;
+        display: inline-block;
+        transform-origin: center; 
+    }
+  }
+
+  .canvas-area {
+    position: relative;
+    flex: 1;
+    background-color: #fff;
+    border-bottom: 1px solid black;
+
+    .grid-lines {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      pointer-events: none;
+      
+      .day-column-rect {
+        border-right: 1px solid black;
+        height: 100%;
+      }
+    }
+  }
+
+  .lecture-block {
+    position: absolute;
+    background: white;
+    color: black;
+    padding: 2px;
+    margin: 0;
+    border: 1px solid black;
+    font-size: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    z-index: 2;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    .lec-name { 
+        font-weight: bold; 
+        font-size: 0.7rem;
+    }
+    .lec-loc { 
+        font-weight: bold;
+        font-size: 0.7rem; 
+        margin-top: 5%; 
+    }
+    .lec-tea {
+        font-weight: 400;
+        margin-top: 5%;
+    }
+  }
+}
