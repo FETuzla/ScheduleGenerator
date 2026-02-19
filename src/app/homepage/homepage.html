@@ -7,13 +7,8 @@
         </option>
       }
     </select>
-    <option value="" disabled selected>Odaberi godinu</option>
 
-    <select [(ngModel)]="selectedSecond">
-      <option value="" disabled selected>
-        {{ secondPlaceholder }}
-      </option>
-
+    <select *ngIf="selectedFirst !== 'BMI'" [(ngModel)]="selectedSecond">
       @for (option of secondSelectors; track option) {
         <option [value]="option">
           {{ option }}
