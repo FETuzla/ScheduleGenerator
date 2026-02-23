@@ -1,4 +1,4 @@
-import { Component, Input, signal, computed } from '@angular/core';
+import { Component, Input, Output, signal, computed, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Schedule, Lecture } from '../models/schedule.model';
 
@@ -13,9 +13,12 @@ export class ScheduleComponent {
   @Input({ required: true })
   schedule!: Schedule | null;
 
+  @Output() lectureSelected = new EventEmitter<Lecture>();
+
   selectedLecture = signal<Lecture | null>(null);
 
   selectLecture(lecture: Lecture) {
     this.selectedLecture.set(lecture);
+    this.lectureSelected.emit(lecture);
   }
 }
