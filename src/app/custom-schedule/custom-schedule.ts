@@ -58,6 +58,10 @@ export class CustomSchedule implements AfterViewInit {
   }
 
   private processDayLayout(dayLectures: any[], dayName: string) {
+    dayLectures = dayLectures.map(lec => 
+      (lec.day.toLowerCase() === 'saturday') ? { ...lec, startTime: '18:00', endTime: '20:00' } : lec
+    );
+
     const getDecimalHour = (timeStr: string) => {
       const [hh, mm] = timeStr.split(':').map(Number);
       return hh + (mm / 60);
@@ -65,7 +69,7 @@ export class CustomSchedule implements AfterViewInit {
 
     const dayMap: { [key: string]: number } = {
       'monday': 0, 'tuesday': 20, 'wednesday': 40, 'thursday': 60, 'friday': 80,
-      'ponedjeljak': 0, 'utorak': 20, 'srijeda': 40, 'četvrtak': 60, 'petak': 80
+      'saturday': 80
     };
     
     const dayBase = dayMap[dayName.toLowerCase()] ?? 0;
