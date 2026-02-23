@@ -14,7 +14,6 @@ import { CustomSchedule } from "../custom-schedule/custom-schedule";
   styleUrl: './homepage.scss',
 })
 export class Homepage {
-  // Grab the custom schedule component instance
   @ViewChild(CustomSchedule) customSchedule!: CustomSchedule;
 
   selectedFirst: FirstSelector = 'Prva godina';
