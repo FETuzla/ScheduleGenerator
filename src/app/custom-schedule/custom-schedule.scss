@@ -8,17 +8,3 @@
   display: flex;
   justify-content: center;
 }
-
-.canvas-container {
-  width: 100%;
-  max-width: 1000px;
-  background-color: #ffffff;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-
-  canvas {
-    display: block;
-    cursor: pointer;
-    image-rendering: -webkit-optimize-contrast;
-  }
-}

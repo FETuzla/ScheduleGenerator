@@ -1,17 +1,4 @@
-@if (schedule) {
-  <div class="schedule-container">
-    <img [src]="schedule.image" alt="Schedule" class="schedule-image" />
-
-    @for (lecture of schedule.lectures; track $index) {
-      <div
-        class="lecture-rect"
-        [style.top.%]="lecture.topPercent"
-        [style.left.%]="lecture.leftPercent"
-        [style.width.%]="lecture.widthPercent"
-        [style.height.%]="lecture.heightPercent"
-        (click)="selectLecture(lecture)"
-      ></div>
-    }
-  </div>
-}
-
+<app-drawing-tool 
+  [lectures]="schedule?.lectures || []" 
+  (lectureClicked)="onLectureClick($event)">
+</app-drawing-tool>

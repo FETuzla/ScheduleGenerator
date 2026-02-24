@@ -16,16 +16,13 @@ export type LectureType = (typeof LECTURE_TYPES)[number];
 
 export interface Lecture {
   name: string;
+  displayName: string;
   day: string;
   startTime: string;
   endTime: string;
   location: string;
   teacher: string;
 	type: LectureType;
-  topPercent: number;
-  leftPercent: number;
-  widthPercent: number;
-  heightPercent: number;
 }
 
 export interface Schedule {
