@@ -2,6 +2,10 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.4.
 
+# Site is live at:
+
+https://senadm02.github.io/Exam-calendar-generator/
+
 ## Development server
 
 To start a local development server, run:
