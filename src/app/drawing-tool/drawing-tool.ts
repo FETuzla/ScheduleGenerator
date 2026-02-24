@@ -405,4 +405,88 @@ export class DrawingTool implements AfterViewInit, OnChanges {
 		link.download = 'raspored.png';
 		link.click();
 	}
+
+  generateIcs() {
+    if (!this.lectures || this.lectures.length === 0) return;
+
+    const getNextDay = (dayName: string) => {
+      const dayMap: { [key: string]: number } = {
+        'sunday': 0,
+        'monday': 1,
+        'tuesday': 2,
+        'wednesday': 3,
+        'thursday': 4,
+        'friday': 5,
+        'saturday': 6,
+      };
+      const targetDay = dayMap[dayName.toLowerCase()] ?? 5;
+      const d = new Date();
+      const currentDay = d.getDay();
+      const distance = (targetDay + 7 - currentDay) % 7;
+      d.setDate(d.getDate() + distance);
+      return d;
+    };
+
+    const formatIcsDate = (date: Date, timeStr: string) => {
+      const [hours, minutes] = timeStr.split(':').map(Number);
+      const d = new Date(date);
+      d.setHours(hours, minutes, 0, 0);
+      
+      const pad = (n: number) => n.toString().padStart(2, '0');
+      const yyyy = d.getFullYear();
+      const mm = pad(d.getMonth() + 1);
+      const dd = pad(d.getDate());
+      const hh = pad(d.getHours());
+      const min = pad(d.getMinutes());
+      const ss = pad(d.getSeconds());
+      
+      return `${yyyy}${mm}${dd}T${hh}${min}${ss}`;
+    };
+
+    const dtstamp = new Date().toISOString().replace(/[-:]/g, '').slice(0, 15) + 'Z';
+
+    let ics = [
+      "BEGIN:VCALENDAR",
+      "VERSION:2.0",
+      "PRODID:-//ScheduleGenerator//EN"
+    ];
+
+    this.lectures.forEach((lec, index) => {
+      const baseDate = getNextDay(lec.day);
+      const dtstart = formatIcsDate(baseDate, lec.startTime);
+      const dtend = formatIcsDate(baseDate, lec.endTime);
+      
+      const uid = `schedule-${Date.now()}-${index}@fetuzla`;
+
+      ics.push(
+        "BEGIN:VEVENT",
+        `UID:${uid}`,
+        `DTSTAMP:${dtstamp}`,
+        `DTSTART:${dtstart}`,
+        `DTEND:${dtend}`,
+        `RRULE:FREQ=WEEKLY;COUNT=15`,
+        `SUMMARY:${lec.name}`,
+        `LOCATION:${lec.location}`,
+        `DESCRIPTION:Type: ${lec.type}\\nTeacher: ${lec.teacher}`,
+        "END:VEVENT"
+      );
+    });
+
+    ics.push("END:VCALENDAR");
+
+    const icsString = ics.join('\r\n');
+    const blob = new Blob([icsString], { type: 'text/calendar' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'Raspored.ics';
+    
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(link.href);
+  }
+
+  openExamCalendar(){
+    window.open('https://senadm02.github.io/Exam-calendar-generator/', '_blank');
+  }
 }

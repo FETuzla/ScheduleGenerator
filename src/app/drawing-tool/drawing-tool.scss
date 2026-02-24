@@ -18,6 +18,12 @@ canvas {
   image-rendering: -webkit-optimize-contrast;
 }
 
+.canvas-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
 button {
 	margin-top: 4px;
   background-color: rgb(108, 106, 176);
