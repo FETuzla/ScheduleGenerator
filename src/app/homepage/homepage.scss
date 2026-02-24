@@ -3,9 +3,7 @@
     flex-direction: column;
     flex: 1;
     height: 100%;
-}
 
-.body-bg {
     background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../public/testbg.avif"); 
     background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../public/testbg.avif"); 
     background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../public/testbg.avif"); 
@@ -14,8 +12,6 @@
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
-
-    min-height: 100vh;
 }
 
 nav {
@@ -61,7 +57,6 @@ nav {
     max-width: 1000px;
     aspect-ratio: 16 / 9;
     align-items: center;
-    background-color: white;
 }
 
 footer {
