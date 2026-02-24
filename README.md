@@ -4,7 +4,7 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 # Site is live at:
 
-https://senadm02.github.io/Exam-calendar-generator/
+https://fetuzla.github.io/ScheduleGenerator/
 
 ## Development server
 
