@@ -1,37 +1,35 @@
-<div class="body-bg">
-  <nav>
-    <h2>Generator rasporeda FET</h2>
-  </nav>
-  <main class="content">
-    <div class="choice">
-      <select [(ngModel)]="selectedFirst" (ngModelChange)="onFirstChange()">
-        @for (selector of firstSelectors; track selector) {
-          <option [value]="selector">{{ selector }}</option>
-        }
-      </select>
+<nav>
+  <h2>Generator rasporeda FET</h2>
+</nav>
+<main class="content">
+  <div class="choice">
+    <select [(ngModel)]="selectedFirst" (ngModelChange)="onFirstChange()">
+      @for (selector of firstSelectors; track selector) {
+        <option [value]="selector">{{ selector }}</option>
+      }
+    </select>
 
-      <select *ngIf="selectedFirst !== 'BMI'" [(ngModel)]="selectedSecond">
-        @for (option of secondSelectors; track option) {
-          <option [value]="option">{{ option }}</option>
-        }
-      </select>
-    </div>
+    <select *ngIf="selectedFirst !== 'BMI'" [(ngModel)]="selectedSecond">
+      @for (option of secondSelectors; track option) {
+        <option [value]="option">{{ option }}</option>
+      }
+    </select>
+  </div>
 
-    <div class="custom_schedule">
-      <app-schedule 
-        [schedule]="schedule" 
-        (lectureSelected)="addLectureToCustom($event)">
-      </app-schedule>
-    </div>
-    
-    <div class="custom_schedule">
-      <app-custom-schedule 
-        #customScheduleComponent
-        (lectureClicked)="onLectureClick($event)">
-      </app-custom-schedule>
-    </div>
-  </main>
-  <footer>
-    Community project by FET students
-  </footer>
-</div>
+  <div class="custom_schedule">
+    <app-schedule 
+      [schedule]="schedule" 
+      (lectureSelected)="addLectureToCustom($event)">
+    </app-schedule>
+  </div>
+  
+  <div class="custom_schedule">
+    <app-custom-schedule 
+      #customScheduleComponent
+      (lectureClicked)="onLectureClick($event)">
+    </app-custom-schedule>
+  </div>
+</main>
+<footer>
+  Community project by FET students
+</footer>
