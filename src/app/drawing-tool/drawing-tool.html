@@ -1,3 +1,6 @@
 <div class="canvas-container">
   <canvas #scheduleCanvas></canvas>
 </div>
+@if (showSaveButton) {
+	<button type="button" (click)="saveCanvas()">Save Image</button>
+}
