@@ -11,6 +11,7 @@ import { Lecture } from '../models/schedule.model';
 })
 export class DrawingTool implements AfterViewInit, OnChanges {
   @Input() lectures: Lecture[] = [];
+  @Input() showSaveButton: boolean = false;
   @Output() lectureClicked = new EventEmitter<Lecture>();
 
   @ViewChild('scheduleCanvas') canvasRef!: ElementRef<HTMLCanvasElement>;
@@ -29,7 +30,6 @@ export class DrawingTool implements AfterViewInit, OnChanges {
   
   private sidebarWidth = 25; 
   private headerHeight = 25;
-  private dpr = window.devicePixelRatio || 1;
   
   private hourHeight = 0;
   private dayWidth = 0;
@@ -166,18 +166,18 @@ export class DrawingTool implements AfterViewInit, OnChanges {
     const height = width * (9 / 16);
     canvas.style.width = `${width}px`;
     canvas.style.height = `${height}px`;
-    canvas.width = width * this.dpr;
-    canvas.height = height * this.dpr;
-    this.ctx.scale(this.dpr, this.dpr);
 
-    this.dayWidth = (width - this.sidebarWidth) / 5;
-    this.hourHeight = (height - this.headerHeight) / this.hours.length;
+    this.dayWidth = (1920 - this.sidebarWidth) / 5;
+    this.hourHeight = (1080 - this.headerHeight) / this.hours.length;
+
+		canvas.width = 1920;
+		canvas.height = 1080;
   }
 
   private render() {
     if (!this.ctx) return;
-    const width = this.canvasRef.nativeElement.width / this.dpr;
-    const height = this.canvasRef.nativeElement.height / this.dpr;
+    const width = this.canvasRef.nativeElement.width;
+    const height = this.canvasRef.nativeElement.height;		
     this.ctx.clearRect(0, 0, width, height);
     this.drawGrid(width, height);
     this.drawLectures(width, height);
@@ -187,15 +187,14 @@ export class DrawingTool implements AfterViewInit, OnChanges {
     this.ctx.strokeStyle = '#000';
     this.ctx.lineWidth = 1;
     this.ctx.fillStyle = '#f8f9fa';
-    this.ctx.fillRect(0, 0, width, this.headerHeight);
-    this.ctx.fillRect(0, 0, this.sidebarWidth, height);
+    this.ctx.fillRect(0, 0, width, height);
 
     this.ctx.beginPath();
     this.ctx.moveTo(0, this.headerHeight);
     this.ctx.lineTo(width, this.headerHeight);
     this.ctx.stroke();
 
-    const dayFontSize = Math.max(8, Math.min(11, width / 70));
+    const dayFontSize = Math.max(10, Math.min(13, width / 70));
     for (let i = 0; i <= 5; i++) {
       const x = this.sidebarWidth + (i * this.dayWidth);
       this.ctx.moveTo(x, 0);
@@ -368,4 +367,14 @@ export class DrawingTool implements AfterViewInit, OnChanges {
     });
     if (clicked) this.lectureClicked.emit(clicked);
   }
+
+	saveCanvas() {
+		if(!this.showSaveButton) return;
+		const canvas = this.canvasRef.nativeElement as HTMLCanvasElement;
+		const dataUrl = canvas.toDataURL('image/png');
+		const link = document.createElement('a');
+		link.href = dataUrl;
+		link.download = 'raspored.png';
+		link.click();
+	}
 }
