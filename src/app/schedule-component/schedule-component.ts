@@ -1,24 +1,20 @@
-import { Component, Input, Output, signal, computed, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Schedule, Lecture } from '../models/schedule.model';
+import { DrawingTool } from '../drawing-tool/drawing-tool';
 
 @Component({
   selector: 'app-schedule',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, DrawingTool],
   templateUrl: './schedule-component.html',
-  styleUrl: './schedule-component.scss',
+  styleUrl: './schedule-component.scss'
 })
 export class ScheduleComponent {
-  @Input({ required: true })
-  schedule!: Schedule | null;
-
+  @Input() schedule: Schedule | null = null;
   @Output() lectureSelected = new EventEmitter<Lecture>();
 
-  selectedLecture = signal<Lecture | null>(null);
-
-  selectLecture(lecture: Lecture) {
-    this.selectedLecture.set(lecture);
+  public onLectureClick(lecture: Lecture) {
     this.lectureSelected.emit(lecture);
   }
 }

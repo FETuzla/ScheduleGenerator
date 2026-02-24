@@ -14,7 +14,7 @@ import { CustomSchedule } from "../custom-schedule/custom-schedule";
   styleUrl: './homepage.scss',
 })
 export class Homepage {
-  @ViewChild(CustomSchedule) customSchedule!: CustomSchedule;
+  @ViewChild('customScheduleComponent') customSchedule!: CustomSchedule;
 
   selectedFirst: FirstSelector = 'Prva godina';
   selectedSecond: SecondSelector | null = 'Linija 1';

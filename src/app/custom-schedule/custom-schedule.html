@@ -1,5 +1,4 @@
-<div class="schedule-wrapper">
-  <div class="canvas-container">
-    <canvas #scheduleCanvas></canvas>
-  </div>
-</div>
+<app-drawing-tool 
+  [lectures]="myLectures" 
+  (lectureClicked)="onLectureClick($event)">
+</app-drawing-tool>

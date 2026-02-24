@@ -9,22 +9,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(218, 218, 218);
+    background-color: rgb(53, 55, 73);
     overflow: auto;
     flex: 1;
-
     padding: 15px;
     gap: 10px;
 }
 
 .choice {
+    max-width: 1000px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     gap: 20px;
     justify-content: center;
     select {
         height: 30px;
-        width: 200px;
+        max-width: 200px;
+        width: 45%;
     }
 }
 

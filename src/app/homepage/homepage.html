@@ -13,12 +13,17 @@
     </select>
   </div>
 
-  <app-schedule 
-    [schedule]="schedule" 
-    (lectureSelected)="addLectureToCustom($event)">
-  </app-schedule>
-
   <div class="custom_schedule">
-    <app-custom-schedule (lectureClicked)="onLectureClick($event)"></app-custom-schedule>
+    <app-schedule 
+      [schedule]="schedule" 
+      (lectureSelected)="addLectureToCustom($event)">
+    </app-schedule>
+  </div>
+  
+  <div class="custom_schedule">
+    <app-custom-schedule 
+      #customScheduleComponent
+      (lectureClicked)="onLectureClick($event)">
+    </app-custom-schedule>
   </div>
 </main>

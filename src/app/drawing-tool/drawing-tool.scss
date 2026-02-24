@@ -1,0 +1,19 @@
+.canvas-container {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  box-sizing: border-box;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+  image-rendering: -webkit-optimize-contrast;
+}
