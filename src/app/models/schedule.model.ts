@@ -8,21 +8,32 @@ export const FIRST_SELECTORS = [
 
 export const SECOND_SELECTORS = ['Linija 1', 'Linija 2', 'AR', 'RI', 'ESKE', 'EEMS', 'TK'] as const;
 
+export const DAYS = [
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday',
+  'Sunday',
+] as const;
+
 export const LECTURE_TYPES = ['Predavanje', 'AV', 'LV'] as const;
 
 export type FirstSelector = (typeof FIRST_SELECTORS)[number];
 export type SecondSelector = (typeof SECOND_SELECTORS)[number];
+export type DayType = (typeof DAYS)[number];
 export type LectureType = (typeof LECTURE_TYPES)[number];
 
 export interface Lecture {
   name: string;
   displayName: string;
-  day: string;
+  day: DayType;
   startTime: string;
   endTime: string;
   location: string;
   teacher: string;
-	type: LectureType;
+  type: LectureType;
 }
 
 export interface Schedule {

@@ -1348,7 +1348,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Statistička teorija telekomunikacija',
         displayName: 'STK 1',
-        day: 'Fridaz',
+        day: 'Friday',
         startTime: '17:00',
         endTime: '19:00',
         location: 'Stelekt Lab',
@@ -1375,7 +1375,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Aktuatori',
         displayName: 'AKT',
-        day: 'Tuesdaz',
+        day: 'Tuesday',
         startTime: '11:00',
         endTime: '12:00',
         location: 'LabOE',
@@ -2114,7 +2114,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Digitalni sistemi upravljanja i obrade signala II',
         displayName: 'DSUOS II',
-        day: 'Firday',
+        day: 'Friday',
         startTime: '12:00',
         endTime: '13:00',
         location: 'G RC 19',
