@@ -592,8 +592,8 @@ export const SCHEDULES: Schedule[] = [
     image: 'Godina2AR.png',
     lectures: [
       {
-        name: 'Strukture podataka 2a/2b',
-        displayName: 'placeholder',
+        name: 'Strukture podataka',
+        displayName: 'SP 2a/2b',
         day: 'Monday',
         startTime: '08:00',
         endTime: '10:00',
@@ -602,8 +602,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'LV',
       },
       {
-        name: 'Strukture podataka 2',
-        displayName: 'placeholder',
+        name: 'Strukture podataka',
+        displayName: 'SP 2',
         day: 'Monday',
         startTime: '10:00',
         endTime: '11:00',
@@ -613,7 +613,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Projektovanje logičkih sistema',
-        displayName: 'placeholder',
+        displayName: 'PLS',
         day: 'Monday',
         startTime: '11:00',
         endTime: '14:00',
@@ -623,7 +623,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Analogna integrisana elektronika',
-        displayName: 'placeholder',
+        displayName: 'AIE',
         day: 'Tuesday',
         startTime: '14:00',
         endTime: '17:00',
@@ -632,8 +632,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'Predavanje',
       },
       {
-        name: 'Linearni dinamički sistemi i signali 1a/1b',
-        displayName: 'placeholder',
+        name: 'Linearni dinamički sistemi i signali',
+        displayName: 'LDSS 1a/1b',
         day: 'Wednesday',
         startTime: '08:00',
         endTime: '10:00',
@@ -643,7 +643,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Linearni dinamički sistemi i signali',
-        displayName: 'placeholder',
+        displayName: 'LDSS',
         day: 'Wednesday',
         startTime: '10:00',
         endTime: '11:00',
@@ -653,7 +653,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Linearni dinamički sistemi i signali',
-        displayName: 'placeholder',
+        displayName: 'LDSS',
         day: 'Wednesday',
         startTime: '11:00',
         endTime: '14:00',
@@ -662,8 +662,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'Predavanje',
       },
       {
-        name: 'Strukture podataka 1a/1b',
-        displayName: 'placeholder',
+        name: 'Strukture podataka',
+        displayName: 'SP 1a/1b',
         day: 'Thursday',
         startTime: '08:00',
         endTime: '10:00',
@@ -672,8 +672,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'LV',
       },
       {
-        name: 'Strukture podataka 1',
-        displayName: 'placeholder',
+        name: 'Strukture podataka',
+        displayName: 'SP 1',
         day: 'Thursday',
         startTime: '10:00',
         endTime: '11:00',
@@ -683,7 +683,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Strukture podataka',
-        displayName: 'placeholder',
+        displayName: 'SP',
         day: 'Thursday',
         startTime: '11:00',
         endTime: '14:00',
@@ -692,8 +692,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'Predavanje',
       },
       {
-        name: 'Mjerenja u automatici i robotici 1a/1b',
-        displayName: 'placeholder',
+        name: 'Mjerenja u automatici i robotici',
+        displayName: 'MAR 1a/1b',
         day: 'Friday',
         startTime: '08:00',
         endTime: '11:00',
@@ -703,7 +703,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Mjerenja u automatici i robotici',
-        displayName: 'placeholder',
+        displayName: 'MAR',
         day: 'Friday',
         startTime: '11:00',
         endTime: '14:00',
@@ -712,8 +712,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'Predavanje',
       },
       {
-        name: 'Analogna integrisana elektronika 1a/1b',
-        displayName: 'placeholder',
+        name: 'Analogna integrisana elektronika',
+        displayName: 'AIE 1a/1b',
         day: 'Friday',
         startTime: '14:00',
         endTime: '15:30',
@@ -723,7 +723,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Analogna integrisana elektronika',
-        displayName: 'placeholder',
+        displayName: 'AIE',
         day: 'Friday',
         startTime: '15:30',
         endTime: '16:15',
@@ -732,8 +732,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'AV',
       },
       {
-        name: 'Projektovanje logičkih sistema 1a',
-        displayName: 'placeholder',
+        name: 'Projektovanje logičkih sistema',
+        displayName: 'PLS 1a',
         day: 'Friday',
         startTime: '16:15',
         endTime: '18:00',
@@ -742,8 +742,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'LV',
       },
       {
-        name: 'Projektovanje logičkih sistema 1b',
-        displayName: 'placeholder',
+        name: 'Projektovanje logičkih sistema',
+        displayName: 'PLS 1b',
         day: 'Friday',
         startTime: '16:15',
         endTime: '18:00',
@@ -760,7 +760,7 @@ export const SCHEDULES: Schedule[] = [
     lectures: [
       {
         name: 'Programski alati u elektro-energetici',
-        displayName: 'placeholder',
+        displayName: 'PAEE',
         day: 'Monday',
         startTime: '13:00',
         endTime: '16:00',
@@ -770,7 +770,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Programski alati u elektro-energetici',
-        displayName: 'placeholder',
+        displayName: 'PAEE',
         day: 'Monday',
         startTime: '16:00',
         endTime: '17:00',
@@ -779,8 +779,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'AV',
       },
       {
-        name: 'Programski alati u elektro-energetici 1a/1b',
-        displayName: 'placeholder',
+        name: 'Programski alati u elektro-energetici',
+        displayName: 'PAEE 1a/1b',
         day: 'Monday',
         startTime: '17:00',
         endTime: '18:30',
@@ -790,7 +790,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Električne instalacije niskog napona',
-        displayName: 'placeholder',
+        displayName: 'EINN',
         day: 'Tuesday',
         startTime: '08:00',
         endTime: '11:00',
@@ -800,7 +800,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Električne instalacije niskog napona',
-        displayName: 'placeholder',
+        displayName: 'EINN',
         day: 'Tuesday',
         startTime: '11:00',
         endTime: '12:00',
@@ -810,7 +810,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Električne instalacije niskog napona',
-        displayName: 'placeholder',
+        displayName: 'EINN',
         day: 'Tuesday',
         startTime: '12:00',
         endTime: '14:00',
@@ -820,7 +820,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Električne mašine I',
-        displayName: 'placeholder',
+        displayName: 'EM I',
         day: 'Wednesday',
         startTime: '13:00',
         endTime: '16:00',
@@ -830,7 +830,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Elektroenergetske prenosne i distributivne mreže',
-        displayName: 'placeholder',
+        displayName: 'EEPDM',
         day: 'Thursday',
         startTime: '13:00',
         endTime: '16:00',
@@ -840,7 +840,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Elektroenergetske prenosne i distributivne mreže',
-        displayName: 'placeholder',
+        displayName: 'EEPDM',
         day: 'Thursday',
         startTime: '16:00',
         endTime: '17:00',
@@ -850,7 +850,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Elektroenergetske prenosne i distributivne mreže',
-        displayName: 'placeholder',
+        displayName: 'EPDM',
         day: 'Thursday',
         startTime: '17:00',
         endTime: '18:00',
@@ -860,7 +860,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Numeričke metode u elektrotehnici',
-        displayName: 'placeholder',
+        displayName: 'NME',
         day: 'Friday',
         startTime: '08:00',
         endTime: '09:00',
@@ -870,7 +870,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Numeričke metode u elektrotehnici',
-        displayName: 'placeholder',
+        displayName: 'NME',
         day: 'Friday',
         startTime: '09:00',
         endTime: '10:00',
@@ -880,7 +880,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Numeričke metode u elektrotehnici',
-        displayName: 'placeholder',
+        displayName: 'NME',
         day: 'Friday',
         startTime: '10:00',
         endTime: '11:00',
@@ -890,7 +890,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Električne mašine I',
-        displayName: 'placeholder',
+        displayName: 'EM I',
         day: 'Friday',
         startTime: '11:00',
         endTime: '12:00',
@@ -900,7 +900,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Električne mašine I',
-        displayName: 'placeholder',
+        displayName: 'EM I',
         day: 'Friday',
         startTime: '12:00',
         endTime: '13:00',
@@ -910,13 +910,13 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Numeričke metode u elektrotehnici',
-        displayName: 'placeholder',
+        displayName: 'NME',
         day: 'Friday',
         startTime: '13:00',
         endTime: '16:00',
         location: 'Stelekt',
         teacher:
-          'doc.dr. Izudin Softić (1,4.-15. sedmica) vanr.prof.dr. Nedžmija Demirović (1.,2.,3. sedmica)',
+          'doc.dr. Izudin Softić (1,4.-15. sedmica) / vanr.prof.dr. Nedžmija Demirović (1.,2.,3. sedmica)',
         type: 'Predavanje',
       },
     ],
@@ -928,29 +928,29 @@ export const SCHEDULES: Schedule[] = [
     lectures: [
       {
         name: 'Električna mjerenja',
-        displayName: 'placeholder',
+        displayName: 'EM',
         day: 'Monday',
         startTime: '11:00',
         endTime: '14:00',
         location: 'G LabEM',
         teacher:
-          'vanr.prof.dr. Majda Tešanović (1.-7.sedmice) doc.dr. Šeila Ferhatbegović-Gruhonjić (8.-15.sedmice)',
+          'vanr.prof.dr. Majda Tešanović (1.-7.sedmice) / doc.dr. Šeila Ferhatbegović-Gruhonjić (8.-15.sedmice)',
         type: 'Predavanje',
       },
       {
         name: 'Električna mjerenja',
-        displayName: 'placeholder',
+        displayName: 'EM',
         day: 'Tuesday',
         startTime: '16:00',
         endTime: '19:00',
         location: 'G LabEM',
         teacher:
-          'vanr.prof.dr. Majda Tešanović (1.-7.sedmice) doc.dr. Šeila Ferhatbegović-Gruhonjić (8.-15.sedmice)',
+          'vanr.prof.dr. Majda Tešanović (1.-7.sedmice) / doc.dr. Šeila Ferhatbegović-Gruhonjić (8.-15.sedmice)',
         type: 'Predavanje',
       },
       {
         name: 'Električne mašine I',
-        displayName: 'placeholder',
+        displayName: 'EM I',
         day: 'Wednesday',
         startTime: '10:00',
         endTime: '11:00',
@@ -959,8 +959,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'AV',
       },
       {
-        name: 'Električne mašine I 1a/1b',
-        displayName: 'placeholder',
+        name: 'Električne mašine I',
+        displayName: 'EM I 1a/1b',
         day: 'Wednesday',
         startTime: '11:00',
         endTime: '13:00',
@@ -970,7 +970,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Električne mašine I',
-        displayName: 'placeholder',
+        displayName: 'EM I',
         day: 'Wednesday',
         startTime: '13:00',
         endTime: '16:00',
@@ -980,7 +980,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Elektromehanička konverzija energije',
-        displayName: 'placeholder',
+        displayName: 'EKE',
         day: 'Thursday',
         startTime: '08:00',
         endTime: '10:00',
@@ -990,17 +990,17 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Elektromehanička konverzija energije',
-        displayName: 'placeholder',
+        displayName: 'EKE',
         day: 'Thursday',
         startTime: '10:00',
         endTime: '13:00',
         location: 'G LabEM',
-        teacher: 'vanr.prof.dr. Nerdina Mehinović red.prof.dr. Tatjana Konjić (svake 3. sedmice)',
+        teacher: 'vanr.prof.dr. Nerdina Mehinović / red.prof.dr. Tatjana Konjić (svake 3. sedmice)',
         type: 'Predavanje',
       },
       {
         name: 'Senzori i pretvarači',
-        displayName: 'placeholder',
+        displayName: 'SP',
         day: 'Thursday',
         startTime: '13:00',
         endTime: '14:00',
@@ -1009,8 +1009,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'AV',
       },
       {
-        name: 'Električna mjerenja 1a/1b',
-        displayName: 'placeholder',
+        name: 'Električna mjerenja',
+        displayName: 'EM 1a/1b',
         day: 'Friday',
         startTime: '08:00',
         endTime: '10:00',
@@ -1020,7 +1020,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Električna mjerenja',
-        displayName: 'placeholder',
+        displayName: 'EM',
         day: 'Friday',
         startTime: '10:00',
         endTime: '11:00',
@@ -1030,18 +1030,18 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Senzori i pretvarači',
-        displayName: 'placeholder',
+        displayName: 'SP',
         day: 'Friday',
         startTime: '11:00',
         endTime: '14:00',
         location: 'GMM',
         teacher:
-          'vanr.prof.dr. Mario Pejdanović, red.prof.dr. Jakub Osmić, vanr.prof.dr. Lejla Banjanović-Mehmedović, vanr.prof.dr. Amira Šerifović-Trbalić',
+          'vanr.prof.dr. Mario Pejdanović / red.prof.dr. Jakub Osmić / vanr.prof.dr. Lejla Banjanović-Mehmedović / vanr.prof.dr. Amira Šerifović-Trbalić',
         type: 'Predavanje',
       },
       {
-        name: 'Senzori i pretvarači 1a/1b',
-        displayName: 'placeholder',
+        name: 'Senzori i pretvarači',
+        displayName: 'SP 1a/1b',
         day: 'Friday',
         startTime: '14:00',
         endTime: '16:00',
@@ -1058,7 +1058,7 @@ export const SCHEDULES: Schedule[] = [
     lectures: [
       {
         name: 'Arhitektura računara',
-        displayName: 'placeholder',
+        displayName: 'AR',
         day: 'Monday',
         startTime: '08:00',
         endTime: '11:00',
@@ -1067,8 +1067,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'Predavanje',
       },
       {
-        name: 'Strukture podataka 2',
-        displayName: 'placeholder',
+        name: 'Strukture podataka',
+        displayName: 'SP 2',
         day: 'Monday',
         startTime: '11:00',
         endTime: '12:00',
@@ -1077,8 +1077,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'AV',
       },
       {
-        name: 'Strukture podataka 2a/2b',
-        displayName: 'placeholder',
+        name: 'Strukture podataka',
+        displayName: 'SP 2a/2b',
         day: 'Monday',
         startTime: '12:00',
         endTime: '14:00',
@@ -1087,8 +1087,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'LV',
       },
       {
-        name: 'Uvod u računarske algoritme 1a/1b',
-        displayName: 'placeholder',
+        name: 'Uvod u računarske algoritme',
+        displayName: 'URA 1a/1b',
         day: 'Tuesday',
         startTime: '08:00',
         endTime: '10:00',
@@ -1098,7 +1098,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Uvod u računarske algoritme',
-        displayName: 'placeholder',
+        displayName: 'URA',
         day: 'Tuesday',
         startTime: '10:00',
         endTime: '11:00',
@@ -1108,18 +1108,18 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Uvod u računarske algoritme',
-        displayName: 'placeholder',
+        displayName: 'URA',
         day: 'Tuesday',
         startTime: '11:00',
         endTime: '14:00',
         location: 'Stelekt',
         teacher:
-          'red.prof.dr. Amir Tokić (1.-5.sedmice), vanr.prof.dr. Edin Pjanić (6.-15.sedmice)',
+          'red.prof.dr. Amir Tokić (1.-5.sedmice) / vanr.prof.dr. Edin Pjanić (6.-15.sedmice)',
         type: 'Predavanje',
       },
       {
-        name: 'Strukture podataka 1a/1b',
-        displayName: 'placeholder',
+        name: 'Strukture podataka',
+        displayName: 'SP 1a/1b',
         day: 'Wednesday',
         startTime: '14:00',
         endTime: '16:00',
@@ -1128,8 +1128,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'LV',
       },
       {
-        name: 'Strukture podataka 1',
-        displayName: 'placeholder',
+        name: 'Strukture podataka',
+        displayName: 'SP 1',
         day: 'Wednesday',
         startTime: '16:00',
         endTime: '17:00',
@@ -1138,8 +1138,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'AV',
       },
       {
-        name: 'Arhitektura računara 1',
-        displayName: 'placeholder',
+        name: 'Arhitektura računara',
+        displayName: 'AR 1',
         day: 'Wednesday',
         startTime: '17:00',
         endTime: '18:00',
@@ -1148,8 +1148,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'AV',
       },
       {
-        name: 'Arhitektura računara 1a/1b',
-        displayName: 'placeholder',
+        name: 'Arhitektura računara',
+        displayName: 'AR 1a/1b',
         day: 'Wednesday',
         startTime: '18:00',
         endTime: '20:00',
@@ -1159,7 +1159,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Strukture podataka',
-        displayName: 'placeholder',
+        displayName: 'SP',
         day: 'Thursday',
         startTime: '11:00',
         endTime: '14:00',
@@ -1169,7 +1169,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Primjena inženjerskih softverskih paketa',
-        displayName: 'placeholder',
+        displayName: 'PISP',
         day: 'Thursday',
         startTime: '14:00',
         endTime: '15:00',
@@ -1178,8 +1178,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'AV',
       },
       {
-        name: 'Primjena inženjerskih softverskih paketa 1a/1b',
-        displayName: 'placeholder',
+        name: 'Primjena inženjerskih softverskih paketa',
+        displayName: 'PISP 1a/1b',
         day: 'Thursday',
         startTime: '15:00',
         endTime: '17:00',
@@ -1188,8 +1188,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'LV',
       },
       {
-        name: 'Arhitektura računara 2',
-        displayName: 'placeholder',
+        name: 'Arhitektura računara',
+        displayName: 'AR 2',
         day: 'Thursday',
         startTime: '17:00',
         endTime: '18:00',
@@ -1198,8 +1198,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'AV',
       },
       {
-        name: 'Arhitektura računara 1c',
-        displayName: 'placeholder',
+        name: 'Arhitektura računara',
+        displayName: 'AR 1c',
         day: 'Thursday',
         startTime: '18:00',
         endTime: '19:00',
@@ -1209,7 +1209,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Primjena inženjerskih softverskih paketa',
-        displayName: 'placeholder',
+        displayName: 'PISP',
         day: 'Friday',
         startTime: '08:00',
         endTime: '11:00',
@@ -1226,7 +1226,7 @@ export const SCHEDULES: Schedule[] = [
     lectures: [
       {
         name: 'Modeliranje i analiza podataka',
-        displayName: 'placeholder',
+        displayName: 'MAP',
         day: 'Monday',
         startTime: '08:00',
         endTime: '11:00',
@@ -1236,7 +1236,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Statistička teorija telekomunikacija',
-        displayName: 'placeholder',
+        displayName: 'STK',
         day: 'Monday',
         startTime: '11:00',
         endTime: '14:00',
@@ -1245,8 +1245,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'Predavanje',
       },
       {
-        name: 'Analogna integrisana elektronika 1a/1b',
-        displayName: 'placeholder',
+        name: 'Analogna integrisana elektronika',
+        displayName: 'AIE 1a/1b',
         day: 'Monday',
         startTime: '14:00',
         endTime: '15:30',
@@ -1256,7 +1256,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Analogna integrisana elektronika',
-        displayName: 'placeholder',
+        displayName: 'AIE',
         day: 'Tuesday',
         startTime: '14:00',
         endTime: '17:00',
@@ -1266,7 +1266,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Analogna integrisana elektronika',
-        displayName: 'placeholder',
+        displayName: 'AIE',
         day: 'Tuesday',
         startTime: '17:00',
         endTime: '18:00',
@@ -1276,18 +1276,18 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Sekvencijalni sklopovi',
-        displayName: 'placeholder',
+        displayName: 'Sekv. skl.',
         day: 'Wednesday',
         startTime: '08:00',
         endTime: '11:00',
         location: 'Stelekt',
         teacher:
-          'vanr.prof.dr. Samra Mujačić (1.-5. sedmice), vanr.prof.dr. Asmir Gogić (6.-15. sedmice)',
+          'vanr.prof.dr. Samra Mujačić (1.-5. sedmice) / vanr.prof.dr. Asmir Gogić (6.-15. sedmice)',
         type: 'Predavanje',
       },
       {
-        name: 'Modeliranje i analiza podataka 1a',
-        displayName: 'placeholder',
+        name: 'Modeliranje i analiza podataka',
+        displayName: 'MAP 1a',
         day: 'Wednesday',
         startTime: '11:00',
         endTime: '13:00',
@@ -1296,8 +1296,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'LV',
       },
       {
-        name: 'Modeliranje i analiza podataka 1b',
-        displayName: 'placeholder',
+        name: 'Modeliranje i analiza podataka',
+        displayName: 'MAP 1b',
         day: 'Wednesday',
         startTime: '13:00',
         endTime: '15:00',
@@ -1306,8 +1306,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'LV',
       },
       {
-        name: 'Modeliranje i analiza podataka 1c',
-        displayName: 'placeholder',
+        name: 'Modeliranje i analiza podataka',
+        displayName: 'MAP 1c',
         day: 'Wednesday',
         startTime: '15:00',
         endTime: '17:00',
@@ -1317,27 +1317,27 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Sekvencijalni sklopovi',
-        displayName: 'placeholder',
+        displayName: 'Sekv. skl.',
         day: 'Friday',
         startTime: '12:00',
         endTime: '13:00',
         location: 'Stelekt',
-        teacher: 'as. Belma Mujičić (1.-5. sedmice), as. Admir Mustafić (6.-15. sedmice)',
+        teacher: 'as. Belma Mujičić (1.-5. sedmice) / as. Admir Mustafić (6.-15. sedmice)',
         type: 'AV',
       },
       {
-        name: 'Sekvencijalni sklopovi 1a/1b',
-        displayName: 'placeholder',
+        name: 'Sekvencijalni sklopovi',
+        displayName: 'Sekv. skl. 1a/1b',
         day: 'Friday',
         startTime: '13:00',
         endTime: '16:00',
         location: 'G LabOE i LabEM',
-        teacher: 'as. Belma Mujičić (1.-10. sedmice), as. Admir Mustafić (11.-15. sedmice)',
+        teacher: 'as. Belma Mujičić (1.-10. sedmice) / as. Admir Mustafić (11.-15. sedmice)',
         type: 'LV',
       },
       {
         name: 'Statistička teorija telekomunikacija',
-        displayName: 'placeholder',
+        displayName: 'STK',
         day: 'Friday',
         startTime: '16:00',
         endTime: '17:00',
@@ -1346,8 +1346,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'AV',
       },
       {
-        name: 'Statistička teorija telekomunikacija 1',
-        displayName: 'placeholder',
+        name: 'Statistička teorija telekomunikacija',
+        displayName: 'STK 1',
         day: 'Fridaz',
         startTime: '17:00',
         endTime: '19:00',
@@ -1364,7 +1364,7 @@ export const SCHEDULES: Schedule[] = [
     lectures: [
       {
         name: 'Aktuatori',
-        displayName: 'placeholder',
+        displayName: 'AKT',
         day: 'Monday',
         startTime: '14:00',
         endTime: '17:00',
@@ -1374,7 +1374,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Aktuatori',
-        displayName: 'placeholder',
+        displayName: 'AKT',
         day: 'Tuesdaz',
         startTime: '11:00',
         endTime: '12:00',
@@ -1383,8 +1383,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'AV',
       },
       {
-        name: 'Aktuatori 1a/1b',
-        displayName: 'placeholder',
+        name: 'Aktuatori',
+        displayName: 'AKT 1a/1b',
         day: 'Tuesday',
         startTime: '12:00',
         endTime: '14:00',
@@ -1394,7 +1394,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Linearni sistemi automatskog upravljanja II',
-        displayName: 'placeholder',
+        displayName: 'LSAU II',
         day: 'Wednesday',
         startTime: '14:00',
         endTime: '17:00',
@@ -1404,7 +1404,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Linearni sistemi automatskog upravljanja II',
-        displayName: 'placeholder',
+        displayName: 'LSAU II',
         day: 'Wednesday',
         startTime: '17:00',
         endTime: '18:00',
@@ -1413,18 +1413,18 @@ export const SCHEDULES: Schedule[] = [
         type: 'AV',
       },
       {
-        name: 'Linearni sistemi automatskog upravljanja II 1a/1b',
-        displayName: 'placeholder',
+        name: 'Linearni sistemi automatskog upravljanja II',
+        displayName: 'LSAU II 1a/1b',
         day: 'Wednesday',
         startTime: '18:00',
         endTime: '20:00',
         location: 'GMM',
-        teacher: 'v.as. Mirza Hodžić/as. Emir Hrbat',
+        teacher: 'v.as. Mirza Hodžić / as. Emir Hrbat',
         type: 'LV',
       },
       {
         name: 'Nelinearni sistemi upravljanja',
-        displayName: 'placeholder',
+        displayName: 'NSU',
         day: 'Thursday',
         startTime: '08:00',
         endTime: '11:00',
@@ -1434,7 +1434,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Nelinearni sistemi upravljanja',
-        displayName: 'placeholder',
+        displayName: 'NSU',
         day: 'Thursday',
         startTime: '12:00',
         endTime: '13:00',
@@ -1443,8 +1443,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'AV',
       },
       {
-        name: 'Nelinearni sistemi upravljanja 1a/1b',
-        displayName: 'placeholder',
+        name: 'Nelinearni sistemi upravljanja',
+        displayName: 'NSU 1a/1b',
         day: 'Thursday',
         startTime: '13:00',
         endTime: '15:00',
@@ -1454,7 +1454,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Projektovanje mikroprocesorskih sistema',
-        displayName: 'placeholder',
+        displayName: 'PMPS',
         day: 'Friday',
         startTime: '14:00',
         endTime: '17:00',
@@ -1463,8 +1463,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'Predavanje',
       },
       {
-        name: 'Projektovanje mikroprocesorskih sistema 1a/1b',
-        displayName: 'placeholder',
+        name: 'Projektovanje mikroprocesorskih sistema',
+        displayName: 'PMPS 1a/1b',
         day: 'Friday',
         startTime: '17:00',
         endTime: '20:00',
@@ -1481,7 +1481,7 @@ export const SCHEDULES: Schedule[] = [
     lectures: [
       {
         name: 'Simulacija sistema',
-        displayName: 'placeholder',
+        displayName: 'Sim.',
         day: 'Monday',
         startTime: '11:00',
         endTime: '14:00',
@@ -1491,7 +1491,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Simulacija sistema',
-        displayName: 'placeholder',
+        displayName: 'Sim.',
         day: 'Monday',
         startTime: '16:00',
         endTime: '17:00',
@@ -1500,8 +1500,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'AV',
       },
       {
-        name: 'Simulacija sistema 1c',
-        displayName: 'placeholder',
+        name: 'Simulacija sistema',
+        displayName: 'Sim. 1c',
         day: 'Monday',
         startTime: '17:00',
         endTime: '18:00',
@@ -1511,7 +1511,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Tehnika visokih napona',
-        displayName: 'placeholder',
+        displayName: 'TVN',
         day: 'Tuesday',
         startTime: '08:00',
         endTime: '11:00',
@@ -1521,7 +1521,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Relejna tehnika',
-        displayName: 'placeholder',
+        displayName: 'RT',
         day: 'Tuesday',
         startTime: '11:00',
         endTime: '12:00',
@@ -1531,7 +1531,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Relejna tehnika',
-        displayName: 'placeholder',
+        displayName: 'RT',
         day: 'Tuesday',
         startTime: '12:00',
         endTime: '13:00',
@@ -1541,7 +1541,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Relejna tehnika',
-        displayName: 'placeholder',
+        displayName: 'RT',
         day: 'Tuesday',
         startTime: '13:00',
         endTime: '14:00',
@@ -1551,7 +1551,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Tehnika visokih napona',
-        displayName: 'placeholder',
+        displayName: 'TVN',
         day: 'Tuesday',
         startTime: '14:00',
         endTime: '15:00',
@@ -1561,7 +1561,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Elektroenergetske stanice',
-        displayName: 'placeholder',
+        displayName: 'ES',
         day: 'Wednesday',
         startTime: '13:00',
         endTime: '16:00',
@@ -1571,7 +1571,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Elektroenergetske stanice',
-        displayName: 'placeholder',
+        displayName: 'ES',
         day: 'Wednesday',
         startTime: '16:00',
         endTime: '17:00',
@@ -1581,7 +1581,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Tehnika visokih napona',
-        displayName: 'placeholder',
+        displayName: 'TVN',
         day: 'Wednesday',
         startTime: '17:00',
         endTime: '18:30',
@@ -1591,7 +1591,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Elektroenergetske stanice',
-        displayName: 'placeholder',
+        displayName: 'ES',
         day: 'Wednesday',
         startTime: '18:30',
         endTime: '19:30',
@@ -1601,7 +1601,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Relejna tehnika',
-        displayName: 'placeholder',
+        displayName: 'RT',
         day: 'Thursday',
         startTime: '11:00',
         endTime: '14:00',
@@ -1611,17 +1611,17 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Pametne energetske mreže',
-        displayName: 'placeholder',
+        displayName: 'PEM',
         day: 'Friday',
         startTime: '08:00',
         endTime: '11:00',
         location: 'GMM',
-        teacher: 'red.prof.dr. Suad Halilčević, red.prof.dr. Tatjana Konjić, doc.dr. Marina Pejić',
+        teacher: 'red.prof.dr. Suad Halilčević / red.prof.dr. Tatjana Konjić / doc.dr. Marina Pejić',
         type: 'Predavanje',
       },
       {
         name: 'Pametne energetske mreže',
-        displayName: 'placeholder',
+        displayName: 'PEM',
         day: 'Friday',
         startTime: '11:00',
         endTime: '12:00',
@@ -1631,7 +1631,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Pametne energetske mreže',
-        displayName: 'placeholder',
+        displayName: 'PEM',
         day: 'Friday',
         startTime: '12:00',
         endTime: '13:00',
@@ -1648,40 +1648,40 @@ export const SCHEDULES: Schedule[] = [
     lectures: [
       {
         name: 'Operaciona istraživanja',
-        displayName: 'placeholder',
+        displayName: 'OI',
         day: 'Tuesday',
         startTime: '13:00',
         endTime: '16:00',
         location: 'GMM',
         teacher:
-          'red.prof.dr. Zenan Šehić (1.-8. sedmice), vanr.prof.dr. Mario Pejdanović (8.-15.sedmice)',
+          'red.prof.dr. Zenan Šehić (1.-8. sedmice) / vanr.prof.dr. Mario Pejdanović (8.-15.sedmice)',
         type: 'Predavanje',
       },
       {
         name: 'Električna postrojenja',
-        displayName: 'placeholder',
+        displayName: 'EP',
         day: 'Tuesday',
         startTime: '16:00',
         endTime: '19:00',
         location: 'LabEM',
         teacher:
-          'vanr.prof.dr. Mensur Kasumović (1.-7. sedmice), doc.dr. Šeila Gruhonjić-Ferhatbegović (8.-15. sedmice)',
+          'vanr.prof.dr. Mensur Kasumović (1.-7. sedmice) / doc.dr. Šeila Gruhonjić-Ferhatbegović (8.-15. sedmice)',
         type: 'Predavanje',
       },
       {
         name: 'Dijagnostika u energetici',
-        displayName: 'placeholder',
+        displayName: 'DuE',
         day: 'Wednesday',
         startTime: '13:00',
         endTime: '16:00',
         location: 'LabEM',
         teacher:
-          'anr.prof.dr. Mario Pejdanović, doc.dr. Šeila Gruhonjić-Ferhatbegović (svake 3. sedmice)',
+          'anr.prof.dr. Mario Pejdanović / doc.dr. Šeila Gruhonjić-Ferhatbegović (svake 3. sedmice)',
         type: 'Predavanje',
       },
       {
         name: 'Električna postrojenja',
-        displayName: 'placeholder',
+        displayName: 'EP',
         day: 'Wednesday',
         startTime: '16:00',
         endTime: '17:00',
@@ -1690,8 +1690,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'AV',
       },
       {
-        name: 'Električna postrojenja 1a/1b',
-        displayName: 'placeholder',
+        name: 'Električna postrojenja',
+        displayName: 'EP 1a/1b',
         day: 'Wednesday',
         startTime: '17:00',
         endTime: '19:00',
@@ -1701,7 +1701,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Elektromagnetna kompatibilnost',
-        displayName: 'placeholder',
+        displayName: 'EMK',
         day: 'Wednesday',
         startTime: '19:00',
         endTime: '20:00',
@@ -1711,7 +1711,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Operaciona istraživanja',
-        displayName: 'placeholder',
+        displayName: 'OI',
         day: 'Thursday',
         startTime: '08:00',
         endTime: '09:00',
@@ -1721,7 +1721,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Elektromagnetna kompatibilnost',
-        displayName: 'placeholder',
+        displayName: 'EMK',
         day: 'Thursday',
         startTime: '09:00',
         endTime: '10:00',
@@ -1731,7 +1731,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Dijagnostika u energetici',
-        displayName: 'placeholder',
+        displayName: 'DuE',
         day: 'Thursday',
         startTime: '10:00',
         endTime: '11:00',
@@ -1741,18 +1741,18 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Elektromagnetna kompatibilnost',
-        displayName: 'placeholder',
+        displayName: 'EMK',
         day: 'Friday',
         startTime: '08:00',
         endTime: '11:00',
         location: 'GA',
         teacher:
-          'vanr.prof.dr. Mario Pejdanović (1.-10. sedmice), vanr.prof.dr. Majda Tešanović (11.-15.sedmice)',
+          'vanr.prof.dr. Mario Pejdanović (1.-10. sedmice) / vanr.prof.dr. Majda Tešanović (11.-15.sedmice)',
         type: 'Predavanje',
       },
       {
         name: 'Dijagnostika u energetici',
-        displayName: 'placeholder',
+        displayName: 'DuE',
         day: 'Friday',
         startTime: '13:00',
         endTime: '14:00',
@@ -1768,8 +1768,8 @@ export const SCHEDULES: Schedule[] = [
     image: 'Godina3RI.png',
     lectures: [
       {
-        name: 'Simulacija sistema 1a/1b',
-        displayName: 'placeholder',
+        name: 'Simulacija sistema',
+        displayName: 'Sim. 1a/1b',
         day: 'Monday',
         startTime: '08:00',
         endTime: '10:00',
@@ -1779,7 +1779,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Simulacija sistema',
-        displayName: 'placeholder',
+        displayName: 'Sim.',
         day: 'Monday',
         startTime: '10:00',
         endTime: '11:00',
@@ -1789,7 +1789,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Simulacija sistema',
-        displayName: 'placeholder',
+        displayName: 'Sim.',
         day: 'Monday',
         startTime: '11:00',
         endTime: '14:00',
@@ -1799,7 +1799,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Računarske mreže',
-        displayName: 'placeholder',
+        displayName: 'RM',
         day: 'Tuesday',
         startTime: '14:00',
         endTime: '17:00',
@@ -1809,7 +1809,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Računarske mreže',
-        displayName: 'placeholder',
+        displayName: 'RM',
         day: 'Tuesday',
         startTime: '17:00',
         endTime: '18:00',
@@ -1819,7 +1819,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Računarske mreže',
-        displayName: 'placeholder',
+        displayName: 'RM',
         day: 'Tuesday',
         startTime: '17:45',
         endTime: '20:00',
@@ -1829,7 +1829,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Računarska grafika',
-        displayName: 'placeholder',
+        displayName: 'RG',
         day: 'Wednesday',
         startTime: '08:00',
         endTime: '09:30',
@@ -1839,7 +1839,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Razvoj softvera',
-        displayName: 'placeholder',
+        displayName: 'RS',
         day: 'Wednesday',
         startTime: '09:30',
         endTime: '11:00',
@@ -1849,7 +1849,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Razvoj softvera',
-        displayName: 'placeholder',
+        displayName: 'RS',
         day: 'Wednesday',
         startTime: '11:00',
         endTime: '14:00',
@@ -1859,7 +1859,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Razvoj softvera',
-        displayName: 'placeholder',
+        displayName: 'RS',
         day: 'Thursday',
         startTime: '10:00',
         endTime: '11:00',
@@ -1869,7 +1869,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Računarska grafika',
-        displayName: 'placeholder',
+        displayName: 'RG',
         day: 'Thursday',
         startTime: '11:00',
         endTime: '14:00',
@@ -1879,7 +1879,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Računarska grafika',
-        displayName: 'placeholder',
+        displayName: 'RG',
         day: 'Thursday',
         startTime: '14:00',
         endTime: '15:00',
@@ -1895,8 +1895,8 @@ export const SCHEDULES: Schedule[] = [
     image: 'Godina3TK.png',
     lectures: [
       {
-        name: 'Telekomunikacione mreže 1',
-        displayName: 'placeholder',
+        name: 'Telekomunikacione mreže',
+        displayName: 'TKM 1',
         day: 'Monday',
         startTime: '12:00',
         endTime: '14:00',
@@ -1906,7 +1906,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Optičke telekomunikacije',
-        displayName: 'placeholder',
+        displayName: 'OTK',
         day: 'Monday',
         startTime: '14:00',
         endTime: '17:00',
@@ -1916,7 +1916,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Optičke telekomunikacije',
-        displayName: 'placeholder',
+        displayName: 'OTK',
         day: 'Monday',
         startTime: '17:30',
         endTime: '18:30',
@@ -1925,8 +1925,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'AV',
       },
       {
-        name: 'Optičke telekomunikacije 1a/1b',
-        displayName: 'placeholder',
+        name: 'Optičke telekomunikacije',
+        displayName: 'OTK 1a/1b',
         day: 'Monday',
         startTime: '18:30',
         endTime: '20:00',
@@ -1936,7 +1936,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Radijski telekomunikacijski sistemi',
-        displayName: 'placeholder',
+        displayName: 'RTKS',
         day: 'Tuesday',
         startTime: '14:00',
         endTime: '17:00',
@@ -1945,8 +1945,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'Predavanje',
       },
       {
-        name: 'Radijski telekomunikacijski sistemi 1a/1b',
-        displayName: 'placeholder',
+        name: 'Radijski telekomunikacijski sistemi',
+        displayName: 'RTKS 1a/1b',
         day: 'Tuesday',
         startTime: '17:00',
         endTime: '18:30',
@@ -1956,7 +1956,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Radijski telekomunikacijski sistemi',
-        displayName: 'placeholder',
+        displayName: 'RTKS',
         day: 'Tuesday',
         startTime: '19:00',
         endTime: '20:00',
@@ -1966,7 +1966,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Razvoj telekomunikacijske programske podrške',
-        displayName: 'placeholder',
+        displayName: 'RTKPP',
         day: 'Wednesday',
         startTime: '14:00',
         endTime: '17:00',
@@ -1976,7 +1976,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Razvoj telekomunikacijske programske podrške',
-        displayName: 'placeholder',
+        displayName: 'RTKPP',
         day: 'Wednesday',
         startTime: '17:00',
         endTime: '19:00',
@@ -1986,7 +1986,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Telekomunikacione mreže',
-        displayName: 'placeholder',
+        displayName: 'TKM',
         day: 'Thursday',
         startTime: '08:00',
         endTime: '11:00',
@@ -1995,8 +1995,8 @@ export const SCHEDULES: Schedule[] = [
         type: 'Predavanje',
       },
       {
-        name: 'Telekomunikacione mreže 1b',
-        displayName: 'placeholder',
+        name: 'Telekomunikacione mreže',
+        displayName: 'TKM 1b',
         day: 'Thursday',
         startTime: '11:00',
         endTime: '13:00',
