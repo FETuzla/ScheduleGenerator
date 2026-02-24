@@ -28,8 +28,8 @@ export class DrawingTool implements AfterViewInit, OnChanges {
   private readonly dayLabelsFull = ['PONEDJELJAK', 'UTORAK', 'SRIJEDA', 'ČETVRTAK', 'PETAK'];
   private readonly dayLabelsShort = ['PON', 'UTO', 'SRI', 'ČET', 'PET'];
   
-  private sidebarWidth = 50; 
-  private headerHeight = 35;
+  private sidebarWidth = 70; 
+  private headerHeight = 45;
   
   private hourHeight = 0;
   private dayWidth = 0;
@@ -160,8 +160,8 @@ export class DrawingTool implements AfterViewInit, OnChanges {
     let width = container.clientWidth;
     if (width > 1000) width = 1000;
 
-    this.sidebarWidth = width < 500 ? 50 : 50;
-    this.headerHeight = width < 500 ? 35 : 35;
+    this.sidebarWidth = width < 500 ? 70 : 70;
+    this.headerHeight = width < 500 ? 45 : 45;
 
     const height = width * (9 / 16);
     canvas.style.width = `${width}px`;
@@ -218,7 +218,7 @@ export class DrawingTool implements AfterViewInit, OnChanges {
     this.ctx.stroke();
 
     this.ctx.beginPath(); 
-    const hourFontSize = Math.max(10, Math.min(13, width / 80));
+    const hourFontSize = Math.max(14, Math.min(18, width / 55));
     this.hours.forEach((hour, i) => {
       const y = this.headerHeight + (i * this.hourHeight);
       this.ctx.moveTo(0, y);
@@ -269,7 +269,7 @@ export class DrawingTool implements AfterViewInit, OnChanges {
         teacherList = [];
       }
       
-      let fontSize = Math.max(14, Math.min(isLecture ? 24 : 20, width / (isLecture ? 50 : 65)));
+      let fontSize = Math.max(16, Math.min(isLecture ? 28 : 24, width / (isLecture ? 40 : 50)));
       let lines: string[] = [];
       const maxWidth = w - 4; 
       let fontValid = false;
@@ -289,8 +289,11 @@ export class DrawingTool implements AfterViewInit, OnChanges {
 
         if (fontValid) {
           lines = this.getWrappedLines(lec.displayName, maxWidth);
-          const totalLineCount = lines.length + 1 + (isLecture ? teacherList.length : 0);
-          const totalHeight = totalLineCount * (fontSize + 1.5);
+          
+          const nameHeight = lines.length * (fontSize + 2.5);
+          const locHeight = (fontSize * 0.85) + 2.5;
+          const teacherHeight = (isLecture ? teacherList.length : 0) * ((fontSize * 0.7) + 2.5);
+          const totalHeight = nameHeight + locHeight + teacherHeight;
           
           if (totalHeight > h - 4) {
             fontValid = false;
@@ -301,33 +304,39 @@ export class DrawingTool implements AfterViewInit, OnChanges {
 
       this.ctx.font = `bold ${fontSize}px sans-serif`;
       lines = this.getWrappedLines(lec.displayName, maxWidth);
-      const lineHeight = fontSize + 2.5;
       
-      const totalRows = lines.length + 1 + (isLecture ? teacherList.length : 0);
-      const totalContentHeight = totalRows * lineHeight;
+      const locFontSize = Math.max(9, fontSize * 0.85);
+      const teacherFontSize = Math.max(8, fontSize * 0.7);
+
+      const nameLineHeight = fontSize + 2.5;
+      const locLineHeight = locFontSize + 2.5;
+      const teacherLineHeight = teacherFontSize + 2.5;
+
+      const totalContentHeight = (lines.length * nameLineHeight) + locLineHeight + ((isLecture ? teacherList.length : 0) * teacherLineHeight);
       
-      let startY = y + (h - totalContentHeight) / 2 + (fontSize / 2);
-      if (startY < y + fontSize) {
-        startY = y + fontSize; 
+      let startY = y + (h - totalContentHeight) / 2 + (nameLineHeight / 2);
+      if (startY < y + (nameLineHeight / 2)) {
+        startY = y + (nameLineHeight / 2); 
       }
       
       let currentY = startY;
 
       lines.forEach(line => {
         this.ctx.fillText(line.trim(), x + w / 2, currentY);
-        currentY += lineHeight;
+        currentY += nameLineHeight;
       });
 
-      this.ctx.font = `${isLecture ? fontSize - 1 : fontSize - 1.5}px sans-serif`;
+      currentY += (locLineHeight - nameLineHeight) / 2;
+      this.ctx.font = `${locFontSize}px sans-serif`;
       this.ctx.fillText(lec.location, x + w / 2, currentY);
-      currentY += lineHeight;
 
       if (isLecture && teacherList.length > 0) {
-        this.ctx.font = `${fontSize - 2.5}px sans-serif`;
+        currentY += (locLineHeight + teacherLineHeight) / 2;
+        this.ctx.font = `${teacherFontSize}px sans-serif`;
         this.ctx.fillStyle = '#ff0000';
         teacherList.forEach(teacher => {
           this.ctx.fillText(teacher, x + w / 2, currentY);
-          currentY += lineHeight;
+          currentY += teacherLineHeight;
         });
       }
 
@@ -362,12 +371,19 @@ export class DrawingTool implements AfterViewInit, OnChanges {
   }
 
   @HostListener('click', ['$event'])
+  @HostListener('click', ['$event'])
   onCanvasClick(event: MouseEvent) {
-    const rect = this.canvasRef.nativeElement.getBoundingClientRect();
-    const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
-    const availW = rect.width - this.sidebarWidth;
-    const availH = rect.height - this.headerHeight;
+    const canvas = this.canvasRef.nativeElement;
+    const rect = canvas.getBoundingClientRect();
+    
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
+
+    const x = (event.clientX - rect.left) * scaleX;
+    const y = (event.clientY - rect.top) * scaleY;
+
+    const availW = canvas.width - this.sidebarWidth;
+    const availH = canvas.height - this.headerHeight;
 
     const clicked = this.processedLectures.find(lec => {
       const lx = this.sidebarWidth + (lec.leftPercent * availW / 100);
@@ -376,6 +392,7 @@ export class DrawingTool implements AfterViewInit, OnChanges {
       const lh = (lec.heightPercent * availH / 100);
       return x >= lx && x <= lx + lw && y >= ly && y <= ly + lh;
     });
+    
     if (clicked) this.lectureClicked.emit(clicked);
   }
 
