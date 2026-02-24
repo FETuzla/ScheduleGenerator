@@ -457,8 +457,6 @@ export class DrawingTool implements AfterViewInit, OnChanges {
       const dtend = formatIcsDate(baseDate, lec.endTime);
       
       const uid = `schedule-${Date.now()}-${index}@fetuzla`;
-      
-      let summary = `${lec.type}: ${lec.name}`;
 
       ics.push(
         "BEGIN:VEVENT",
@@ -467,8 +465,9 @@ export class DrawingTool implements AfterViewInit, OnChanges {
         `DTSTART:${dtstart}`,
         `DTEND:${dtend}`,
         `RRULE:FREQ=WEEKLY;COUNT=15`,
-        `SUMMARY:${summary}`,
+        `SUMMARY:${lec.name}`,
         `LOCATION:${lec.location}`,
+        `DESCRIPTION:Type: ${lec.type}\\nTeacher: ${lec.teacher}`,
         "END:VEVENT"
       );
     });
