@@ -28,8 +28,8 @@ export class DrawingTool implements AfterViewInit, OnChanges {
   private readonly dayLabelsFull = ['PONEDJELJAK', 'UTORAK', 'SRIJEDA', 'ČETVRTAK', 'PETAK'];
   private readonly dayLabelsShort = ['PON', 'UTO', 'SRI', 'ČET', 'PET'];
   
-  private sidebarWidth = 25; 
-  private headerHeight = 25;
+  private sidebarWidth = 50; 
+  private headerHeight = 35;
   
   private hourHeight = 0;
   private dayWidth = 0;
@@ -160,8 +160,8 @@ export class DrawingTool implements AfterViewInit, OnChanges {
     let width = container.clientWidth;
     if (width > 1000) width = 1000;
 
-    this.sidebarWidth = width < 500 ? 20 : 25;
-    this.headerHeight = width < 500 ? 20 : 25;
+    this.sidebarWidth = width < 500 ? 50 : 50;
+    this.headerHeight = width < 500 ? 35 : 35;
 
     const height = width * (9 / 16);
     canvas.style.width = `${width}px`;
@@ -176,16 +176,23 @@ export class DrawingTool implements AfterViewInit, OnChanges {
 
   private render() {
     if (!this.ctx) return;
-    const width = this.canvasRef.nativeElement.width;
-    const height = this.canvasRef.nativeElement.height;		
+    const canvas = this.canvasRef.nativeElement;
+    const width = canvas.width;
+    const height = canvas.height;   
+    
     this.ctx.clearRect(0, 0, width, height);
+
+    const displayWidth = canvas.clientWidth || 1000;
+    const scaleRatio = width / displayWidth;
+    this.ctx.lineWidth = scaleRatio;
+
     this.drawGrid(width, height);
     this.drawLectures(width, height);
   }
 
   private drawGrid(width: number, height: number) {
     this.ctx.strokeStyle = '#000';
-    this.ctx.lineWidth = 1;
+    
     this.ctx.fillStyle = '#f8f9fa';
     this.ctx.fillRect(0, 0, width, height);
 
@@ -194,7 +201,8 @@ export class DrawingTool implements AfterViewInit, OnChanges {
     this.ctx.lineTo(width, this.headerHeight);
     this.ctx.stroke();
 
-    const dayFontSize = Math.max(10, Math.min(13, width / 70));
+    this.ctx.beginPath(); 
+    const dayFontSize = Math.max(14, Math.min(18, width / 55));
     for (let i = 0; i <= 5; i++) {
       const x = this.sidebarWidth + (i * this.dayWidth);
       this.ctx.moveTo(x, 0);
@@ -209,19 +217,22 @@ export class DrawingTool implements AfterViewInit, OnChanges {
     }
     this.ctx.stroke();
 
-    const hourFontSize = Math.max(7, Math.min(9, width / 100));
+    this.ctx.beginPath(); 
+    const hourFontSize = Math.max(10, Math.min(13, width / 80));
     this.hours.forEach((hour, i) => {
       const y = this.headerHeight + (i * this.hourHeight);
       this.ctx.moveTo(0, y);
       this.ctx.lineTo(this.sidebarWidth, y);
+      
       this.ctx.save();
-      this.ctx.translate(this.sidebarWidth / 2, y + this.hourHeight / 2);
-      this.ctx.rotate(-Math.PI / 2);
       this.ctx.font = `900 ${hourFontSize}px sans-serif`;
-      this.ctx.fillText(`${hour}-${hour + 1}`, 0, 0);
+      this.ctx.textAlign = 'center';
+      this.ctx.textBaseline = 'middle';
+      this.ctx.fillText(`${hour}-${hour + 1}`, this.sidebarWidth / 2, y + this.hourHeight / 2);
       this.ctx.restore();
     });
     this.ctx.stroke();
+    
     this.ctx.strokeRect(0, 0, width, height);
   }
 
@@ -258,7 +269,7 @@ export class DrawingTool implements AfterViewInit, OnChanges {
         teacherList = [];
       }
       
-      let fontSize = Math.max(6, Math.min(isLecture ? 15 : 13, width / (isLecture ? 85 : 100)));
+      let fontSize = Math.max(14, Math.min(isLecture ? 24 : 20, width / (isLecture ? 50 : 65)));
       let lines: string[] = [];
       const maxWidth = w - 4; 
       let fontValid = false;
@@ -290,7 +301,7 @@ export class DrawingTool implements AfterViewInit, OnChanges {
 
       this.ctx.font = `bold ${fontSize}px sans-serif`;
       lines = this.getWrappedLines(lec.displayName, maxWidth);
-      const lineHeight = fontSize + 1.5;
+      const lineHeight = fontSize + 2.5;
       
       const totalRows = lines.length + 1 + (isLecture ? teacherList.length : 0);
       const totalContentHeight = totalRows * lineHeight;
@@ -307,12 +318,12 @@ export class DrawingTool implements AfterViewInit, OnChanges {
         currentY += lineHeight;
       });
 
-      this.ctx.font = `${isLecture ? fontSize - 0.5 : fontSize - 1}px sans-serif`;
+      this.ctx.font = `${isLecture ? fontSize - 1 : fontSize - 1.5}px sans-serif`;
       this.ctx.fillText(lec.location, x + w / 2, currentY);
       currentY += lineHeight;
 
       if (isLecture && teacherList.length > 0) {
-        this.ctx.font = `${fontSize - 2}px sans-serif`;
+        this.ctx.font = `${fontSize - 2.5}px sans-serif`;
         this.ctx.fillStyle = '#ff0000';
         teacherList.forEach(teacher => {
           this.ctx.fillText(teacher, x + w / 2, currentY);
