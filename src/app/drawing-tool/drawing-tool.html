@@ -2,5 +2,11 @@
   <canvas #scheduleCanvas></canvas>
 </div>
 @if (showSaveButton) {
-	<button type="button" (click)="saveCanvas()">Save Image</button>
+  <div class="canvas-buttons">
+    <button type="button" (click)="saveCanvas()">Save Image</button>
+    <button type="button" (click)="generateIcs()">Export to calendar</button>
+    <button type="button" (click)="openExamCalendar()">
+      Open Exam Calendar
+    </button>
+  </div>
 }
