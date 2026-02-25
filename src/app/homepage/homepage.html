@@ -5,7 +5,10 @@
   <div class="nav-brand">Generator rasporeda FET</div>
   <div class="nav-links">
     <div class="help-container">
-      <button class="nav-help-btn" (click)="toggleHelp()">?</button>
+      <button class="nav-help-btn" (click)="toggleHelp()">
+        <span class="desktop-text">Uputstvo</span>
+        <span class="mobile-text">?</span>
+      </button>
       <div class="help-dropdown" *ngIf="showHelp">
         <h3>Uputstvo</h3>
         <ul>
