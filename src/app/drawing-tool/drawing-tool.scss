@@ -16,6 +16,8 @@ canvas {
   height: auto;
   cursor: pointer;
   image-rendering: -webkit-optimize-contrast;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
 
 .canvas-buttons {

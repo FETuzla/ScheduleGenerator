@@ -96,15 +96,27 @@ footer {
     background: transparent;
     border: 1px solid #6c6ab0;
     color: white;
-    padding: 6px 6px;
-    border-radius: 50%;
+    padding: 0px 12px;
+    border-radius: 16px;
     font-size: 16px;
-    width: 32px;
     height: 32px;
     float: right;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &:hover {
       background: #6c6ab0;
+    }
+    .desktop-text { display: inline; }
+    .mobile-text { display: none; }
+    @media (max-width: 700px) {
+        width: 32px;
+        padding: 0;
+        border-radius: 50%;
+        
+        .desktop-text { display: none; }
+        .mobile-text { display: inline; }
     }
   }
 

@@ -34,6 +34,8 @@ export class DrawingTool implements AfterViewInit, OnChanges {
   private hourHeight = 0;
   private dayWidth = 0;
 
+  private highlightedLecture: any = null;
+
   ngOnChanges(changes: SimpleChanges) {
     if (changes['lectures']) {
       this.updateProcessedLectures();
@@ -246,7 +248,12 @@ export class DrawingTool implements AfterViewInit, OnChanges {
       const w = (lec.widthPercent * availW / 100);
       const h = (lec.heightPercent * availH / 100);
 
-      this.ctx.fillStyle = '#ffffff';
+      if (this.highlightedLecture === lec) {
+        this.ctx.fillStyle = '#bbdefb';
+      } else {
+        this.ctx.fillStyle = '#ffffff';
+      }
+      
       this.ctx.fillRect(x, y, w, h);
       this.ctx.strokeStyle = '#000';
       this.ctx.strokeRect(x, y, w, h);
@@ -394,7 +401,18 @@ export class DrawingTool implements AfterViewInit, OnChanges {
       return x >= lx && x <= lx + lw && y >= ly && y <= ly + lh;
     });
     
-    if (clicked) this.lectureClicked.emit(clicked);
+    if (clicked){
+      this.highlightedLecture = clicked;
+      this.render(); 
+
+      setTimeout(() => {
+        this.highlightedLecture = null;
+
+        this.lectureClicked.emit(clicked);
+
+        this.render();
+      }, 150);
+    }
   }
 
 	saveCanvas() {
