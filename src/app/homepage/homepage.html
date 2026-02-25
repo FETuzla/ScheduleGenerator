@@ -1,9 +1,11 @@
 <nav class="navbar">
+  <div class="nav-menu">
+    <p (click)="showMenu()">≡</p>
+  </div>
+  <div class="nav-brand">Generator rasporeda FET</div>
   <div class="nav-links">
     <div class="help-container">
-      <button class="nav-help-btn" (click)="toggleHelp()">
-        Kako koristiti?
-      </button>
+      <button class="nav-help-btn" (click)="toggleHelp()">Kako koristiti?</button>
       <div class="help-dropdown" *ngIf="showHelp">
         <h3>Upustvo</h3>
         <ul>
@@ -16,9 +18,22 @@
       </div>
     </div>
   </div>
-  <div class="nav-brand">Generator rasporeda FET</div>
-  <div class="placeholder"></div>
 </nav>
+
+<div class="side-overlay" [class.open]="menuOpen" (click)="menuOpen = false"></div>
+
+<aside class="side-menu" [class.open]="menuOpen">
+  <ul>
+    @for (page of otherPages; track page) {
+      <li>
+        <a [href]="'https://fetuzla.github.io/' + page + '/'">
+          {{ page }}
+        </a>
+      </li>
+    }
+  </ul>
+</aside>
+
 <main class="content">
   <div class="choice">
     <select [(ngModel)]="selectedFirst" (ngModelChange)="onFirstChange()">
@@ -35,19 +50,13 @@
   </div>
 
   <div class="custom_schedule">
-    <app-schedule 
-      [schedule]="schedule" 
-      (lectureSelected)="addLectureToCustom($event)">
+    <app-schedule [schedule]="schedule" (lectureSelected)="addLectureToCustom($event)">
     </app-schedule>
   </div>
-  
+
   <div class="custom_schedule">
-    <app-custom-schedule 
-      #customScheduleComponent
-      (lectureClicked)="onLectureClick($event)">
+    <app-custom-schedule #customScheduleComponent (lectureClicked)="onLectureClick($event)">
     </app-custom-schedule>
   </div>
 </main>
-<footer>
-  Community project by FET students
-</footer>
+<footer>Community project by FET students</footer>

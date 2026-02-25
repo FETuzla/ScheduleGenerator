@@ -487,7 +487,4 @@ export class DrawingTool implements AfterViewInit, OnChanges {
     URL.revokeObjectURL(link.href);
   }
 
-  openExamCalendar(){
-    window.open('https://fetuzla.github.io/Exam-calendar-generator/', '_blank');
-  }
 }
