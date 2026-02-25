@@ -488,6 +488,6 @@ export class DrawingTool implements AfterViewInit, OnChanges {
   }
 
   openExamCalendar(){
-    window.open('https://senadm02.github.io/Exam-calendar-generator/', '_blank');
+    window.open('https://fetuzla.github.io/Exam-calendar-generator/', '_blank');
   }
 }
