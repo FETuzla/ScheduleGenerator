@@ -30,6 +30,7 @@ export class Homepage {
 
   ngOnInit() {
     this.loadPages();
+    this.checkMenu();
   }
 
   async loadPages() {
@@ -42,10 +43,18 @@ export class Homepage {
 
       const data = await response.json();
       this.otherPages = data;
-			this.otherPages = this.otherPages.filter(page => page != window.location.pathname.replace(/^\/|\/$/g, ''))
+      this.otherPages = this.otherPages.filter(
+        (page) => page != window.location.pathname.replace(/^\/|\/$/g, ''),
+      );
     } catch (error) {
       console.error('Failed to fetch pages:', error);
     }
+  }
+
+  checkMenu() {
+    if(window.localStorage.getItem('showHelp') !== null) {
+			this.showHelp = false;
+		}
   }
 
   onFirstChange() {
@@ -77,10 +86,11 @@ export class Homepage {
     console.log('Lecture clicked on canvas:', lecture.name);
   }
 
-  showHelp = false;
+  showHelp = true;
 
   toggleHelp() {
     this.showHelp = !this.showHelp;
+    window.localStorage.setItem('showHelp', 'opened');
   }
 
   menuOpen = false;
@@ -88,5 +98,4 @@ export class Homepage {
   showMenu() {
     this.menuOpen = !this.menuOpen;
   }
-
 }
