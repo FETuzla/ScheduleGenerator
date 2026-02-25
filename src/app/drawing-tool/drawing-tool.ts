@@ -265,11 +265,11 @@ export class DrawingTool implements AfterViewInit, OnChanges {
       
       let teacherList = lec.teacher ? lec.teacher.split('/').map(t => t.trim()) : [];
       
-      if (isMobile || h < 45 || w < 40) {
+      if (isMobile || h < 30 || w < 40) {
         teacherList = [];
       }
       
-      let fontSize = Math.max(22, Math.min(isLecture ? 42 : 34, width / (isLecture ? 25 : 35)));
+      let fontSize = Math.max(20, Math.min(isLecture ? 38 : 30, width / (isLecture ? 28 : 38)));
       let lines: string[] = [];
       const maxWidth = w - 4; 
       let fontValid = false;
@@ -292,7 +292,7 @@ export class DrawingTool implements AfterViewInit, OnChanges {
           
           const nameHeight = lines.length * (fontSize + 2.5);
           const locHeight = (fontSize * 0.85) + 2.5;
-          const teacherHeight = (isLecture ? teacherList.length : 0) * ((fontSize * 0.7) + 2.5);
+          const teacherHeight = teacherList.length * ((fontSize * 0.7) + 2.5);
           const totalHeight = nameHeight + locHeight + teacherHeight;
           
           if (totalHeight > h - 4) {
@@ -306,14 +306,14 @@ export class DrawingTool implements AfterViewInit, OnChanges {
       lines = this.getWrappedLines(lec.displayName, maxWidth);
       
       const locFontSize = Math.max(9, fontSize * 0.75);
-      const teacherFontSize = Math.max(8, fontSize * 0.4);
+      const teacherFontSize = Math.max(8, fontSize * 0.5);
 
       const nameLineHeight = fontSize + 2.5;
       const locLineHeight = locFontSize + 2.5;
       const teacherLineHeight = teacherFontSize + 2.5;
 
-      const totalContentHeight = (lines.length * nameLineHeight) + locLineHeight + ((isLecture ? teacherList.length : 0) * teacherLineHeight);
-      
+      const totalContentHeight = (lines.length * nameLineHeight) + locLineHeight + (teacherList.length * teacherLineHeight);
+
       let startY = y + (h - totalContentHeight) / 2 + (nameLineHeight / 2);
       if (startY < y + (nameLineHeight / 2)) {
         startY = y + (nameLineHeight / 2); 
@@ -330,10 +330,10 @@ export class DrawingTool implements AfterViewInit, OnChanges {
       this.ctx.font = `${locFontSize}px sans-serif`;
       this.ctx.fillText(lec.location, x + w / 2, currentY);
 
-      if (isLecture && teacherList.length > 0) {
+      if (teacherList.length > 0) {
         currentY += (locLineHeight + teacherLineHeight) / 2;
         this.ctx.font = `${teacherFontSize}px sans-serif`;
-        this.ctx.fillStyle = '#ff0000';
+        this.ctx.fillStyle = this.getTextColor(lec.type);
         teacherList.forEach(teacher => {
           this.ctx.fillText(teacher, x + w / 2, currentY);
           currentY += teacherLineHeight;
@@ -351,7 +351,7 @@ export class DrawingTool implements AfterViewInit, OnChanges {
 
     for (let i = 1; i < words.length; i++) {
       const word = words[i];
-      const startsWithNumber = /^\d/.test(word);
+      const startsWithNumber = /^\d[a-zA-Z]/.test(word);
       const width = this.ctx.measureText(currentLine + " " + word).width;
       if (startsWithNumber || width > maxWidth) {
         lines.push(currentLine);
