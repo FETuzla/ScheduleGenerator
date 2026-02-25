@@ -237,15 +237,12 @@ footer {
       font-size: 15px;
     }
     .help-dropdown {
-      left: 50%;
-      transform: translateX(-50%);
       width: 90vw;
       &::before {
         content: '';
         position: absolute;
         top: -10px;
-        left: 50%;
-        transform: translateX(-50%);
+				right: 8px;
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
         border-bottom: 10px solid white;
