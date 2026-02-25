@@ -1,5 +1,23 @@
-<nav>
-  <h2>Generator rasporeda FET</h2>
+<nav class="navbar">
+  <div class="nav-links">
+    <div class="help-container">
+      <button class="nav-help-btn" (click)="toggleHelp()">
+        Kako koristiti?
+      </button>
+      <div class="help-dropdown" *ngIf="showHelp">
+        <h3>Upustvo</h3>
+        <ul>
+          <li><strong>Dodaj:</strong> Klik na predmet kojeg zelis dodati</li>
+          <li><strong>Izbaci:</strong> Klik na predmet kojeg zelis izbaciti</li>
+          <li><strong>Pregled:</strong> Mozes dodati predmete sa razlicitih godina</li>
+          <li><strong>Preuzimanje:</strong> Mozes preuzeti kao sliku ili kao .ics file</li>
+        </ul>
+        <button class="close-btn" (click)="showHelp = false">Zatvori</button>
+      </div>
+    </div>
+  </div>
+  <div class="nav-brand">Generator rasporeda FET</div>
+  <div class="placeholder"></div>
 </nav>
 <main class="content">
   <div class="choice">

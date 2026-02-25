@@ -14,27 +14,15 @@
 	background-size: cover;
 }
 
-nav {
-    height: 50px;
-    padding-top: 10px;
-    margin: 0;
-    text-align: center;
-    h2 {
-        padding: 0;
-        margin: 0;
-        font-size: 30px;
-        color: white;
-    }
-}
-
 .content {
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: auto;
     flex: 1;
-    padding: 15px;
+    padding: 10px;
     gap: 10px;
+    margin-top: 5px;
 }
 
 .choice {
@@ -67,7 +55,121 @@ footer {
     color: white;
 }
 
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: white;
+  height: 50px;
+  background-color: transparent;
+
+  .nav-links, .placeholder {
+    flex: 1;
+  }
+
+  .nav-brand {
+    flex: 0 0 auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    white-space: nowrap;
+  }
+
+  .placeholder {
+    display: block; 
+  }
+}
+
+.help-container {
+  position: relative;
+
+  .nav-help-btn {
+    background: transparent;
+    border: 1px solid #6c6ab0;
+    color: white;
+    padding: 6px 6px;
+    border-radius: 20px;
+    font-size: 16px;
+    width: 120px;
+    cursor: pointer;
+    &:hover { background: #6c6ab0; }
+  }
+
+  .help-dropdown {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 250px;
+    background: white;
+    color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+
+    ul {
+        list-style: none;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid white;
+    }
+
+    .close-btn {
+        background: #6c6ab0;
+        border: 1px solid #6c6ab0;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover { background: #7673dc; }
+    }
+  }
+}
+
 @media(max-width: 600px){
+    .navbar {
+        flex-direction: column;
+        height: 80px;
+        .nav-brand {
+            order: 1;
+            font-size: 20px;
+        }
+        .nav-links {
+            order: 2;
+            margin-top: 5px;
+        }
+        .nav-help-btn {
+            font-size: 15px;
+        }
+        .help-dropdown {
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90vw;
+            &::before {
+                content: '';
+                position: absolute;
+                top: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 10px solid white;
+            }
+        }
+    }
     footer {
         height: 16px;
         font-size: 10px;

@@ -1701,7 +1701,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Elektromagnetna kompatibilnost',
-        displayName: 'EMK',
+        displayName: 'EMC',
         day: 'Wednesday',
         startTime: '19:00',
         endTime: '20:00',
@@ -1721,7 +1721,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Elektromagnetna kompatibilnost',
-        displayName: 'EMK',
+        displayName: 'EMC',
         day: 'Thursday',
         startTime: '09:00',
         endTime: '10:00',
@@ -1741,7 +1741,7 @@ export const SCHEDULES: Schedule[] = [
       },
       {
         name: 'Elektromagnetna kompatibilnost',
-        displayName: 'EMK',
+        displayName: 'EMC',
         day: 'Friday',
         startTime: '08:00',
         endTime: '11:00',
