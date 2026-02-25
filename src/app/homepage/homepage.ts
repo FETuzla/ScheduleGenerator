@@ -48,4 +48,10 @@ export class Homepage {
   onLectureClick(lecture: Lecture) {
     console.log('Lecture clicked on canvas:', lecture.name);
   }
+
+    showHelp = false;
+
+  toggleHelp() {
+    this.showHelp = !this.showHelp;
+  }
 }
