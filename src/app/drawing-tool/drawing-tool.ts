@@ -269,7 +269,7 @@ export class DrawingTool implements AfterViewInit, OnChanges {
         teacherList = [];
       }
       
-      let fontSize = Math.max(16, Math.min(isLecture ? 28 : 24, width / (isLecture ? 40 : 50)));
+      let fontSize = Math.max(22, Math.min(isLecture ? 42 : 34, width / (isLecture ? 25 : 35)));
       let lines: string[] = [];
       const maxWidth = w - 4; 
       let fontValid = false;
@@ -305,8 +305,8 @@ export class DrawingTool implements AfterViewInit, OnChanges {
       this.ctx.font = `bold ${fontSize}px sans-serif`;
       lines = this.getWrappedLines(lec.displayName, maxWidth);
       
-      const locFontSize = Math.max(9, fontSize * 0.85);
-      const teacherFontSize = Math.max(8, fontSize * 0.7);
+      const locFontSize = Math.max(9, fontSize * 0.75);
+      const teacherFontSize = Math.max(8, fontSize * 0.4);
 
       const nameLineHeight = fontSize + 2.5;
       const locLineHeight = locFontSize + 2.5;
@@ -351,12 +351,13 @@ export class DrawingTool implements AfterViewInit, OnChanges {
 
     for (let i = 1; i < words.length; i++) {
       const word = words[i];
+      const startsWithNumber = /^\d/.test(word);
       const width = this.ctx.measureText(currentLine + " " + word).width;
-      if (width < maxWidth) {
-        currentLine += " " + word;
-      } else {
+      if (startsWithNumber || width > maxWidth) {
         lines.push(currentLine);
         currentLine = word;
+      } else {
+        currentLine += " " + word;
       }
     }
     lines.push(currentLine);
