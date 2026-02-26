@@ -26,6 +26,7 @@
 <div class="side-overlay" [class.open]="menuOpen" (click)="menuOpen = false"></div>
 
 <aside class="side-menu" [class.open]="menuOpen">
+  <button class="close-btn" (click)="showMenu()">×</button>
   <ul>
     @for (page of otherPages; track page) {
       <li>
