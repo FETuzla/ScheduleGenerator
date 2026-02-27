@@ -1,63 +1,70 @@
-# Raspored
+# 📅 Student Schedule Builder
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.4.
+A student-led open-source tool built to help students plan their academic schedules.
 
-# Site is live at:
+## Live at:
 
 https://fetuzla.github.io/ScheduleGenerator/
 
-## Development server
+## Overview
 
-To start a local development server, run:
+Student Schedule Builder visualizes course schedules by year and orientation, allowing students to hand-pick lectures from across any year and build a fully personalized timetable and export it directly to their calendar app or as an image.
 
-```bash
-ng serve
-```
+## Features
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **Schedule Visualization** — Automatically renders schedules for each academic year and orientation based on structured data.
+- **Clickable Lectures** — Every lecture block is interactive. Click any lecture to add it to your custom schedule.
+- **Cross-Year Selection** — Mix and match lectures from different years and orientations freely.
+- **Custom Schedule Canvas** — A dedicated canvas displays your personally selected lectures in real time.
+- **Export as Image** — Download your custom schedule as an image file to share or save.
+- **Export as .ics** — Download your schedule as an `.ics` file and import it directly into Google Calendar, Apple Calendar, Outlook, or any other calendar app.
 
-## Code scaffolding
+## How It Works
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+1. Browse the schedule canvases organized by year and orientation.
+2. Click on any lecture you want to attend — it will appear on the **Custom Schedule** canvas.
+3. Add as many lectures as you need, from any year or orientation.
+4. When you're done, export your schedule:
+   - 🖼️ **Image** — for a quick visual reference
+   - 📆 **.ics file** — to import directly into your calendar app
 
-```bash
-ng generate component component-name
-```
+## Getting Started
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Prerequisites
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+- [Node.js](https://nodejs.org/) (LTS version recommended)
+- Angular CLI — install globally with:
 
 ```bash
-ng test
+npm install -g @angular/cli
 ```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
 
 ```bash
-ng e2e
+# Clone the repository
+git clone https://github.com/FETuzla/ScheduleGenerator.git
+
+# Navigate into the project
+cd ScheduleGenerator
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm start
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Contributing
 
-## Additional Resources
+This project is built by students, for students. Contributions are welcome!
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/your-feature`)
+3. Commit your changes (`git commit -m 'Add some feature'`)
+4. Push to the branch (`git push origin feature/your-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is open-source.
+
+---
