@@ -4,11 +4,12 @@ export const FIRST_SELECTORS = [
   'Treca godina',
   'Cetvrta godina',
   'BMI',
+	'TOI',
   'Profesori',
   'Prostorije',
 ] as const;
 
-export const SECOND_SELECTORS = ['Linija 1', 'Linija 2', 'AR', 'RI', 'ESKE', 'EEMS', 'TK'] as const;
+export const SECOND_SELECTORS = ['Linija 1', 'Linija 2', 'AR', 'RI', 'ESKE', 'EEMS', 'TK', 'Prva godina', 'Druga godina', 'Treca godina'] as const;
 
 export const DAYS = [
   'Ponedjeljak',

@@ -78,24 +78,29 @@ export class Homepage {
 
   get secondSelectors(): SecondSelector[] | string[] {
     if (this.selectedFirst === 'Prva godina') return ['Linija 1', 'Linija 2'];
+    if (this.selectedFirst === 'TOI') return ['Prva godina', 'Druga godina', 'Treca godina'];
     if (this.selectedFirst === 'BMI') return [];
     if (this.selectedFirst === 'Profesori') {
-      return [
+      let x = [
         ...new Set(
           this.schedules.flatMap((sched) => {
-            return sched.lectures.flatMap((lect) => lect.teacher);
+            return sched.lectures.flatMap((lect) =>
+              lect.teacher.split('/').flatMap((l) => l.replaceAll(/\(.*\)/g, '').trim()),
+            );
           }),
         ),
-      ].filter((s) => !s.includes('/') && s.trim() !== '');
+      ].filter((s) => s.trim() !== '');
+      console.log(x);
+      return x;
     }
     if (this.selectedFirst === 'Prostorije') {
       return [
         ...new Set(
           this.schedules.flatMap((sched) => {
-            return sched.lectures.flatMap((lect) => lect.location);
+            return sched.lectures.flatMap((lect) => lect.location.split('/')[0].trim());
           }),
         ),
-      ].filter((s) => !s.includes('/') && s.trim() !== '');
+      ].filter((s) => s.trim() !== '');
     }
     return ['AR', 'EEMS', 'ESKE', 'RI', 'TK'];
   }
