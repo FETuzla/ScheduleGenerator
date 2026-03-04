@@ -36,6 +36,7 @@
       </li>
     }
   </ul>
+  <button (click)="exportToPdf()" id="pdfBtn">Preuzmi označenu godinu kao PDF</button>
 </aside>
 
 <main class="content">
@@ -52,8 +53,6 @@
       }
     </select>
   </div>
-
-	<button (click)="exportToPdf()">Export to PDF</button>
 
   <div *ngIf="loading" class="status-message">Učitavanje rasporeda...</div>
   <div *ngIf="error" class="status-message">Greška pri učitavanju podataka. Pokušaj ponovo.</div>
