@@ -8,10 +8,10 @@ import { DrawingTool } from '../drawing-tool/drawing-tool';
   standalone: true,
   imports: [CommonModule, DrawingTool],
   templateUrl: './schedule-component.html',
-  styleUrl: './schedule-component.scss'
+  styleUrl: './schedule-component.scss',
 })
 export class ScheduleComponent {
-  @Input() schedule: Schedule | null = null;
+  @Input() lectures: Lecture[] | null = null;
   @Output() lectureSelected = new EventEmitter<Lecture>();
 
   public onLectureClick(lecture: Lecture) {

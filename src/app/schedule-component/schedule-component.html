@@ -1,4 +1,2 @@
-<app-drawing-tool 
-  [lectures]="schedule?.lectures || []" 
-  (lectureClicked)="onLectureClick($event)">
+<app-drawing-tool [lectures]="lectures || []" (lectureClicked)="onLectureClick($event)">
 </app-drawing-tool>

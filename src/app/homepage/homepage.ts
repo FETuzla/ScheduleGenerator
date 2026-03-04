@@ -2,7 +2,13 @@ import { Component, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ScheduleComponent } from '../schedule-component/schedule-component';
-import { FIRST_SELECTORS, FirstSelector, Schedule, SecondSelector, Lecture } from '../models/schedule.model';
+import {
+  FIRST_SELECTORS,
+  FirstSelector,
+  Schedule,
+  SecondSelector,
+  Lecture,
+} from '../models/schedule.model';
 import { CustomSchedule } from '../custom-schedule/custom-schedule';
 import { ScheduleService } from '../services/schedule.service';
 
@@ -17,7 +23,7 @@ export class Homepage {
   @ViewChild('customScheduleComponent') customSchedule!: CustomSchedule;
 
   selectedFirst: FirstSelector = 'Prva godina';
-  selectedSecond: SecondSelector | null = 'Linija 1';
+  selectedSecond: SecondSelector | string | null = 'Linija 1';
   firstSelectors = FIRST_SELECTORS;
 
   schedules: Schedule[] = [];
@@ -27,7 +33,10 @@ export class Homepage {
   showHelp = true;
   menuOpen = false;
 
-  constructor(private scheduleService: ScheduleService, private cdr: ChangeDetectorRef) {}
+  constructor(
+    private scheduleService: ScheduleService,
+    private cdr: ChangeDetectorRef,
+  ) {}
 
   async ngOnInit() {
     this.loadPages();
@@ -49,7 +58,7 @@ export class Homepage {
       if (!response.ok) throw new Error('Network response was not ok');
       const data = await response.json();
       this.otherPages = (data as string[]).filter(
-        (page) => page !== window.location.pathname.replace(/^\/|\/$/g, '')
+        (page) => page !== window.location.pathname.replace(/^\/|\/$/g, ''),
       );
     } catch (error) {
       console.error('Failed to fetch pages:', error);
@@ -67,19 +76,56 @@ export class Homepage {
     this.selectedSecond = options.length ? options[0] : null;
   }
 
-  get secondSelectors(): SecondSelector[] {
+  get secondSelectors(): SecondSelector[] | string[] {
     if (this.selectedFirst === 'Prva godina') return ['Linija 1', 'Linija 2'];
+    if (this.selectedFirst === 'TOI') return ['Prva godina', 'Druga godina', 'Treca godina'];
     if (this.selectedFirst === 'BMI') return [];
+    if (this.selectedFirst === 'Profesori') {
+      return [
+        ...new Set(
+          this.schedules.flatMap((sched) => {
+            return sched.lectures.flatMap((lect) =>
+              lect.teacher.split('/').flatMap((l) => l.replaceAll(/\(.*\)/g, '').trim()),
+            );
+          }),
+        ),
+      ].filter((s) => s.trim() !== '');
+    }
+    if (this.selectedFirst === 'Prostorije') {
+      return [
+        ...new Set(
+          this.schedules.flatMap((sched) => {
+            return sched.lectures.flatMap((lect) => lect.location.split('/')[0].trim());
+          }),
+        ),
+      ].filter((s) => s.trim() !== '');
+    }
     return ['AR', 'EEMS', 'ESKE', 'RI', 'TK'];
   }
 
-  get schedule(): Schedule | null {
+  get lectures(): Lecture[] | null {
     if (!this.schedules.length) return null;
-    return this.schedules.find(
-      (s) =>
-        s.firstSelector === this.selectedFirst &&
-        (s.secondSelector ?? null) === (this.selectedSecond ?? null)
-    ) ?? null;
+    if (this.selectedFirst === 'Profesori') {
+      return (
+        this.schedules.flatMap((scheds) => {
+          return scheds.lectures.filter((lect) => lect.teacher.includes(this.selectedSecond!!));
+        }) || null
+      );
+    }
+    if (this.selectedFirst === 'Prostorije') {
+      return (
+        this.schedules.flatMap((scheds) => {
+          return scheds.lectures.filter((lect) => lect.location.includes(this.selectedSecond!!));
+        }) || null
+      );
+    }
+    return (
+      this.schedules.find(
+        (s) =>
+          s.firstSelector === this.selectedFirst &&
+          (s.secondSelector ?? null) === (this.selectedSecond ?? null),
+      )?.lectures ?? null
+    );
   }
 
   addLectureToCustom(lecture: Lecture) {
