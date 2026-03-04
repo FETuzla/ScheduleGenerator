@@ -87,7 +87,7 @@ export class DrawingTool implements AfterViewInit, OnChanges {
 
     const dayMap: { [key: string]: number } = {
       'monday': 0, 'tuesday': 20, 'wednesday': 40, 'thursday': 60, 'friday': 80,
-      'ponedjeljak': 0, 'utorak': 20, 'srijeda': 40, 'četvrtak': 60, 'petak': 80,
+      'ponedjeljak': 0, 'utorak': 20, 'srijeda': 40, 'četvrtak': 60, 'cetvrtak': 60, 'petak': 80,
       'saturday': 80, 'subota': 80
     };
     
@@ -430,13 +430,14 @@ export class DrawingTool implements AfterViewInit, OnChanges {
 
     const getNextDay = (dayName: string) => {
       const dayMap: { [key: string]: number } = {
-        'sunday': 0,
-        'monday': 1,
-        'tuesday': 2,
-        'wednesday': 3,
-        'thursday': 4,
-        'friday': 5,
-        'saturday': 6,
+        'nedjelja': 0,
+        'ponedjeljak': 1,
+        'utorak': 2,
+        'srijeda': 3,
+        'četvrtak': 4,
+        'cetvrtak': 4,
+        'petak': 5,
+        'subota': 6,
       };
       const targetDay = dayMap[dayName.toLowerCase()] ?? 5;
       const d = new Date();

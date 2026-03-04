@@ -9,7 +9,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Osnovi Programiranja 1',
         displayName: 'OP 1',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '09:00',
         endTime: '10:00',
         location: 'FF 008',
@@ -19,7 +19,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Osnovi elektrotehnike II 2',
         displayName: 'OE II 2',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '09:00',
         endTime: '11:00',
         location: 'GIM MM',
@@ -29,7 +29,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Osnovi programiranja',
         displayName: 'OP',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '10:00',
         endTime: '12:00',
         location: 'G RC 21',
@@ -39,7 +39,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Tehnologije za podršku tehničkom pisanju',
         displayName: 'TPTP',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '10:00',
         endTime: '12:00',
         location: 'G RC 9',
@@ -49,7 +49,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Osnovi elektrotehnike II',
         displayName: 'OE II 2a/2b',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '11:00',
         endTime: '13:00',
         location: 'Lab.Gim',
@@ -59,7 +59,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Matematika II',
         displayName: 'MM II',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '13:00',
         endTime: '16:00',
         location: 'A2',
@@ -69,7 +69,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Fizika II',
         displayName: 'Fiz II 2a/2b',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '08:00',
         endTime: '09:30',
         location: 'Tehn.fak.',
@@ -79,7 +79,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Fizika II',
         displayName: 'Fiz II 1a/1b',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '09:30',
         endTime: '11:00',
         location: 'Tehn.fak.',
@@ -89,7 +89,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Osnovi elektrotehnike II',
         displayName: 'OE II',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '11:00',
         endTime: '14:00',
         location: 'A2',
@@ -99,7 +99,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Matematika II',
         displayName: 'MM II 3',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '14:00',
         endTime: '16:00',
         location: 'GA',
@@ -109,7 +109,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Tehnologije za podršku tehničkom pisanju',
         displayName: 'TPTP 3a/3b',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '16:00',
         endTime: '18:00',
         location: 'G RC 9',
@@ -119,7 +119,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Tehnologije za podršku tehničkom pisanju',
         displayName: 'TPTP 2a/2b',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '12:00',
         endTime: '14:00',
         location: 'G RC 9',
@@ -129,7 +129,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Osnovi elektrotehnike II',
         displayName: 'OE II 3a/3b',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '12:00',
         endTime: '14:00',
         location: 'Lab.Gim',
@@ -139,7 +139,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Fizika II',
         displayName: 'Fiz II',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '14:00',
         endTime: '17:00',
         location: 'A2',
@@ -149,7 +149,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Fizika II',
         displayName: 'Fiz II 1',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '17:00',
         endTime: '18:00',
         location: 'A2',
@@ -159,7 +159,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Osnovi programiranja 2a/2b',
         displayName: 'OP 2a/2b',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '17:00',
         endTime: '18:30',
         location: 'G RC 21',
@@ -169,7 +169,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Osnovi programiranja',
         displayName: 'OP 3',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '17:00',
         endTime: '18:00',
         location: 'FF 008',
@@ -179,7 +179,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Osnovi programiranja',
         displayName: 'OP 3a/3b',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '18:30',
         endTime: '20:00',
         location: 'G RC 21',
@@ -189,7 +189,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Osnovi programiranja',
         displayName: 'OP 2',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '19:00',
         endTime: '20:00',
         location: 'GA',
@@ -199,7 +199,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Matematika II',
         displayName: 'MM II 1',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '09:00',
         endTime: '11:00',
         location: 'FF 008',
@@ -209,7 +209,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Osnovi elektrotehnike II',
         displayName: 'OE II 1a/1b',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '11:00',
         endTime: '13:00',
         location: 'Lab.Gim',
@@ -219,7 +219,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Fizika II',
         displayName: 'Fiz II 2',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '12:00',
         endTime: '13:00',
         location: 'FF 008',
@@ -229,7 +229,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Fizika II',
         displayName: 'Fiz II 3',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '11:00',
         endTime: '12:00',
         location: 'FF 008',
@@ -239,7 +239,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Osnovi elektrotehnike II',
         displayName: 'OE II 3',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '12:00',
         endTime: '14:00',
         location: 'GIM MM',
@@ -249,7 +249,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Osnovi programiranja',
         displayName: 'OP',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '14:00',
         endTime: '17:00',
         location: 'A2',
@@ -259,7 +259,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Osnovi elektrotehnike II',
         displayName: 'OE II',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '09:00',
         endTime: '11:00',
         location: 'Lab EM',
@@ -269,7 +269,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Matematika II',
         displayName: 'MM II',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '09:00',
         endTime: '11:00',
         location: 'FF 008',
@@ -279,7 +279,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Tehnologije za podršku tehničkom pisanju',
         displayName: 'TPTP',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '11:00',
         endTime: '14:00',
         location: 'A2',
@@ -289,7 +289,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Fizika II',
         displayName: 'Fiz II 3a/3b',
-        day: 'Saturday',
+        day: 'Subota',
         startTime: '8:00',
         endTime: '10:00',
         location: 'Tehn.fak / Subota od 8:00',
@@ -306,7 +306,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Fizika II',
         displayName: 'Fiz II',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '08:00',
         endTime: '11:00',
         location: 'A2',
@@ -316,7 +316,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Mat II',
         displayName: 'Mat II 4',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '11:00',
         endTime: '13:00',
         location: 'A2',
@@ -326,7 +326,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Osnovi programiranja',
         displayName: 'OP 5a/5b',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '12:00',
         endTime: '14:00',
         location: 'G RC 21',
@@ -336,7 +336,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Tehnologije za podršku tehničkom pisanju 5a/5b',
         displayName: 'TPTP 5a/5b',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '12:00',
         endTime: '14:00',
         location: 'G RC 9',
@@ -346,7 +346,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Osnovi programiranja 5',
         displayName: 'OP 5',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '14:00',
         endTime: '15:00',
         location: 'FF 008',
@@ -356,7 +356,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Osnovi elektrotehnike II',
         displayName: 'OE II 6',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '11:00',
         endTime: '13:00',
         location: 'FF 008',
@@ -366,7 +366,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Osnovi elektrotehnike II',
         displayName: 'OE II 6a/6b',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '13:00',
         endTime: '15:00',
         location: 'Lab.Gim',
@@ -376,7 +376,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Osnovi elektrotehnike II',
         displayName: 'OE II',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '08:00',
         endTime: '11:00',
         location: 'A2',
@@ -386,7 +386,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Osnovi programiranja',
         displayName: 'OP 4a/4b',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '11:00',
         endTime: '13:00',
         location: 'G RC 21',
@@ -396,7 +396,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Osnovi programiranja',
         displayName: 'OP 4',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '13:00',
         endTime: '14:00',
         location: 'GA',
@@ -406,7 +406,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Fizika II',
         displayName: 'Fiz II 6a/6b',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '11:00',
         endTime: '13:00',
         location: 'Tehn.Fak',
@@ -416,7 +416,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Osnovi elektrotehnike II',
         displayName: 'OE II 5',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '11:00',
         endTime: '13:00',
         location: 'GA',
@@ -426,7 +426,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Osnovi elektrotehnike II',
         displayName: 'OE II 5a/5b',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '13:00',
         endTime: '15:00',
         location: 'Lab.Gim',
@@ -436,7 +436,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Fizika II',
         displayName: 'Fiz II 5a/5b',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '13:00',
         endTime: '15:00',
         location: 'Tehn.fak',
@@ -446,7 +446,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Fizika II',
         displayName: 'Fiz II 4',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '08:30',
         endTime: '09:30',
         location: 'FF 008',
@@ -456,7 +456,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Tehnologije za podršku tehničkom pisanju',
         displayName: 'TPTP 4a/4b',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '09:30',
         endTime: '11:00',
         location: 'G RC 9',
@@ -466,7 +466,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Tehnologije za podršku tehničkom pisanju',
         displayName: 'TPTP 6a/6b',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '08:00',
         endTime: '09:30',
         location: 'G RC 9',
@@ -476,7 +476,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Fizika II',
         displayName: 'Fiz II 6',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '10:00',
         endTime: '11:00',
         location: 'FF 008',
@@ -486,7 +486,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Matematika II',
         displayName: 'Mat II',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '11:00',
         endTime: '14:00',
         location: 'A2',
@@ -496,7 +496,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'MAT II',
         displayName: 'Mat II 5',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '14:00',
         endTime: '15:30',
         location: 'FF 008',
@@ -506,7 +506,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Fizika II',
         displayName: 'Fiz II 5',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '16:00',
         endTime: '17:00',
         location: 'FF 008',
@@ -516,7 +516,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Osnovi programiranja',
         displayName: 'OP',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '08:00',
         endTime: '11:00',
         location: 'A2',
@@ -526,7 +526,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Osnovi elektrotehnike II',
         displayName: 'OE II 4',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '11:00',
         endTime: '13:00',
         location: 'GA',
@@ -536,7 +536,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Osnovi elektrotehnike II',
         displayName: 'OE II 4a/4b',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '13:00',
         endTime: '15:00',
         location: 'Lab.Gim',
@@ -546,7 +546,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Osnovi programiranja',
         displayName: 'OP 6',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '11:00',
         endTime: '12:00',
         location: 'G RC 19',
@@ -556,7 +556,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Osnovi programiranja',
         displayName: 'OP 6a/6b',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '12:00',
         endTime: '14:00',
         location: 'G RC 9',
@@ -566,7 +566,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Tehnologije za podršku tehničkom pisanju',
         displayName: 'TPTP',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '08:00',
         endTime: '11:00',
         location: 'A2',
@@ -577,7 +577,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Matematika II',
         displayName: 'Mat II 6',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '11:00',
         endTime: '13:00',
         location: 'FF 008',
@@ -587,7 +587,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Fizika II',
         displayName: 'Fiz II 4a/4b',
-        day: 'Saturday',
+        day: 'Subota',
         startTime: '09:30',
         endTime: '11:30',
         location: 'Tehn.fak / Subotom od 9:30',
@@ -604,7 +604,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Strukture podataka',
         displayName: 'SP 2a/2b',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '08:00',
         endTime: '10:00',
         location: 'SSQ Lab',
@@ -614,7 +614,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Strukture podataka',
         displayName: 'SP 2',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '10:00',
         endTime: '11:00',
         location: 'SSQ Lab',
@@ -624,7 +624,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Projektovanje logičkih sistema',
         displayName: 'PLS',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '11:00',
         endTime: '14:00',
         location: 'GIM MM',
@@ -634,7 +634,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Analogna integrisana elektronika',
         displayName: 'AIE',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '14:00',
         endTime: '17:00',
         location: 'A2',
@@ -644,7 +644,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Linearni dinamički sistemi i signali',
         displayName: 'LDSS 1a/1b',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '08:00',
         endTime: '10:00',
         location: 'G RC 19',
@@ -654,7 +654,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Linearni dinamički sistemi i signali',
         displayName: 'LDSS',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '10:00',
         endTime: '11:00',
         location: 'G RC 19',
@@ -664,7 +664,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Linearni dinamički sistemi i signali',
         displayName: 'LDSS',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '11:00',
         endTime: '14:00',
         location: 'GIM MM',
@@ -674,7 +674,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Strukture podataka',
         displayName: 'SP 1a/1b',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '08:00',
         endTime: '10:00',
         location: 'G RC 19',
@@ -684,7 +684,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Strukture podataka',
         displayName: 'SP 1',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '10:00',
         endTime: '11:00',
         location: 'G RC 19',
@@ -694,7 +694,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Strukture podataka',
         displayName: 'SP',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '11:00',
         endTime: '14:00',
         location: 'A2',
@@ -704,7 +704,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Mjerenja u automatici i robotici',
         displayName: 'MAR 1a/1b',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '08:00',
         endTime: '11:00',
         location: 'G RC 21',
@@ -714,7 +714,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Mjerenja u automatici i robotici',
         displayName: 'MAR',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '11:00',
         endTime: '14:00',
         location: 'GA',
@@ -724,7 +724,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Analogna integrisana elektronika',
         displayName: 'AIE 1a/1b',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '14:00',
         endTime: '15:30',
         location: 'Stelekt Lab',
@@ -734,7 +734,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Analogna integrisana elektronika',
         displayName: 'AIE',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '15:30',
         endTime: '16:15',
         location: 'GLabEM',
@@ -744,7 +744,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Projektovanje logičkih sistema',
         displayName: 'PLS 1a',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '16:15',
         endTime: '18:00',
         location: 'G RC 19',
@@ -754,7 +754,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Projektovanje logičkih sistema',
         displayName: 'PLS 1b',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '16:15',
         endTime: '18:00',
         location: 'G RC 19',
@@ -771,7 +771,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Programski alati u elektro-energetici',
         displayName: 'PAEE',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '13:00',
         endTime: '16:00',
         location: 'G RC 19',
@@ -781,7 +781,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Programski alati u elektro-energetici',
         displayName: 'PAEE',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '16:00',
         endTime: '17:00',
         location: 'G RC 19',
@@ -791,7 +791,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Programski alati u elektro-energetici',
         displayName: 'PAEE 1a/1b',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '17:00',
         endTime: '18:30',
         location: 'G RC 19',
@@ -801,7 +801,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Električne instalacije niskog napona',
         displayName: 'EINN',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '08:00',
         endTime: '11:00',
         location: 'GA',
@@ -811,7 +811,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Električne instalacije niskog napona',
         displayName: 'EINN',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '11:00',
         endTime: '12:00',
         location: 'G RC 19',
@@ -821,7 +821,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Električne instalacije niskog napona',
         displayName: 'EINN',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '12:00',
         endTime: '14:00',
         location: 'G RC 19',
@@ -831,7 +831,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Električne mašine I',
         displayName: 'EM I',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '13:00',
         endTime: '16:00',
         location: 'GA',
@@ -841,7 +841,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Elektroenergetske prenosne i distributivne mreže',
         displayName: 'EEPDM',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '13:00',
         endTime: '16:00',
         location: 'GA',
@@ -851,7 +851,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Elektroenergetske prenosne i distributivne mreže',
         displayName: 'EEPDM',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '16:00',
         endTime: '17:00',
         location: 'GA',
@@ -861,7 +861,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Elektroenergetske prenosne i distributivne mreže',
         displayName: 'EPDM',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '17:00',
         endTime: '18:00',
         location: 'G RC 21',
@@ -871,7 +871,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Numeričke metode u elektrotehnici',
         displayName: 'NME',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '08:00',
         endTime: '09:00',
         location: 'FF 008',
@@ -881,7 +881,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Numeričke metode u elektrotehnici',
         displayName: 'NME',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '09:00',
         endTime: '10:00',
         location: 'G RC 9',
@@ -891,7 +891,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Numeričke metode u elektrotehnici',
         displayName: 'NME',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '10:00',
         endTime: '11:00',
         location: 'G RC 9',
@@ -901,7 +901,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Električne mašine I',
         displayName: 'EM I',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '11:00',
         endTime: '12:00',
         location: 'G Lab EM',
@@ -911,7 +911,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Električne mašine I',
         displayName: 'EM I',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '12:00',
         endTime: '13:00',
         location: 'G Lab EM',
@@ -921,7 +921,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Numeričke metode u elektrotehnici',
         displayName: 'NME',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '13:00',
         endTime: '16:00',
         location: 'Stelekt',
@@ -939,7 +939,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Električna mjerenja',
         displayName: 'EM',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '11:00',
         endTime: '14:00',
         location: 'G Lab EM',
@@ -950,7 +950,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Električna mjerenja',
         displayName: 'EM',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '16:00',
         endTime: '19:00',
         location: 'G Lab EM',
@@ -961,7 +961,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Električne mašine I',
         displayName: 'EM I',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '10:00',
         endTime: '11:00',
         location: 'GA',
@@ -971,7 +971,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Električne mašine I',
         displayName: 'EM I 1a/1b',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '11:00',
         endTime: '13:00',
         location: 'G Lab EM',
@@ -981,7 +981,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Električne mašine I',
         displayName: 'EM I',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '13:00',
         endTime: '16:00',
         location: 'GA',
@@ -991,7 +991,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Elektromehanička konverzija energije',
         displayName: 'EKE',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '08:00',
         endTime: '10:00',
         location: 'G Lab EM',
@@ -1001,7 +1001,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Elektromehanička konverzija energije',
         displayName: 'EKE',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '10:00',
         endTime: '13:00',
         location: 'G Lab EM',
@@ -1011,7 +1011,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Senzori i pretvarači',
         displayName: 'SP',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '13:00',
         endTime: '14:00',
         location: 'G Lab EM',
@@ -1021,7 +1021,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Električna mjerenja',
         displayName: 'EM 1a/1b',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '08:00',
         endTime: '10:00',
         location: 'Lab.Gim',
@@ -1031,7 +1031,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Električna mjerenja',
         displayName: 'EM',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '10:00',
         endTime: '11:00',
         location: 'G Lab EM',
@@ -1041,7 +1041,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Senzori i pretvarači',
         displayName: 'SP',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '11:00',
         endTime: '14:00',
         location: 'GIM MM',
@@ -1052,7 +1052,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Senzori i pretvarači',
         displayName: 'SP 1a/1b',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '14:00',
         endTime: '16:00',
         location: 'Lab.Gim',
@@ -1069,7 +1069,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Arhitektura računara',
         displayName: 'AR',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '08:00',
         endTime: '11:00',
         location: 'Stelekt',
@@ -1079,7 +1079,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Strukture podataka',
         displayName: 'SP 2',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '11:00',
         endTime: '12:00',
         location: 'SSQ Lab',
@@ -1089,7 +1089,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Strukture podataka',
         displayName: 'SP 2a/2b',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '12:00',
         endTime: '14:00',
         location: 'SSQ Lab',
@@ -1099,7 +1099,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Uvod u računarske algoritme',
         displayName: 'URA 1a/1b',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '08:00',
         endTime: '10:00',
         location: 'G RC 19',
@@ -1109,7 +1109,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Uvod u računarske algoritme',
         displayName: 'URA',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '10:00',
         endTime: '11:00',
         location: 'G RC 19',
@@ -1119,7 +1119,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Uvod u računarske algoritme',
         displayName: 'URA',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '11:00',
         endTime: '14:00',
         location: 'Stelekt',
@@ -1130,7 +1130,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Strukture podataka',
         displayName: 'SP 1a/1b',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '14:00',
         endTime: '16:00',
         location: 'SSQ Lab',
@@ -1140,7 +1140,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Strukture podataka',
         displayName: 'SP 1',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '16:00',
         endTime: '17:00',
         location: 'SSQ Lab',
@@ -1150,7 +1150,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Arhitektura računara',
         displayName: 'AR 1',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '17:00',
         endTime: '18:00',
         location: 'G RC 9',
@@ -1160,7 +1160,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Arhitektura računara',
         displayName: 'AR 1a/1b',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '18:00',
         endTime: '20:00',
         location: 'G RC 9',
@@ -1170,7 +1170,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Strukture podataka',
         displayName: 'SP',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '11:00',
         endTime: '14:00',
         location: 'A2',
@@ -1180,7 +1180,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Primjena inženjerskih softverskih paketa',
         displayName: 'PISP',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '14:00',
         endTime: '15:00',
         location: 'FF 008',
@@ -1190,7 +1190,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Primjena inženjerskih softverskih paketa',
         displayName: 'PISP 1a/1b',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '15:00',
         endTime: '17:00',
         location: 'G RC 21',
@@ -1200,7 +1200,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Arhitektura računara',
         displayName: 'AR 2',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '17:00',
         endTime: '18:00',
         location: 'G RC 9',
@@ -1210,7 +1210,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Arhitektura računara',
         displayName: 'AR 1c',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '18:00',
         endTime: '19:00',
         location: 'G RC 9',
@@ -1220,7 +1220,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Primjena inženjerskih softverskih paketa',
         displayName: 'PISP',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '08:00',
         endTime: '11:00',
         location: 'Stelekt',
@@ -1237,7 +1237,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Modeliranje i analiza podataka',
         displayName: 'MAP',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '08:00',
         endTime: '11:00',
         location: 'FTOS',
@@ -1247,7 +1247,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Statistička teorija telekomunikacija',
         displayName: 'STK',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '11:00',
         endTime: '14:00',
         location: 'FTOS',
@@ -1257,7 +1257,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Analogna integrisana elektronika',
         displayName: 'AIE 1a/1b',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '14:00',
         endTime: '15:30',
         location: 'Stelekt Lab',
@@ -1267,7 +1267,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Analogna integrisana elektronika',
         displayName: 'AIE',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '14:00',
         endTime: '17:00',
         location: 'A2',
@@ -1277,7 +1277,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Analogna integrisana elektronika',
         displayName: 'AIE',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '17:30',
         endTime: '18:30',
         location: 'Stelekt',
@@ -1287,7 +1287,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Statistička teorija telekomunikacija',
         displayName: 'STK 1',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '18:30',
         endTime: '19:30',
         location: 'Stelekt Lab',
@@ -1297,7 +1297,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Sekvencijalni sklopovi',
         displayName: 'Sekv. skl.',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '08:00',
         endTime: '11:00',
         location: 'Stelekt',
@@ -1308,7 +1308,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Modeliranje i analiza podataka',
         displayName: 'MAP 1a',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '11:00',
         endTime: '13:00',
         location: 'Stelekt Lab',
@@ -1318,7 +1318,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Modeliranje i analiza podataka',
         displayName: 'MAP 1b',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '13:00',
         endTime: '15:00',
         location: 'Stelekt Lab',
@@ -1328,7 +1328,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Modeliranje i analiza podataka',
         displayName: 'MAP 1c',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '15:00',
         endTime: '17:00',
         location: 'Stelekt Lab',
@@ -1338,7 +1338,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Sekvencijalni sklopovi',
         displayName: 'Sekv. skl.',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '12:00',
         endTime: '13:00',
         location: 'Stelekt',
@@ -1348,7 +1348,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Sekvencijalni sklopovi',
         displayName: 'Sekv. skl. 1a/1b',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '13:00',
         endTime: '16:00',
         location: 'G LabOE i GLabEM',
@@ -1358,7 +1358,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Statistička teorija telekomunikacija',
         displayName: 'STK',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '16:00',
         endTime: '17:00',
         location: 'Stelekt',
@@ -1375,7 +1375,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Aktuatori',
         displayName: 'AKT',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '14:00',
         endTime: '17:00',
         location: 'GA',
@@ -1385,7 +1385,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Aktuatori',
         displayName: 'AKT',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '11:00',
         endTime: '12:00',
         location: 'LabOE',
@@ -1395,7 +1395,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Aktuatori',
         displayName: 'AKT 1a/1b',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '12:00',
         endTime: '14:00',
         location: 'G RC 12',
@@ -1405,7 +1405,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Projektovanje mikroprocesorskih sistema',
         displayName: 'PMPS 1c',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '14:00',
         endTime: '16:00',
         location: 'G RC 9',
@@ -1415,7 +1415,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Linearni sistemi automatskog upravljanja II',
         displayName: 'LSAU II 1a',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '12:00',
         endTime: '14:00',
         location: 'GIM MM',
@@ -1425,7 +1425,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Linearni sistemi automatskog upravljanja II',
         displayName: 'LSAU II',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '14:00',
         endTime: '17:00',
         location: 'GIM MM',
@@ -1435,7 +1435,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Linearni sistemi automatskog upravljanja II',
         displayName: 'LSAU II',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '17:00',
         endTime: '18:00',
         location: 'GIM MM',
@@ -1445,7 +1445,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Linearni sistemi automatskog upravljanja II',
         displayName: 'LSAU II 1b',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '18:00',
         endTime: '19:00',
         location: 'GIM MM',
@@ -1455,7 +1455,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Nelinearni sistemi upravljanja',
         displayName: 'NSU',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '08:00',
         endTime: '11:00',
         location: 'Stelekt',
@@ -1465,7 +1465,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Nelinearni sistemi upravljanja',
         displayName: 'NSU',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '12:00',
         endTime: '13:00',
         location: 'G RC 19',
@@ -1475,7 +1475,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Nelinearni sistemi upravljanja',
         displayName: 'NSU 1a/1b',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '13:00',
         endTime: '15:00',
         location: 'G RC 19',
@@ -1485,7 +1485,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Projektovanje mikroprocesorskih sistema',
         displayName: 'PMPS',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '14:00',
         endTime: '17:00',
         location: 'GIM MM',
@@ -1495,7 +1495,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Projektovanje mikroprocesorskih sistema',
         displayName: 'PMPS 1a/1b',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '17:00',
         endTime: '20:00',
         location: 'GA',
@@ -1512,7 +1512,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Simulacija sistema',
         displayName: 'Sim.Sis',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '11:00',
         endTime: '14:00',
         location: 'GA',
@@ -1522,7 +1522,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Simulacija sistema',
         displayName: 'Sim.Sis',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '16:00',
         endTime: '17:00',
         location: 'FF 008',
@@ -1532,7 +1532,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Simulacija sistema',
         displayName: 'Sim.Sis 1c',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '17:00',
         endTime: '18:00',
         location: 'G RC 21',
@@ -1542,7 +1542,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Tehnika visokih napona',
         displayName: 'TVN',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '08:00',
         endTime: '11:00',
         location: 'Stelekt',
@@ -1552,7 +1552,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Relejna tehnika',
         displayName: 'RT',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '11:00',
         endTime: '12:00',
         location: 'GLabEM',
@@ -1562,7 +1562,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Relejna tehnika',
         displayName: 'RT',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '12:00',
         endTime: '13:00',
         location: 'GLabEM',
@@ -1572,7 +1572,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Relejna tehnika',
         displayName: 'RT',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '13:00',
         endTime: '14:00',
         location: 'GLabEM',
@@ -1582,7 +1582,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Tehnika visokih napona',
         displayName: 'TVN',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '14:00',
         endTime: '15:00',
         location: 'GLabEM',
@@ -1592,7 +1592,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Elektroenergetske stanice',
         displayName: 'EES',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '13:00',
         endTime: '16:00',
         location: 'G RC 21',
@@ -1602,7 +1602,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Elektroenergetske stanice',
         displayName: 'EES',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '16:00',
         endTime: '17:00',
         location: 'G RC 21',
@@ -1612,7 +1612,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Tehnika visokih napona',
         displayName: 'TVN',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '17:00',
         endTime: '18:00',
         location: 'G RC 19',
@@ -1622,7 +1622,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Elektroenergetske stanice',
         displayName: 'EES',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '18:00',
         endTime: '19:00',
         location: 'G RC 12',
@@ -1632,7 +1632,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Relejna tehnika',
         displayName: 'RT',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '11:00',
         endTime: '14:00',
         location: 'G RC 21',
@@ -1642,7 +1642,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Pametne energetske mreže',
         displayName: 'PEM',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '08:00',
         endTime: '11:00',
         location: 'GIM MM',
@@ -1652,7 +1652,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Pametne energetske mreže',
         displayName: 'PEM',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '11:00',
         endTime: '12:00',
         location: 'G RC 21',
@@ -1662,7 +1662,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Pametne energetske mreže',
         displayName: 'PEM',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '12:00',
         endTime: '13:00',
         location: 'Lab.Gim',
@@ -1679,7 +1679,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Operaciona istraživanja',
         displayName: 'OI',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '13:00',
         endTime: '16:00',
         location: 'GIM MM',
@@ -1690,7 +1690,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Električna postrojenja',
         displayName: 'EP',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '16:00',
         endTime: '19:00',
         location: 'GLabEM',
@@ -1701,7 +1701,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Dijagnostika u energetici',
         displayName: 'DuE',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '13:00',
         endTime: '16:00',
         location: 'GLabEM',
@@ -1712,7 +1712,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Električna postrojenja',
         displayName: 'EP',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '16:00',
         endTime: '17:00',
         location: 'GA',
@@ -1722,7 +1722,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Električna postrojenja',
         displayName: 'EP 1a/1b',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '17:00',
         endTime: '19:00',
         location: 'GLabEM',
@@ -1732,7 +1732,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Elektromagnetna kompatibilnost',
         displayName: 'EMC',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '19:00',
         endTime: '20:00',
         location: 'GLabEM',
@@ -1742,7 +1742,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Operaciona istraživanja',
         displayName: 'OI',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '08:00',
         endTime: '09:00',
         location: 'GA',
@@ -1752,7 +1752,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Elektromagnetna kompatibilnost',
         displayName: 'EMC',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '09:00',
         endTime: '10:00',
         location: 'GA',
@@ -1762,7 +1762,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Dijagnostika u energetici',
         displayName: 'DuE',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '10:00',
         endTime: '11:00',
         location: 'GA',
@@ -1772,7 +1772,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Elektromagnetna kompatibilnost',
         displayName: 'EMC',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '08:00',
         endTime: '11:00',
         location: 'GA',
@@ -1783,7 +1783,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Dijagnostika u energetici',
         displayName: 'DuE',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '13:00',
         endTime: '14:00',
         location: 'GLabEM',
@@ -1800,7 +1800,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Simulacija sistema',
         displayName: 'Sim.Sis 1a/1b',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '08:00',
         endTime: '10:00',
         location: 'G RC 21',
@@ -1810,7 +1810,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Simulacija sistema',
         displayName: 'Sim.Sis',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '10:00',
         endTime: '11:00',
         location: 'FF 008',
@@ -1820,7 +1820,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Simulacija sistema',
         displayName: 'Sim.Sis',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '11:00',
         endTime: '14:00',
         location: 'GA',
@@ -1830,7 +1830,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Računarske mreže',
         displayName: 'RM',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '14:00',
         endTime: '17:00',
         location: 'Stelekt',
@@ -1840,7 +1840,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Računarske mreže',
         displayName: 'RM',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '17:00',
         endTime: '17:45',
         location: 'SSQ Lab',
@@ -1850,7 +1850,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Računarske mreže',
         displayName: 'RM',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '17:45',
         endTime: '20:00',
         location: 'SSQ Lab',
@@ -1860,7 +1860,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Računarska grafika',
         displayName: 'RG 1a/1b',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '08:00',
         endTime: '09:30',
         location: 'SSQ Lab',
@@ -1870,7 +1870,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Razvoj softvera',
         displayName: 'RS 1a/1b',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '09:30',
         endTime: '11:00',
         location: 'SSQ Lab',
@@ -1880,7 +1880,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Razvoj softvera',
         displayName: 'RS',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '11:00',
         endTime: '14:00',
         location: 'Stelekt',
@@ -1890,7 +1890,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Razvoj softvera',
         displayName: 'RS',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '10:00',
         endTime: '11:00',
         location: 'SSQ Lab',
@@ -1900,7 +1900,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Računarska grafika',
         displayName: 'RG',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '11:00',
         endTime: '14:00',
         location: 'Stelekt',
@@ -1910,7 +1910,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Računarska grafika',
         displayName: 'RG',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '14:00',
         endTime: '15:00',
         location: 'SSQ Lab',
@@ -1927,7 +1927,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Telekomunikacione mreže',
         displayName: 'TKM 1',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '12:00',
         endTime: '14:00',
         location: 'Stelekt Lab',
@@ -1937,7 +1937,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Optičke telekomunikacije',
         displayName: 'OTK',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '14:00',
         endTime: '17:00',
         location: 'Stelekt',
@@ -1947,7 +1947,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Optičke telekomunikacije',
         displayName: 'OTK',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '17:30',
         endTime: '18:30',
         location: 'Stelekt',
@@ -1957,7 +1957,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Optičke telekomunikacije',
         displayName: 'OTK 1a/1b',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '18:30',
         endTime: '20:00',
         location: 'Stelekt Lab',
@@ -1967,7 +1967,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Radijski telekomunikacijski sistemi',
         displayName: 'RTKS',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '14:00',
         endTime: '17:00',
         location: 'BIT',
@@ -1977,7 +1977,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Radijski telekomunikacijski sistemi',
         displayName: 'RTKS 1a/1b',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '17:00',
         endTime: '18:30',
         location: 'Stelekt Lab',
@@ -1987,7 +1987,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Radijski telekomunikacijski sistemi',
         displayName: 'RTKS',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '18:30',
         endTime: '19:30',
         location: 'Stelekt',
@@ -1997,7 +1997,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Razvoj telekomunikacijske programske podrške',
         displayName: 'RTKPP',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '14:00',
         endTime: '17:00',
         location: 'BIT',
@@ -2007,7 +2007,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Razvoj telekomunikacijske programske podrške',
         displayName: 'RTKPP',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '17:00',
         endTime: '19:00',
         location: 'Stelekt Lab',
@@ -2017,7 +2017,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Telekomunikacione mreže',
         displayName: 'TKM',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '08:00',
         endTime: '11:00',
         location: 'GIM MM',
@@ -2027,7 +2027,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Telekomunikacione mreže',
         displayName: 'TKM 1b',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '11:00',
         endTime: '13:00',
         location: 'Stelekt Lab',
@@ -2044,7 +2044,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Digitalni sistemi upravljanja i obrade signala II',
         displayName: 'DSUOS II',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '11:00',
         endTime: '14:00',
         location: 'Stelekt',
@@ -2054,7 +2054,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Inteligentni sistemi',
         displayName: 'IS',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '14:00',
         endTime: '17:00',
         location: 'G RC 19',
@@ -2064,7 +2064,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Inteligentni sistemi',
         displayName: 'IS 1b',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '17:00',
         endTime: '18:30',
         location: 'G RC 19',
@@ -2074,7 +2074,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Upravljanje mehatroničkim sistemima',
         displayName: 'UMS',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '13:00',
         endTime: '16:00',
         location: 'G RC 19',
@@ -2084,7 +2084,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Upravljanje mehatroničkim sistemima',
         displayName: 'UMS',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '17:00',
         endTime: '18:00',
         location: 'G RC 19',
@@ -2094,7 +2094,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Upravljanje mehatroničkim sistemima',
         displayName: 'UMS 1a/1b',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '18:00',
         endTime: '20:00',
         location: 'G RC 19',
@@ -2104,7 +2104,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Robotika i mašinska vizija',
         displayName: 'RMV',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '14:00',
         endTime: '17:00',
         location: 'GIM MM',
@@ -2114,7 +2114,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Robotika i mašinska vizija',
         displayName: 'RMV',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '17:00',
         endTime: '18:00',
         location: 'GA',
@@ -2124,7 +2124,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Robotika i mašinska vizija',
         displayName: 'RMV 1a/1b',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '18:00',
         endTime: '20:00',
         location: 'G RC 21',
@@ -2134,7 +2134,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Digitalni sistemi upravljanja i obrade signala II',
         displayName: 'DSUOS II',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '11:00',
         endTime: '12:00',
         location: 'G RC 19',
@@ -2144,7 +2144,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Digitalni sistemi upravljanja i obrade signala II',
         displayName: 'DSUOS II',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '12:00',
         endTime: '13:00',
         location: 'G RC 19',
@@ -2154,7 +2154,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Inteligentni sistemi',
         displayName: 'IS 1a',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '13:00',
         endTime: '15:00',
         location: 'G RC 19',
@@ -2171,7 +2171,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Tržište električne energije',
         displayName: 'TEE',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '14:00',
         endTime: '17:00',
         location: 'GIM MM',
@@ -2181,7 +2181,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Dinamika elektroenergetskog sistema',
         displayName: 'DEES',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '13:00',
         endTime: '16:00',
         location: 'G RC 21',
@@ -2191,7 +2191,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Dinamika elektroenergetskog sistema',
         displayName: 'DEES',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '16:00',
         endTime: '17:00',
         location: 'GA',
@@ -2201,7 +2201,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Dinamika elektroenergetskog sistema',
         displayName: 'DEES',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '17:00',
         endTime: '18:00',
         location: 'GA',
@@ -2211,7 +2211,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Planiranje elektroenergetskih sistema',
         displayName: 'PEES',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '08:00',
         endTime: '11:00',
         location: 'GIM MM',
@@ -2221,7 +2221,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Planiranje elektroenergetskih sistema',
         displayName: 'PEES',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '11:00',
         endTime: '12:00',
         location: 'G RC 19',
@@ -2231,7 +2231,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Planiranje elektroenergetskih sistema',
         displayName: 'PEES',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '12:00',
         endTime: '13:00',
         location: 'G RC 19',
@@ -2241,7 +2241,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Numerički postupci u projektovanju',
         displayName: 'NPP',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '08:00',
         endTime: '11:00',
         location: 'G RC 21',
@@ -2251,7 +2251,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Numerički postupci u projektovanju',
         displayName: 'NPP',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '14:00',
         endTime: '15:00',
         location: 'G RC 21',
@@ -2261,7 +2261,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Numerički postupci u projektovanju',
         displayName: 'NPP',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '15:00',
         endTime: '16:00',
         location: 'GA',
@@ -2271,7 +2271,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Tržište električne energije',
         displayName: 'TEE',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '16:00',
         endTime: '17:00',
         location: 'GA',
@@ -2281,7 +2281,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Tržište električne energije',
         displayName: 'TEE',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '17:00',
         endTime: '18:00',
         location: 'G RC 9',
@@ -2298,7 +2298,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Energetika i okolina',
         displayName: 'EO',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '14:00',
         endTime: '17:00',
         location: 'G RC 21',
@@ -2309,7 +2309,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Ekonomika i organizacija poslovanja',
         displayName: 'EOP',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '17:00',
         endTime: '18:00',
         location: 'GLabEM',
@@ -2319,7 +2319,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Ekonomika i organizacija poslovanja',
         displayName: 'EOP',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '18:00',
         endTime: '19:00',
         location: 'GLabEM',
@@ -2329,7 +2329,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Upravljanje elektromotornih pogona',
         displayName: 'UEMP',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '19:00',
         endTime: '20:00',
         location: 'GLabEM',
@@ -2339,7 +2339,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Ekonomika i organizacija poslovanja',
         displayName: 'EOP',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '08:00',
         endTime: '11:00',
         location: 'A2',
@@ -2350,7 +2350,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Energetika i okolina',
         displayName: 'EO',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '11:00',
         endTime: '12:00',
         location: 'GA',
@@ -2360,7 +2360,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Energetika i okolina',
         displayName: 'EO',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '14:00',
         endTime: '15:00',
         location: 'Lab.Gim',
@@ -2370,7 +2370,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Sistemi konverzije energije',
         displayName: 'SKE',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '14:00',
         endTime: '17:00',
         location: 'GLabEM',
@@ -2381,7 +2381,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Ekonomika i organizacija poslovanja',
         displayName: 'EOP',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '17:00',
         endTime: '20:00',
         location: 'A2',
@@ -2391,7 +2391,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Upravljanje elektromotornih pogona',
         displayName: 'UEMP',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '13:00',
         endTime: '14:00',
         location: 'Lab.Gim',
@@ -2401,7 +2401,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Upravljanje elektromotornih pogona',
         displayName: 'UEMP',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '14:00',
         endTime: '17:00',
         location: 'FF 008',
@@ -2411,7 +2411,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Sistemi konverzije energije',
         displayName: 'SKE',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '17:00',
         endTime: '18:00',
         location: 'GLabEM',
@@ -2421,7 +2421,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Sistemi konverzije energije',
         displayName: 'SKE',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '18:00',
         endTime: '19:00',
         location: 'GLabEM',
@@ -2438,7 +2438,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Razvoj web aplikacija',
         displayName: 'RWA',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '14:00',
         endTime: '17:00',
         location: 'Stelekt',
@@ -2448,7 +2448,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Razvoj web aplikacija',
         displayName: 'RWA',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '17:00',
         endTime: '18:00',
         location: 'SSQ Lab',
@@ -2458,7 +2458,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Razvoj web aplikacija',
         displayName: 'RWA 1a/1b',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '18:00',
         endTime: '20:00',
         location: 'SSQ Lab',
@@ -2468,7 +2468,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Sistemsko programiranje',
         displayName: 'SisP 1a/1b',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '11:00',
         endTime: '13:00',
         location: 'SSQ Lab',
@@ -2478,7 +2478,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Sistemsko programiranje',
         displayName: 'SisP',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '13:00',
         endTime: '14:00',
         location: 'SSQ Lab',
@@ -2488,7 +2488,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Sistemsko programiranje',
         displayName: 'SisP',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '14:00',
         endTime: '17:00',
         location: 'Stelekt',
@@ -2505,7 +2505,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Multimedijski sistemi i komunikacije',
         displayName: 'MMSK',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '08:00',
         endTime: '09:00',
         location: 'G RC 19',
@@ -2515,7 +2515,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Multimedijski sistemi i komunikacije',
         displayName: 'MMSK',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '09:00',
         endTime: '10:00',
         location: 'G RC 19',
@@ -2525,7 +2525,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Multimedijski sistemi i komunikacije',
         displayName: 'MMSK',
-        day: 'Monday',
+        day: 'Ponedjeljak',
         startTime: '10:00',
         endTime: '13:00',
         location: 'G RC 19',
@@ -2535,7 +2535,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Infrastruktura i servisi u oblaku',
         displayName: 'ISU',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '08:00',
         endTime: '11:00',
         location: 'G RC 21',
@@ -2545,7 +2545,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Projektovanje telekomunikacionih mreža',
         displayName: 'PTKM',
-        day: 'Wednesday',
+        day: 'Srijeda',
         startTime: '08:00',
         endTime: '11:00',
         location: 'G RC 21',
@@ -2555,7 +2555,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Infrastruktura i servisi u oblaku',
         displayName: 'ISU',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '16:00',
         endTime: '18:00',
         location: 'G RC 19',
@@ -2565,7 +2565,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Projektovanje telekomunikacionih mreža',
         displayName: 'PTKM',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '18:00',
         endTime: '20:00',
         location: 'G RC 19',
@@ -2581,7 +2581,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Prepoznavanje uzoraka',
         displayName: 'PU',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '08:00',
         endTime: '11:00',
         location: 'GIM MM',
@@ -2591,7 +2591,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Prepoznavanje uzoraka',
         displayName: 'PU 1',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '11:00',
         endTime: '12:00',
         location: 'G RC 9',
@@ -2601,7 +2601,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Prepoznavanje uzoraka',
         displayName: 'PU 2',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '12:00',
         endTime: '13:00',
         location: 'G RC 9',
@@ -2611,7 +2611,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Prepoznavanje uzoraka',
         displayName: 'PU 3',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '16:00',
         endTime: '17:00',
         location: 'G RC 21',
@@ -2621,7 +2621,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Prepoznavanje uzoraka',
         displayName: 'PU 4',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '17:00',
         endTime: '18:00',
         location: 'G RC 21',
@@ -2631,7 +2631,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Prepoznavanje uzoraka',
         displayName: 'PU 6',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '18:00',
         endTime: '19:00',
         location: 'G RC 21',
@@ -2641,7 +2641,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Prinicipi biomedicinskog inženjeringa',
         displayName: 'PBI 1',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '09:00',
         endTime: '10:00',
         location: 'G RC 9',
@@ -2651,7 +2651,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Prinicipi biomedicinskog inženjeringa',
         displayName: 'PBI 2',
-        day: 'Tuesday',
+        day: 'Utorak',
         startTime: '10:00',
         endTime: '11:00',
         location: 'G RC 9',
@@ -2661,7 +2661,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Prinicipi biomedicinskog inženjeringa',
         displayName: 'PBI 5',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '08:00',
         endTime: '09:00',
         location: 'G RC 9',
@@ -2671,7 +2671,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Prinicipi biomedicinskog inženjeringa',
         displayName: 'PBI 6',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '09:00',
         endTime: '10:00',
         location: 'G RC 9',
@@ -2681,7 +2681,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Prinicipi biomedicinskog inženjeringa',
         displayName: 'PBI 3',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '10:00',
         endTime: '11:00',
         location: 'G RC 9',
@@ -2691,7 +2691,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Prinicipi biomedicinskog inženjeringa',
         displayName: 'PBI 4',
-        day: 'Thursday',
+        day: 'Četvrtak',
         startTime: '11:00',
         endTime: '12:00',
         location: 'G RC 9',
@@ -2701,7 +2701,7 @@ export const SCHEDULES: Schedule[] = [
       {
         name: 'Prinicipi biomedicinskog inženjeringa',
         displayName: 'PBI',
-        day: 'Friday',
+        day: 'Petak',
         startTime: '14:00',
         endTime: '17:00',
         location: 'A2',
