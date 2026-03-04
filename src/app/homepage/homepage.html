@@ -53,12 +53,15 @@
     </select>
   </div>
 
-  <div class="custom_schedule">
+  <div *ngIf="loading" class="status-message">Učitavanje rasporeda...</div>
+  <div *ngIf="error" class="status-message">Greška pri učitavanju podataka. Pokušaj ponovo.</div>
+
+  <div class="custom_schedule" *ngIf="!loading && !error && schedule">
     <app-schedule [schedule]="schedule" (lectureSelected)="addLectureToCustom($event)">
     </app-schedule>
   </div>
 
-  <div class="custom_schedule">
+  <div class="custom_schedule" *ngIf="!loading && !error">
     <app-custom-schedule #customScheduleComponent (lectureClicked)="onLectureClick($event)">
     </app-custom-schedule>
   </div>

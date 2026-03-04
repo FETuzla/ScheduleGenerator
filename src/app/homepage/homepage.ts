@@ -1,16 +1,10 @@
-import { Component, signal, ViewChild } from '@angular/core';
+import { Component, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ScheduleComponent } from '../schedule-component/schedule-component';
-import {
-  FIRST_SELECTORS,
-  FirstSelector,
-  Schedule,
-  SecondSelector,
-  Lecture,
-} from '../models/schedule.model';
-import { SCHEDULES } from '../data/schedules.data';
+import { FIRST_SELECTORS, FirstSelector, Schedule, SecondSelector, Lecture } from '../models/schedule.model';
 import { CustomSchedule } from '../custom-schedule/custom-schedule';
+import { ScheduleService } from '../services/schedule.service';
 
 @Component({
   selector: 'app-homepage',
@@ -26,25 +20,36 @@ export class Homepage {
   selectedSecond: SecondSelector | null = 'Linija 1';
   firstSelectors = FIRST_SELECTORS;
 
+  schedules: Schedule[] = [];
+  loading = true;
+  error = false;
   otherPages: string[] = [];
+  showHelp = true;
+  menuOpen = false;
 
-  ngOnInit() {
+  constructor(private scheduleService: ScheduleService, private cdr: ChangeDetectorRef) {}
+
+  async ngOnInit() {
     this.loadPages();
     this.checkMenu();
+    try {
+      this.schedules = await this.scheduleService.getSchedules();
+    } catch (e) {
+      console.error(e);
+      this.error = true;
+    } finally {
+      this.loading = false;
+      this.cdr.detectChanges();
+    }
   }
 
   async loadPages() {
     try {
       const response = await fetch('https://fetuzla.github.io/information/pages.json');
-
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-
+      if (!response.ok) throw new Error('Network response was not ok');
       const data = await response.json();
-      this.otherPages = data;
-      this.otherPages = this.otherPages.filter(
-        (page) => page != window.location.pathname.replace(/^\/|\/$/g, ''),
+      this.otherPages = (data as string[]).filter(
+        (page) => page !== window.location.pathname.replace(/^\/|\/$/g, '')
       );
     } catch (error) {
       console.error('Failed to fetch pages:', error);
@@ -52,9 +57,9 @@ export class Homepage {
   }
 
   checkMenu() {
-    if(window.localStorage.getItem('showHelp') !== null) {
-			this.showHelp = false;
-		}
+    if (window.localStorage.getItem('showHelp') !== null) {
+      this.showHelp = false;
+    }
   }
 
   onFirstChange() {
@@ -68,32 +73,27 @@ export class Homepage {
     return ['AR', 'EEMS', 'ESKE', 'RI', 'TK'];
   }
 
-  get schedule(): Schedule {
-    return SCHEDULES.find(
+  get schedule(): Schedule | null {
+    if (!this.schedules.length) return null;
+    return this.schedules.find(
       (s) =>
         s.firstSelector === this.selectedFirst &&
-        (s.secondSelector ?? null) === (this.selectedSecond ?? null),
-    )!!;
+        (s.secondSelector ?? null) === (this.selectedSecond ?? null)
+    ) ?? null;
   }
 
   addLectureToCustom(lecture: Lecture) {
-    if (this.customSchedule) {
-      this.customSchedule.addLecture(lecture);
-    }
+    this.customSchedule?.addLecture(lecture);
   }
 
   onLectureClick(lecture: Lecture) {
     console.log('Lecture clicked on canvas:', lecture.name);
   }
 
-  showHelp = true;
-
   toggleHelp() {
     this.showHelp = !this.showHelp;
     window.localStorage.setItem('showHelp', 'opened');
   }
-
-  menuOpen = false;
 
   showMenu() {
     this.menuOpen = !this.menuOpen;
