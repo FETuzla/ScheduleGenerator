@@ -76,6 +76,17 @@ export class Homepage {
     this.selectedSecond = options.length ? options[0] : null;
   }
 
+  getPriority(title: string) {
+    if (title.startsWith('red.prof.dr.')) return 1;
+    if (title.startsWith('vanr.prof.dr.')) return 2;
+    if (title.includes('doc.dr')) return 3;
+    if (title.startsWith('v.as.MA')) return 4;
+    if (title.startsWith('v.as.')) return 5;
+    if (title.startsWith('as.')) return 6;
+    if (title.startsWith('sp.MA')) return 7;
+    return 8;
+  }
+
   get secondSelectors(): SecondSelector[] | string[] {
     if (this.selectedFirst === 'Prva godina') return ['Linija 1', 'Linija 2'];
     if (this.selectedFirst === 'TOI') return ['Prva godina', 'Druga godina', 'Treca godina'];
@@ -89,7 +100,14 @@ export class Homepage {
             );
           }),
         ),
-      ].filter((s) => s.trim() !== '');
+      ]
+        .filter((s) => s.trim() !== '')
+        .sort((a, b) => {
+          const priorityDiff = this.getPriority(a) - this.getPriority(b);
+          if (priorityDiff !== 0) return priorityDiff;
+
+          return a.localeCompare(b, 'bs'); //
+        });
     }
     if (this.selectedFirst === 'Prostorije') {
       return [
