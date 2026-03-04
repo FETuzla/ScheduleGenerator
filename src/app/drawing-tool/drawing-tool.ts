@@ -276,15 +276,15 @@ export class DrawingTool implements AfterViewInit, OnChanges {
         teacherList = [];
       }
       
-      let fontSize = Math.max(20, Math.min(isLecture ? 38 : 30, width / (isLecture ? 28 : 38)));
+      let fontSize = Math.max(16, Math.min(isLecture ? 32 : 26, width / (isLecture ? 32 : 42)));
       let lines: string[] = [];
-      const maxWidth = w - 4; 
+      const maxWidth = w - 4;
       let fontValid = false;
 
       while (!fontValid && fontSize > 4) {
         this.ctx.font = `bold ${fontSize}px sans-serif`;
         fontValid = true;
-        
+
         const words = lec.displayName.split(' ');
         for (const word of words) {
           if (this.ctx.measureText(word).width > maxWidth) {
@@ -296,12 +296,19 @@ export class DrawingTool implements AfterViewInit, OnChanges {
 
         if (fontValid) {
           lines = this.getWrappedLines(lec.displayName, maxWidth);
-          
+
+          const teacherFontSize = Math.max(8, fontSize * 0.5);
+          this.ctx.font = `${teacherFontSize}px sans-serif`;
+          const wrappedTeacherLines: string[] = [];
+          teacherList.forEach(teacher => {
+            this.getWrappedLines(teacher, maxWidth).forEach(line => wrappedTeacherLines.push(line));
+          });
+
           const nameHeight = lines.length * (fontSize + 2.5);
           const locHeight = (fontSize * 0.85) + 2.5;
-          const teacherHeight = teacherList.length * ((fontSize * 0.7) + 2.5);
+          const teacherHeight = wrappedTeacherLines.length * (teacherFontSize + 2.5);
           const totalHeight = nameHeight + locHeight + teacherHeight;
-          
+
           if (totalHeight > h - 4) {
             fontValid = false;
             fontSize -= 0.5;
@@ -311,23 +318,31 @@ export class DrawingTool implements AfterViewInit, OnChanges {
 
       this.ctx.font = `bold ${fontSize}px sans-serif`;
       lines = this.getWrappedLines(lec.displayName, maxWidth);
-      
+
       const locFontSize = Math.max(9, fontSize * 0.75);
-      const teacherFontSize = Math.max(8, fontSize * 0.5);
+      const teacherFontSize = Math.max(8, fontSize * 0.6);
 
       const nameLineHeight = fontSize + 2.5;
       const locLineHeight = locFontSize + 2.5;
       const teacherLineHeight = teacherFontSize + 2.5;
 
-      const totalContentHeight = (lines.length * nameLineHeight) + locLineHeight + (teacherList.length * teacherLineHeight);
+      this.ctx.font = `${teacherFontSize}px sans-serif`;
+      const teacherLines: string[] = [];
+      teacherList.forEach(teacher => {
+        this.getWrappedLines(teacher, maxWidth).forEach(line => teacherLines.push(line));
+      });
+
+      const totalContentHeight = (lines.length * nameLineHeight) + locLineHeight + (teacherLines.length * teacherLineHeight);
 
       let startY = y + (h - totalContentHeight) / 2 + (nameLineHeight / 2);
       if (startY < y + (nameLineHeight / 2)) {
-        startY = y + (nameLineHeight / 2); 
+        startY = y + (nameLineHeight / 2);
       }
-      
+
       let currentY = startY;
 
+      this.ctx.font = `bold ${fontSize}px sans-serif`;
+      this.ctx.fillStyle = this.getTextColor(lec.type);
       lines.forEach(line => {
         this.ctx.fillText(line.trim(), x + w / 2, currentY);
         currentY += nameLineHeight;
@@ -337,12 +352,12 @@ export class DrawingTool implements AfterViewInit, OnChanges {
       this.ctx.font = `${locFontSize}px sans-serif`;
       this.ctx.fillText(lec.location, x + w / 2, currentY);
 
-      if (teacherList.length > 0) {
+      if (teacherLines.length > 0) {
         currentY += (locLineHeight + teacherLineHeight) / 2;
         this.ctx.font = `${teacherFontSize}px sans-serif`;
         this.ctx.fillStyle = this.getTextColor(lec.type);
-        teacherList.forEach(teacher => {
-          this.ctx.fillText(teacher, x + w / 2, currentY);
+        teacherLines.forEach(line => {
+          this.ctx.fillText(line, x + w / 2, currentY);
           currentY += teacherLineHeight;
         });
       }
