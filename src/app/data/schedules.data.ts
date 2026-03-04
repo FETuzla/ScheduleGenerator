@@ -4,7 +4,6 @@ export const SCHEDULES: Schedule[] = [
   {
     firstSelector: 'Prva godina',
     secondSelector: 'Linija 1',
-    image: 'Godina1Linija1.png',
     lectures: [
       {
         name: 'Osnovi Programiranja 1',
@@ -301,7 +300,6 @@ export const SCHEDULES: Schedule[] = [
   {
     firstSelector: 'Prva godina',
     secondSelector: 'Linija 2',
-    image: 'Godina1Linija2.png',
     lectures: [
       {
         name: 'Fizika II',
@@ -570,8 +568,7 @@ export const SCHEDULES: Schedule[] = [
         startTime: '08:00',
         endTime: '11:00',
         location: 'A2',
-        teacher:
-          'vanr.prof.dr. Samra Mujačić (6.-15.sed) / vanr.prof.dr. Asmir Gogić (1.-5.sed)',
+        teacher: 'vanr.prof.dr. Samra Mujačić (6.-15.sed) / vanr.prof.dr. Asmir Gogić (1.-5.sed)',
         type: 'Predavanje',
       },
       {
@@ -599,7 +596,6 @@ export const SCHEDULES: Schedule[] = [
   {
     firstSelector: 'Druga godina',
     secondSelector: 'AR',
-    image: 'Godina2AR.png',
     lectures: [
       {
         name: 'Strukture podataka',
@@ -766,7 +762,6 @@ export const SCHEDULES: Schedule[] = [
   {
     firstSelector: 'Druga godina',
     secondSelector: 'EEMS',
-    image: 'Godina2EEMS.png',
     lectures: [
       {
         name: 'Programski alati u elektro-energetici',
@@ -934,7 +929,6 @@ export const SCHEDULES: Schedule[] = [
   {
     firstSelector: 'Druga godina',
     secondSelector: 'ESKE',
-    image: 'Godina2ESKE.png',
     lectures: [
       {
         name: 'Električna mjerenja',
@@ -943,8 +937,7 @@ export const SCHEDULES: Schedule[] = [
         startTime: '11:00',
         endTime: '14:00',
         location: 'GLabEM',
-        teacher:
-          'vanr.prof.dr. Majda Tešanović / (1.-7.sed)',
+        teacher: 'vanr.prof.dr. Majda Tešanović / (1.-7.sed)',
         type: 'Predavanje',
       },
       {
@@ -954,8 +947,7 @@ export const SCHEDULES: Schedule[] = [
         startTime: '16:00',
         endTime: '19:00',
         location: 'GLabEM',
-        teacher:
-          'doc.dr. Šeila Ferhatbegović-Gruhonjić / (8.-15.sed)',
+        teacher: 'doc.dr. Šeila Ferhatbegović-Gruhonjić / (8.-15.sed)',
         type: 'Predavanje',
       },
       {
@@ -1064,7 +1056,6 @@ export const SCHEDULES: Schedule[] = [
   {
     firstSelector: 'Druga godina',
     secondSelector: 'RI',
-    image: 'Godina2RI.png',
     lectures: [
       {
         name: 'Arhitektura računara',
@@ -1123,8 +1114,7 @@ export const SCHEDULES: Schedule[] = [
         startTime: '11:00',
         endTime: '14:00',
         location: 'Stelekt',
-        teacher:
-          'red.prof.dr. Amir Tokić (1.-5.sed) / vanr.prof.dr. Edin Pjanić (6.-15.sed)',
+        teacher: 'red.prof.dr. Amir Tokić (1.-5.sed) / vanr.prof.dr. Edin Pjanić (6.-15.sed)',
         type: 'Predavanje',
       },
       {
@@ -1232,7 +1222,6 @@ export const SCHEDULES: Schedule[] = [
   {
     firstSelector: 'Druga godina',
     secondSelector: 'TK',
-    image: 'Godina2TK.png',
     lectures: [
       {
         name: 'Modeliranje i analiza podataka',
@@ -1301,8 +1290,7 @@ export const SCHEDULES: Schedule[] = [
         startTime: '08:00',
         endTime: '11:00',
         location: 'Stelekt',
-        teacher:
-          'vanr.prof.dr. Samra Mujačić (1.-5. sed) / vanr.prof.dr. Asmir Gogić (6.-15. sed)',
+        teacher: 'vanr.prof.dr. Samra Mujačić (1.-5. sed) / vanr.prof.dr. Asmir Gogić (6.-15. sed)',
         type: 'Predavanje',
       },
       {
@@ -1370,7 +1358,6 @@ export const SCHEDULES: Schedule[] = [
   {
     firstSelector: 'Treca godina',
     secondSelector: 'AR',
-    image: 'Godina3AR.png',
     lectures: [
       {
         name: 'Aktuatori',
@@ -1507,7 +1494,6 @@ export const SCHEDULES: Schedule[] = [
   {
     firstSelector: 'Treca godina',
     secondSelector: 'EEMS',
-    image: 'Godina3EEMS.png',
     lectures: [
       {
         name: 'Simulacija sistema',
@@ -1646,7 +1632,8 @@ export const SCHEDULES: Schedule[] = [
         startTime: '08:00',
         endTime: '11:00',
         location: 'GIM MM',
-        teacher: 'red.prof.dr. Suad Halilčević / red.prof.dr. Tatjana Konjić / doc.dr. Marina Pejić',
+        teacher:
+          'red.prof.dr. Suad Halilčević / red.prof.dr. Tatjana Konjić / doc.dr. Marina Pejić',
         type: 'Predavanje',
       },
       {
@@ -1674,7 +1661,6 @@ export const SCHEDULES: Schedule[] = [
   {
     firstSelector: 'Treca godina',
     secondSelector: 'ESKE',
-    image: 'Godina3ESKE.png',
     lectures: [
       {
         name: 'Operaciona istraživanja',
@@ -1795,7 +1781,6 @@ export const SCHEDULES: Schedule[] = [
   {
     firstSelector: 'Treca godina',
     secondSelector: 'RI',
-    image: 'Godina3RI.png',
     lectures: [
       {
         name: 'Simulacija sistema',
@@ -1922,7 +1907,6 @@ export const SCHEDULES: Schedule[] = [
   {
     firstSelector: 'Treca godina',
     secondSelector: 'TK',
-    image: 'Godina3TK.png',
     lectures: [
       {
         name: 'Telekomunikacione mreže',
@@ -2039,7 +2023,6 @@ export const SCHEDULES: Schedule[] = [
   {
     firstSelector: 'Cetvrta godina',
     secondSelector: 'AR',
-    image: 'Godina4AR.png',
     lectures: [
       {
         name: 'Digitalni sistemi upravljanja i obrade signala II',
@@ -2166,7 +2149,6 @@ export const SCHEDULES: Schedule[] = [
   {
     firstSelector: 'Cetvrta godina',
     secondSelector: 'EEMS',
-    image: 'Godina4EEMS.png',
     lectures: [
       {
         name: 'Tržište električne energije',
@@ -2293,7 +2275,6 @@ export const SCHEDULES: Schedule[] = [
   {
     firstSelector: 'Cetvrta godina',
     secondSelector: 'ESKE',
-    image: 'Godina4ESKE.png',
     lectures: [
       {
         name: 'Energetika i okolina',
@@ -2302,8 +2283,7 @@ export const SCHEDULES: Schedule[] = [
         startTime: '14:00',
         endTime: '17:00',
         location: 'G RC 21',
-        teacher:
-          'vanr.prof.dr. Nerdina Mehinović (1.-5.sed) / doc.dr. Izudin Softić (6.-15. sed)',
+        teacher: 'vanr.prof.dr. Nerdina Mehinović (1.-5.sed) / doc.dr. Izudin Softić (6.-15. sed)',
         type: 'Predavanje',
       },
       {
@@ -2343,8 +2323,7 @@ export const SCHEDULES: Schedule[] = [
         startTime: '08:00',
         endTime: '11:00',
         location: 'A2',
-        teacher:
-          'vanr.prof.dr, Lejla Banjanović-Mehmedović / vanr.prof.dr. Majda Tešanović',
+        teacher: 'vanr.prof.dr, Lejla Banjanović-Mehmedović / vanr.prof.dr. Majda Tešanović',
         type: 'Predavanje',
       },
       {
@@ -2433,7 +2412,6 @@ export const SCHEDULES: Schedule[] = [
   {
     firstSelector: 'Cetvrta godina',
     secondSelector: 'RI',
-    image: 'Godina4RI.png',
     lectures: [
       {
         name: 'Sistemsko programiranje',
@@ -2500,7 +2478,6 @@ export const SCHEDULES: Schedule[] = [
   {
     firstSelector: 'Cetvrta godina',
     secondSelector: 'TK',
-    image: 'Godina4TK.png',
     lectures: [
       {
         name: 'Multimedijski sistemi i komunikacije',
@@ -2576,7 +2553,6 @@ export const SCHEDULES: Schedule[] = [
   },
   {
     firstSelector: 'BMI',
-    image: 'BMI.png',
     lectures: [
       {
         name: 'Prepoznavanje uzoraka',

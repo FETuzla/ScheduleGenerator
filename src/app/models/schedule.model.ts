@@ -42,6 +42,5 @@ export interface Lecture {
 export interface Schedule {
   firstSelector: FirstSelector;
   secondSelector?: SecondSelector;
-  image: string;
   lectures: Lecture[];
 }

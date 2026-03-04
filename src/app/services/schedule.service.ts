@@ -1,12 +1,19 @@
 import { Injectable } from '@angular/core';
-import { Schedule, Lecture, FirstSelector, SecondSelector, DayType, LectureType } from '../models/schedule.model';
+import {
+  Schedule,
+  Lecture,
+  FirstSelector,
+  SecondSelector,
+  DayType,
+  LectureType,
+} from '../models/schedule.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ScheduleService {
-
-  private readonly CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRINslestB3Ef0iDaK4Krbmz5iiYWXZb_cdykIfLyl2lIDPXx38djbA2gCYIFSC8gCnpQsGO3f5KZHY/pub?gid=434239479&single=true&output=csv';
+  private readonly CSV_URL =
+    'https://docs.google.com/spreadsheets/d/e/2PACX-1vRINslestB3Ef0iDaK4Krbmz5iiYWXZb_cdykIfLyl2lIDPXx38djbA2gCYIFSC8gCnpQsGO3f5KZHY/pub?gid=434239479&single=true&output=csv';
 
   async getSchedules(): Promise<Schedule[]> {
     const response = await fetch(`${this.CSV_URL}&t=${Date.now()}`);
@@ -24,15 +31,25 @@ export class ScheduleService {
       const cols = this.splitCSVRow(row);
       if (cols.length < 10) continue;
 
-      const [year, orientation, name, displayName, day, startTime, endTime, location, teacher, type] = cols;
+      const [
+        year,
+        orientation,
+        name,
+        displayName,
+        day,
+        startTime,
+        endTime,
+        location,
+        teacher,
+        type,
+      ] = cols;
       const key = `${year}__${orientation}`;
 
       if (!scheduleMap.has(key)) {
         scheduleMap.set(key, {
           firstSelector: year as FirstSelector,
-          secondSelector: orientation ? orientation as SecondSelector : undefined,
-          image: this.getImage(year, orientation),
-          lectures: []
+          secondSelector: orientation ? (orientation as SecondSelector) : undefined,
+          lectures: [],
         });
       }
 
@@ -44,7 +61,7 @@ export class ScheduleService {
         endTime,
         location,
         teacher,
-        type: type.trim() as LectureType
+        type: type.trim() as LectureType,
       });
     }
 
@@ -59,8 +76,10 @@ export class ScheduleService {
     for (let i = 0; i < row.length; i++) {
       const char = row[i];
       if (char === '"') {
-        if (inQuotes && row[i + 1] === '"') { current += '"'; i++; }
-        else inQuotes = !inQuotes;
+        if (inQuotes && row[i + 1] === '"') {
+          current += '"';
+          i++;
+        } else inQuotes = !inQuotes;
       } else if (char === ',' && !inQuotes) {
         result.push(current);
         current = '';
@@ -71,18 +90,5 @@ export class ScheduleService {
 
     result.push(current);
     return result;
-  }
-
-  private getImage(year: string, orientation: string): string {
-    const yearMap: { [key: string]: string } = {
-      'Prva godina': 'Godina1',
-      'Druga godina': 'Godina2',
-      'Treca godina': 'Godina3',
-      'Cetvrta godina': 'Godina4',
-      'BMI': 'BMI'
-    };
-    const base = yearMap[year] ?? 'Godina1';
-    if (!orientation || year === 'BMI') return `${base}.png`;
-    return `${base}${orientation}.png`;
   }
 }
