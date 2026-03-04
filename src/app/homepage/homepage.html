@@ -53,6 +53,8 @@
     </select>
   </div>
 
+	<button (click)="exportToPdf()">Export to PDF</button>
+
   <div *ngIf="loading" class="status-message">Učitavanje rasporeda...</div>
   <div *ngIf="error" class="status-message">Greška pri učitavanju podataka. Pokušaj ponovo.</div>
 

@@ -11,6 +11,7 @@ import {
 } from '../models/schedule.model';
 import { CustomSchedule } from '../custom-schedule/custom-schedule';
 import { ScheduleService } from '../services/schedule.service';
+import { jsPDF } from 'jspdf';
 
 @Component({
   selector: 'app-homepage',
@@ -21,6 +22,7 @@ import { ScheduleService } from '../services/schedule.service';
 })
 export class Homepage {
   @ViewChild('customScheduleComponent') customSchedule!: CustomSchedule;
+  @ViewChild(ScheduleComponent) scheduleComponent!: ScheduleComponent;
 
   selectedFirst: FirstSelector = 'Prva godina';
   selectedSecond: SecondSelector | string | null = 'Linija 1';
@@ -144,6 +146,16 @@ export class Homepage {
           (s.secondSelector ?? null) === (this.selectedSecond ?? null),
       )?.lectures ?? null
     );
+  }
+
+  exportToPdf() {
+    const pdf: any = new jsPDF('l', 'mm', 'a4');
+    const canvas: HTMLCanvasElement = this.scheduleComponent.getCanvasFromDrawingTool();
+
+    const imgData = canvas.toDataURL('image/png');
+
+    pdf.addImage(imgData, 'PNG', 10, 10, 277, 0);
+    pdf.save('export.pdf');
   }
 
   addLectureToCustom(lecture: Lecture) {
