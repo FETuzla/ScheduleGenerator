@@ -81,7 +81,7 @@ export class Homepage {
     if (this.selectedFirst === 'TOI') return ['Prva godina', 'Druga godina', 'Treca godina'];
     if (this.selectedFirst === 'BMI') return [];
     if (this.selectedFirst === 'Profesori') {
-      let x = [
+      return [
         ...new Set(
           this.schedules.flatMap((sched) => {
             return sched.lectures.flatMap((lect) =>
@@ -90,8 +90,6 @@ export class Homepage {
           }),
         ),
       ].filter((s) => s.trim() !== '');
-      console.log(x);
-      return x;
     }
     if (this.selectedFirst === 'Prostorije') {
       return [
