@@ -9,13 +9,14 @@ export const FIRST_SELECTORS = [
 export const SECOND_SELECTORS = ['Linija 1', 'Linija 2', 'AR', 'RI', 'ESKE', 'EEMS', 'TK'] as const;
 
 export const DAYS = [
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturday',
-  'Sunday',
+  'Ponedjeljak',
+  'Utorak',
+  'Srijeda',
+  'Četvrtak',
+  'Cetvrtak',
+  'Petak',
+  'Subota',
+  'Nedjelja',
 ] as const;
 
 export const LECTURE_TYPES = ['Predavanje', 'AV', 'LV'] as const;
