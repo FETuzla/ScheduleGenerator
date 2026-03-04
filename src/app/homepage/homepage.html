@@ -56,8 +56,8 @@
   <div *ngIf="loading" class="status-message">Učitavanje rasporeda...</div>
   <div *ngIf="error" class="status-message">Greška pri učitavanju podataka. Pokušaj ponovo.</div>
 
-  <div class="custom_schedule" *ngIf="!loading && !error && schedule">
-    <app-schedule [schedule]="schedule" (lectureSelected)="addLectureToCustom($event)">
+  <div class="custom_schedule" *ngIf="!loading && !error && lectures">
+    <app-schedule [lectures]="lectures" (lectureSelected)="addLectureToCustom($event)">
     </app-schedule>
   </div>
 

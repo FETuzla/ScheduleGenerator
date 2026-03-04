@@ -4,6 +4,8 @@ export const FIRST_SELECTORS = [
   'Treca godina',
   'Cetvrta godina',
   'BMI',
+  'Profesori',
+  'Prostorije',
 ] as const;
 
 export const SECOND_SELECTORS = ['Linija 1', 'Linija 2', 'AR', 'RI', 'ESKE', 'EEMS', 'TK'] as const;
