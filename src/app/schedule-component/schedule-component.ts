@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Schedule, Lecture } from '../models/schedule.model';
 import { DrawingTool } from '../drawing-tool/drawing-tool';
@@ -13,6 +13,12 @@ import { DrawingTool } from '../drawing-tool/drawing-tool';
 export class ScheduleComponent {
   @Input() lectures: Lecture[] | null = null;
   @Output() lectureSelected = new EventEmitter<Lecture>();
+
+  @ViewChild(DrawingTool) drawingTool!: DrawingTool;
+
+  getCanvasFromDrawingTool(): HTMLCanvasElement {
+    return this.drawingTool.exportCanvas();
+  }
 
   public onLectureClick(lecture: Lecture) {
     this.lectureSelected.emit(lecture);

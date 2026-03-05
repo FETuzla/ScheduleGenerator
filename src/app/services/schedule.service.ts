@@ -13,8 +13,7 @@ import {
 })
 export class ScheduleService {
   private readonly CSV_URL =
-    'https://docs.google.com/spreadsheets/d/e/2PACX-1vRINslestB3Ef0iDaK4Krbmz5iiYWXZb_cdykIfLyl2lIDPXx38djbA2gCYIFSC8gCnpQsGO3f5KZHY/pub?gid=434239479&single=true&output=csv';
-
+    'https://docs.google.com/spreadsheets/d/e/2PACX-1vTC-TYyZr-HdJ0kGQ5MI65ne3mNiqZ7eMPx7DKGpdXylS1IHRu_DmIdD1gjp366fYYUEZZ1FlAJxIcj/pub?gid=0&single=true&output=csv';
   async getSchedules(): Promise<Schedule[]> {
     const response = await fetch(`${this.CSV_URL}&t=${Date.now()}`);
     if (!response.ok) throw new Error('Failed to fetch schedule CSV');
