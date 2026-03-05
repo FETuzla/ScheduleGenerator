@@ -17,7 +17,7 @@ export class CustomSchedule {
 
   public addLecture(lecture: Lecture) {
     const isDuplicate = this.myLectures.some(
-      (l) => l.name === lecture.name && l.day === lecture.day && l.startTime === lecture.startTime,
+      (l) => l.name === lecture.name && l.displayName === lecture.displayName && l.day === lecture.day && l.startTime === lecture.startTime && l.endTime === lecture.endTime,
     );
     if (isDuplicate) {
       this.removeLecture(lecture);
@@ -30,7 +30,7 @@ export class CustomSchedule {
   public removeLecture(lecture: Lecture) {
     this.myLectures = this.myLectures.filter(
       (l) =>
-        !(l.name === lecture.name && l.day === lecture.day && l.startTime === lecture.startTime),
+        !(l.name === lecture.name && l.displayName === lecture.displayName && l.day === lecture.day && l.startTime === lecture.startTime && l.endTime === lecture.endTime),
     );
   }
 
