@@ -151,7 +151,6 @@ export class Homepage {
   async exportToPdf() {
     const pdf: any = new jsPDF('l', 'mm', 'a4');
     if (this.selectedFirst === 'Profesori' || this.selectedFirst === 'Prostorije') {
-      
       const canvas: HTMLCanvasElement = this.scheduleComponent.getCanvasFromDrawingTool();
       const height = 45;
       const legendCanvas = document.createElement('canvas');
