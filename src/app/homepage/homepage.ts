@@ -149,94 +149,124 @@ export class Homepage {
   }
 
   async exportToPdf() {
-  const pdf: any = new jsPDF('l', 'mm', 'a4');
+    const pdf: any = new jsPDF('l', 'mm', 'a4');
+    if (this.selectedFirst === 'Profesori' || this.selectedFirst === 'Prostorije') {
+      
+      const canvas: HTMLCanvasElement = this.scheduleComponent.getCanvasFromDrawingTool();
+      const height = 45;
+      const legendCanvas = document.createElement('canvas');
 
-  const orientations = this.secondSelectors.length > 0
-    ? this.secondSelectors as string[]
-    : [null];
+      legendCanvas.width = canvas.width;
+      legendCanvas.height = canvas.height + height;
 
-  const originalSecond = this.selectedSecond;
-  let firstPage = true;
+      const ctx = legendCanvas.getContext('2d')!;
 
-  for (const orientation of orientations) {
-    this.selectedSecond = orientation;
-    this.cdr.detectChanges();
-    await new Promise(resolve => setTimeout(resolve, 50));
+      ctx.fillStyle = '#f8f9fa';
+      ctx.fillRect(0, 0, legendCanvas.width, height);
+      ctx.strokeStyle = '#000';
+      ctx.lineWidth = 2;
+      ctx.strokeRect(0, 0, legendCanvas.width, height);
 
-    const canvas: HTMLCanvasElement = this.scheduleComponent.getCanvasFromDrawingTool();
-    const height = 45;
+      const label = `${this.selectedFirst}${this.selectedSecond ? ' - ' + this.selectedSecond : ''}`;
+      const fontSize = Math.round(height * 0.5);
 
-    const legendCanvas = document.createElement('canvas');
-    legendCanvas.width = canvas.width;
-    legendCanvas.height = canvas.height + height;
+      ctx.font = `bold ${fontSize}px sans-serif`;
+      ctx.fillStyle = '#000';
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(label, 20, height / 2);
+      ctx.drawImage(canvas, 0, height);
 
-    const ctx = legendCanvas.getContext('2d')!;
-
-    ctx.fillStyle = '#f8f9fa';
-    ctx.fillRect(0, 0, legendCanvas.width, height);
-
-    ctx.strokeStyle = '#000';
-    ctx.lineWidth = 2;
-    ctx.strokeRect(0, 0, legendCanvas.width, height);
-
-    const label = `${this.selectedFirst}${orientation ? ' - ' + orientation : ''}`;
-    const fontSize = Math.round(height * 0.5);
-    ctx.font = `bold ${fontSize}px sans-serif`;
-    ctx.fillStyle = '#000';
-    ctx.textAlign = 'left';
-    ctx.textBaseline = 'middle';
-    ctx.fillText(label, 20, height / 2);
-
-    const rectSize = Math.round(height * 0.85);
-    const legendItems = [
-      { color: '#ff0000', label: 'Predavanje' },
-      { color: '#2600ff', label: 'AV' },
-      { color: '#1b5e20', label: 'LV' },
-    ];
-
-    ctx.font = `${fontSize}px sans-serif`;
-    ctx.textAlign = 'left';
-    ctx.textBaseline = 'middle';
-
-    const napomena = 'Napomena:';
-    const napomenaWidth = ctx.measureText(napomena + ' ').width;
-
-    let legendX = legendCanvas.width - 20;
-    for (let i = legendItems.length - 1; i >= 0; i--) {
-      const item = legendItems[i];
-      const labelWidth = ctx.measureText(' ' + item.label + '  ').width;
-      legendX -= labelWidth + rectSize + 10;
+      const imgData = legendCanvas.toDataURL('image/png');
+      pdf.addImage(imgData, 'PNG', 10, 10, 277, 0);
+      pdf.save(`${this.selectedFirst} - ${this.selectedSecond}.pdf`);
+      return;
     }
-    legendX -= napomenaWidth;
 
-    ctx.fillStyle = '#000';
-    ctx.fillText(napomena + ' ', legendX, height / 2);
-    legendX += napomenaWidth;
+    const orientations =
+      this.secondSelectors.length > 0 ? (this.secondSelectors as string[]) : [null];
 
-    for (const item of legendItems) {
-      ctx.fillStyle = item.color;
-      ctx.fillRect(legendX, height / 2 - rectSize / 2, rectSize, rectSize);
-      legendX += rectSize + 6;
+    const originalSecond = this.selectedSecond;
+    let firstPage = true;
+
+    for (const orientation of orientations) {
+      this.selectedSecond = orientation;
+      this.cdr.detectChanges();
+      await new Promise((resolve) => setTimeout(resolve, 50));
+
+      const canvas: HTMLCanvasElement = this.scheduleComponent.getCanvasFromDrawingTool();
+      const height = 45;
+
+      const legendCanvas = document.createElement('canvas');
+      legendCanvas.width = canvas.width;
+      legendCanvas.height = canvas.height + height;
+
+      const ctx = legendCanvas.getContext('2d')!;
+
+      ctx.fillStyle = '#f8f9fa';
+      ctx.fillRect(0, 0, legendCanvas.width, height);
+
+      ctx.strokeStyle = '#000';
+      ctx.lineWidth = 2;
+      ctx.strokeRect(0, 0, legendCanvas.width, height);
+
+      const label = `${this.selectedFirst}${orientation ? ' - ' + orientation : ''}`;
+      const fontSize = Math.round(height * 0.5);
+      ctx.font = `bold ${fontSize}px sans-serif`;
+      ctx.fillStyle = '#000';
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(label, 20, height / 2);
+
+      const rectSize = Math.round(height * 0.85);
+      const legendItems = [
+        { color: '#ff0000', label: 'Predavanje' },
+        { color: '#2600ff', label: 'AV' },
+        { color: '#1b5e20', label: 'LV' },
+      ];
+
+      ctx.font = `${fontSize}px sans-serif`;
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'middle';
+
+      const napomena = 'Napomena:';
+      const napomenaWidth = ctx.measureText(napomena + ' ').width;
+
+      let legendX = legendCanvas.width - 20;
+      for (let i = legendItems.length - 1; i >= 0; i--) {
+        const item = legendItems[i];
+        const labelWidth = ctx.measureText(' ' + item.label + '  ').width;
+        legendX -= labelWidth + rectSize + 10;
+      }
+      legendX -= napomenaWidth;
 
       ctx.fillStyle = '#000';
-      ctx.fillText(item.label + '  ', legendX, height / 2);
-      legendX += ctx.measureText(item.label + '  ').width;
+      ctx.fillText(napomena + ' ', legendX, height / 2);
+      legendX += napomenaWidth;
+
+      for (const item of legendItems) {
+        ctx.fillStyle = item.color;
+        ctx.fillRect(legendX, height / 2 - rectSize / 2, rectSize, rectSize);
+        legendX += rectSize + 6;
+
+        ctx.fillStyle = '#000';
+        ctx.fillText(item.label + '  ', legendX, height / 2);
+        legendX += ctx.measureText(item.label + '  ').width;
+      }
+
+      ctx.drawImage(canvas, 0, height);
+
+      if (!firstPage) pdf.addPage();
+      const imgData = legendCanvas.toDataURL('image/png');
+      pdf.addImage(imgData, 'PNG', 10, 10, 277, 0);
+      firstPage = false;
     }
 
-    ctx.drawImage(canvas, 0, height);
+    this.selectedSecond = originalSecond;
+    this.cdr.detectChanges();
 
-    if (!firstPage) pdf.addPage();
-    const imgData = legendCanvas.toDataURL('image/png');
-    pdf.addImage(imgData, 'PNG', 10, 10, 277, 0);
-    firstPage = false;
+    pdf.save(`${this.selectedFirst}.pdf`);
   }
-
-  this.selectedSecond = originalSecond;
-  this.cdr.detectChanges();
-
-  pdf.save(`${this.selectedFirst}.pdf`);
-}
-
   addLectureToCustom(lecture: Lecture) {
     this.customSchedule?.addLecture(lecture);
   }
