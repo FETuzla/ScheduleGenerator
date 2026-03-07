@@ -15,7 +15,7 @@ export class ScheduleService {
   private readonly CSV_URL =
     'https://raspored.adnanmaleskic.com/api/schedule.csv';
   async getSchedules(): Promise<Schedule[]> {
-    const response = await fetch(`${this.CSV_URL}`);
+    const response = await fetch(`${this.CSV_URL}?t=${Date.now()}`);
     if (!response.ok) throw new Error('Failed to fetch schedule CSV');
     const text = await response.text();
     return this.parseCSV(text);
