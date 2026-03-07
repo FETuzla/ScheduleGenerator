@@ -5,7 +5,7 @@ export const FIRST_SELECTORS = [
   'Cetvrta godina',
   'BMI',
 	'TOI',
-  'Profesori',
+  'Predavači',
   'Prostorije',
 ] as const;
 
