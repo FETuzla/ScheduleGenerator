@@ -31,7 +31,7 @@ export class Homepage {
   schedules: Schedule[] = [];
   loading = true;
   error = false;
-  otherPages: string[] = [];
+  otherPages: { name: string; url: string; contributors: string[] }[] = [];
   showHelp = true;
   menuOpen = false;
 
@@ -59,9 +59,10 @@ export class Homepage {
       const response = await fetch('https://fetuzla.github.io/information/pages.json');
       if (!response.ok) throw new Error('Network response was not ok');
       const data = await response.json();
-      this.otherPages = (data as string[]).filter(
-        (page) => page !== window.location.pathname.replace(/^\/|\/$/g, ''),
+      this.otherPages = (data as { name: string; url: string; contributors: string[] }[]).filter(
+        (page) => page.name !== 'ScheduleGenerator',
       );
+			console.log(this.otherPages);
     } catch (error) {
       console.error('Failed to fetch pages:', error);
     }
@@ -93,7 +94,7 @@ export class Homepage {
     if (this.selectedFirst === 'Prva godina') return ['Linija 1', 'Linija 2'];
     if (this.selectedFirst === 'TOI') return ['Prva godina', 'Druga godina', 'Treca godina'];
     if (this.selectedFirst === 'BMI') return [];
-    if (this.selectedFirst === 'Profesori') {
+    if (this.selectedFirst === 'Predavači') {
       return [
         ...new Set(
           this.schedules.flatMap((sched) => {
@@ -125,7 +126,7 @@ export class Homepage {
 
   get lectures(): Lecture[] | null {
     if (!this.schedules.length) return null;
-    if (this.selectedFirst === 'Profesori') {
+    if (this.selectedFirst === 'Predavači') {
       return (
         this.schedules.flatMap((scheds) => {
           return scheds.lectures.filter((lect) => lect.teacher.includes(this.selectedSecond!!));
@@ -150,7 +151,7 @@ export class Homepage {
 
   async exportToPdf() {
     const pdf: any = new jsPDF('l', 'mm', 'a4');
-    if (this.selectedFirst === 'Profesori' || this.selectedFirst === 'Prostorije') {
+    if (this.selectedFirst === 'Predavači' || this.selectedFirst === 'Prostorije') {
       const canvas: HTMLCanvasElement = this.scheduleComponent.getCanvasFromDrawingTool();
       const height = 45;
       const legendCanvas = document.createElement('canvas');

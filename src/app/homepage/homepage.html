@@ -30,8 +30,8 @@
   <ul>
     @for (page of otherPages; track page) {
       <li>
-        <a [href]="'https://fetuzla.github.io/' + page + '/'">
-          {{ page }}
+        <a [href]="page.url">
+          {{ page.name }}
         </a>
       </li>
     }
