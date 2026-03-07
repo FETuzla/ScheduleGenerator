@@ -62,7 +62,7 @@ export class Homepage {
       this.otherPages = (data as { name: string; url: string; contributors: string[] }[]).filter(
         (page) => page.name !== 'ScheduleGenerator',
       );
-			console.log(this.otherPages);
+      console.log(this.otherPages);
     } catch (error) {
       console.error('Failed to fetch pages:', error);
     }
@@ -127,17 +127,33 @@ export class Homepage {
   get lectures(): Lecture[] | null {
     if (!this.schedules.length) return null;
     if (this.selectedFirst === 'Predavači') {
+      const seen = new Set<string>();
       return (
-        this.schedules.flatMap((scheds) => {
-          return scheds.lectures.filter((lect) => lect.teacher.includes(this.selectedSecond!!));
-        }) || null
+        this.schedules
+          .flatMap((scheds) => {
+            return scheds.lectures.filter((lect) => lect.teacher.includes(this.selectedSecond!!));
+          })
+          .filter((lect) => {
+            const key = `${lect.name}-${lect.day}-${lect.startTime}-${lect.endTime}`;
+            if (seen.has(key)) return false;
+            seen.add(key);
+            return true;
+          }) || null
       );
     }
     if (this.selectedFirst === 'Prostorije') {
+      const seen = new Set<string>();
       return (
-        this.schedules.flatMap((scheds) => {
-          return scheds.lectures.filter((lect) => lect.location.includes(this.selectedSecond!!));
-        }) || null
+        this.schedules
+          .flatMap((scheds) =>
+            scheds.lectures.filter((lect) => lect.location.includes(this.selectedSecond!!)),
+          )
+          .filter((lect) => {
+            const key = `${lect.name}-${lect.day}-${lect.startTime}-${lect.endTime}`;
+            if (seen.has(key)) return false;
+            seen.add(key);
+            return true;
+          }) || null
       );
     }
     return (
