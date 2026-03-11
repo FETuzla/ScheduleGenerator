@@ -60,7 +60,7 @@ export class Homepage {
       if (!response.ok) throw new Error('Network response was not ok');
       const data = await response.json();
       this.otherPages = (data as { name: string; url: string; visible: boolean; contributors: string[] }[]).filter(
-        (page) => page.visible && page.name !== 'ScheduleGenerator',
+        (page) => page.visible && page.name !== 'Generator rasporeda nastave',
       );
     } catch (error) {
       console.error('Failed to fetch pages:', error);
