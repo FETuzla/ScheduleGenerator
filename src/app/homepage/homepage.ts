@@ -31,7 +31,7 @@ export class Homepage {
   schedules: Schedule[] = [];
   loading = true;
   error = false;
-  otherPages: { name: string; url: string; contributors: string[] }[] = [];
+  otherPages: { name: string; url: string; visible: boolean; contributors: string[] }[] = [];
   showHelp = true;
   menuOpen = false;
 
@@ -59,10 +59,9 @@ export class Homepage {
       const response = await fetch('https://fetuzla.github.io/information/pages.json');
       if (!response.ok) throw new Error('Network response was not ok');
       const data = await response.json();
-      this.otherPages = (data as { name: string; url: string; contributors: string[] }[]).filter(
-        (page) => page.name !== 'ScheduleGenerator',
+      this.otherPages = (data as { name: string; url: string; visible: boolean; contributors: string[] }[]).filter(
+        (page) => page.visible && page.name !== 'ScheduleGenerator',
       );
-      console.log(this.otherPages);
     } catch (error) {
       console.error('Failed to fetch pages:', error);
     }
