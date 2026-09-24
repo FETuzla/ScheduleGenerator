@@ -33,6 +33,7 @@ export class DrawingTool implements AfterViewInit, OnChanges {
     leftPercent: number;
     widthPercent: number;
     heightPercent: number;
+    isSplit: boolean;
   })[] = [];
 
   private readonly hours = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
@@ -169,6 +170,7 @@ export class DrawingTool implements AfterViewInit, OnChanges {
           heightPercent: (end - start) * hourScale,
           widthPercent: slotWidthPercent,
           leftPercent: dayBase + slotIdx * slotWidthPercent,
+          isSplit: columns.length > 1,
         });
       });
     });
@@ -360,6 +362,25 @@ export class DrawingTool implements AfterViewInit, OnChanges {
       teacherList.forEach((teacher) => {
         this.getWrappedLines(teacher, maxWidth).forEach((line) => teacherLines.push(line));
       });
+
+      if (isLecture && !lec.isSplit && lec.name && lec.name !== lec.displayName) {
+        this.ctx.font = `bold ${fontSize}px sans-serif`;
+        const fullNameWords = lec.name.split(' ');
+        const fullNameWordsFit = fullNameWords.every(
+          (word) => this.ctx.measureText(word).width <= maxWidth,
+        );
+
+        if (fullNameWordsFit) {
+          const fullNameLines = this.getWrappedLines(lec.name, maxWidth);
+          const fullNameHeight = fullNameLines.length * nameLineHeight;
+          const totalWithFullName =
+            fullNameHeight + locLineHeight + teacherLines.length * teacherLineHeight;
+
+          if (totalWithFullName <= h - 4) {
+            lines = fullNameLines;
+          }
+        }
+      }
 
       const totalContentHeight =
         lines.length * nameLineHeight + locLineHeight + teacherLines.length * teacherLineHeight;
